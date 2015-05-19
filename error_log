@@ -1,0 +1,5 @@
+[04-May-2015 14:48:17 Asia/Jerusalem] PHP Fatal error:  Call to undefined function file_entity_type_get_names() in /home/yadvashem/public_html/sites/all/modules/media/includes/media.fields.inc on line 54
+[04-May-2015 14:48:42 Asia/Jerusalem] PHP Fatal error:  Call to undefined function file_entity_type_get_names() in /home/yadvashem/public_html/sites/all/modules/media/includes/media.fields.inc on line 54
+[04-May-2015 14:48:59 Asia/Jerusalem] PHP Fatal error:  Call to undefined function file_entity_type_get_names() in /home/yadvashem/public_html/sites/all/modules/media/includes/media.fields.inc on line 54
+[04-May-2015 14:49:42 Asia/Jerusalem] PHP Fatal error:  Call to undefined function file_entity_type_get_names() in /home/yadvashem/public_html/sites/all/modules/media/includes/media.fields.inc on line 54
+[04-May-2015 14:51:16 Asia/Jerusalem] PHP Fatal error:  Call to undefined function file_entity_type_get_names() in /home/yadvashem/public_html/sites/all/modules/media/modules/media_wysiwyg/media_wysiwyg.module on line 127
