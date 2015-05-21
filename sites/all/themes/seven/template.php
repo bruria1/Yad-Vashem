@@ -117,7 +117,7 @@ function seven_css_alter(&$css) {
   }
 }
 
-function forum_wysiwyg_editor_settings_alter(&$settings, $context) {
+function seven_wysiwyg_editor_settings_alter(&$settings, $context) {
   if($context['profile']->editor == 'ckeditor') {
     $settings['height'] = 180;
   }

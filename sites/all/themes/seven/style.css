@@ -988,3 +988,13 @@ div.add-or-remove-shortcuts {
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
+
+/*********  bruria  ************/
+
+.filter-wrapper, .wysiwyg-toggle-wrapper{
+  display: none;
+}
+
+#edit-field-title .cke_contents, #edit-field-sub-title .cke_contents{
+  height: 35px!important;
+}
