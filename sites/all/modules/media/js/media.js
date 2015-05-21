@@ -24,7 +24,7 @@ Drupal.behaviors.mediaElement = {
           $(selector, context).children('.browse').show();
           $(selector, context).children('.upload').hide();
           $(selector, context).children('.attach').hide();
-          $(selector, context).children('.browse').bind('click', {configuration: configuration}, Drupal.media.openBrowser);
+          $(selector, context).children('.browse').once().bind('click', {configuration: configuration}, Drupal.media.openBrowser);
         });
       });
     }
@@ -71,19 +71,31 @@ Drupal.media.openBrowser = function (event) {
       return;
     }
 
-    // Grab the first of the selected media files.
-    var mediaFile = mediaFiles[0];
+    var mediaFileValue;
+    // Process the value based on multiselect.
+    if (mediaFiles.length > 1) {
+      // Reverse array to have files in correct order
+      mediaFiles.reverse();
+      // Concatenate the array into a comma separated string.
+      mediaFileValue = mediaFiles.map(function(file) {
+        return file.fid;
+      }).join(',');
+    }
+    else {
+      // Grab the first of the selected media files.
+      mediaFileValue = mediaFiles[0].fid;
+
+      // Display a preview of the file using the selected media file's display.
+      previewField.html(mediaFileValue.preview);
+    }
 
     // Set the value of the hidden file ID field and trigger a change.
-    uploadField.val(mediaFile.fid);
+    uploadField.val(mediaFileValue);
     uploadField.trigger('change');
 
     // Find the attach button and automatically trigger it.
     var attachButton = uploadField.siblings('.attach');
     attachButton.trigger('mousedown');
-
-    // Display a preview of the file using the selected media file's display.
-    previewField.html(mediaFile.preview);
   }, configuration);
 
   return false;
