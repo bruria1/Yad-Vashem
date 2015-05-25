@@ -995,6 +995,6 @@ div.add-or-remove-shortcuts {
   display: none;
 }
 
-#edit-field-title .cke_contents{
+#edit-field-title .cke_contents, #edit-field-sub-title .cke_contents{
   height: 35px!important;
 }
