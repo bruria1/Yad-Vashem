@@ -131,8 +131,11 @@
 
   </div>
 
-  <?php print render($page['footer']); ?>
 
 </div>
-
-<?php print render($page['bottom']); ?>
+<div id="footer-wrapper">
+  <?php print render($page['footer']); ?>
+</div>
+<div id="bottom-wrapper">
+  <?php print render($page['bottom']); ?>
+</div>
