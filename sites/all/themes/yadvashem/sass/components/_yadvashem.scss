@@ -56,6 +56,31 @@ textarea:focus, input:focus{
   float: right;
 }
 
+/**********  footer  ********/
+
+#footer-wrapper{
+  background-color: #666;
+  #footer{
+    @include width;
+    .block{
+      width: 33%;
+      float: left;
+      @include res(s-m){
+        width: 100%;
+      }
+    }
+  }
+}
+
+#bottom-wrapper{
+  background-color: #58555f;
+  .region-bottom{
+    @include width;
+    p{
+      margin: 0;
+    }
+  }
+}
 /**********  sidebar  ********/
 .sidebar-first .region-sidebar-first {
     margin-left: 0!important;
@@ -68,4 +93,14 @@ textarea:focus, input:focus{
     margin-left: 0!important;
     margin-right: 0!important;
     width: 75%!important;
+}
+
+/********  Book menu  ********/
+
+.node-type-book{
+  .block-menu-block{
+    .close ul{
+      display: none;
+    }
+  }
 }

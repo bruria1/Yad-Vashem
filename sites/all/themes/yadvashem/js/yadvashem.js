@@ -17,9 +17,26 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+  if ($("body").hasClass("node-type-book")){
 
 
-if ($("body").hasClass("node-type-book")){
+   $(".block-menu-block .nolink").each(function(){
+   	if ($(this).hasClass("is-active-trail")){
+     $(this).parent().addClass("open").addClass("nolink"); 
+   	}
+   	else{
+     $(this).parent().addClass("close").addClass("nolink"); 
+   	}
+   });
+
+	$('.block-menu-block li.nolink').on('click', function() {
+		if ($(this).hasClass("close")){
+			$(this).removeClass('close').addClass('open');
+		}
+		else{
+			$(this).removeClass('open').addClass('close');
+		}
+	});
 
 	$strtitle = $(".field-name-body .field-item").html()
 	$strtitle = $strtitle.replace("[quote]", "<div class='quote'>");
@@ -29,7 +46,16 @@ if ($("body").hasClass("node-type-book")){
 	$('.field-name-body .field-item').html($strtitle);
 
 
+
+
+
+
+
+
 }
+
+
+
 
 
 

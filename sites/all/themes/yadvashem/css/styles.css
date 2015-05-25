@@ -1745,20 +1745,68 @@ textarea:focus, input:focus {
   float: right;
 }
 
+/**********  footer  ********/
+/* line 61, ../sass/components/_yadvashem.scss */
+#footer-wrapper {
+  background-color: #666;
+}
+/* line 63, ../sass/components/_yadvashem.scss */
+#footer-wrapper #footer {
+  width: 1340px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+/* line 65, ../sass/components/_yadvashem.scss */
+#footer-wrapper #footer .block {
+  width: 33%;
+  float: left;
+}
+@media (max-width: 767px) {
+  /* line 65, ../sass/components/_yadvashem.scss */
+  #footer-wrapper #footer .block {
+    width: 100%;
+  }
+}
+
+/* line 75, ../sass/components/_yadvashem.scss */
+#bottom-wrapper {
+  background-color: #58555f;
+}
+/* line 77, ../sass/components/_yadvashem.scss */
+#bottom-wrapper .region-bottom {
+  width: 1340px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+/* line 79, ../sass/components/_yadvashem.scss */
+#bottom-wrapper .region-bottom p {
+  margin: 0;
+}
+
 /**********  sidebar  ********/
-/* line 60, ../sass/components/_yadvashem.scss */
+/* line 85, ../sass/components/_yadvashem.scss */
 .sidebar-first .region-sidebar-first {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 25% !important;
 }
 
-/* line 66, ../sass/components/_yadvashem.scss */
+/* line 91, ../sass/components/_yadvashem.scss */
 .sidebar-first #content {
   float: right;
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 75% !important;
+}
+
+/********  Book menu  ********/
+/* line 102, ../sass/components/_yadvashem.scss */
+.node-type-book .block-menu-block .close ul {
+  display: none;
 }
 
 /**
