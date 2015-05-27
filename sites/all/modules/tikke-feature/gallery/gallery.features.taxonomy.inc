@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * content_book.features.taxonomy.inc
+ * gallery.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function content_book_taxonomy_default_vocabularies() {
+function gallery_taxonomy_default_vocabularies() {
   return array(
     'camps' => array(
       'name' => 'Camps',

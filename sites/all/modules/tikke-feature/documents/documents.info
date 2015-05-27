@@ -3,6 +3,7 @@ core = 7.x
 package = Features
 dependencies[] = autocomplete_deluxe
 dependencies[] = ctools
+dependencies[] = dragndrop_upload_file
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = file

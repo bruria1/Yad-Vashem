@@ -19,9 +19,10 @@
       <?php if (user_is_logged_in() == TRUE) {
         global $user;
         print t("Welcome ") . $user->name;
-      }?>
+        ?>
+        <div class="logout"><a href='/user/logout'>Log out</a></div>
+      <?php }?>
     </div>
-    <div class="logout"><a href='/user/logout'>Log out</a></div>
   </div>
 </div>
 

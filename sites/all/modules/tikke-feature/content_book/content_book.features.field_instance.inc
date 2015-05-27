@@ -10,6 +10,252 @@
 function content_book_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'file-image-field_image_credit'
+  $field_instances['file-image-field_image_credit'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'media_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'media_original' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_image_credit',
+    'label' => 'credit',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'file-image-field_image_description'
+  $field_instances['file-image-field_image_description'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'media_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'media_original' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_image_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'file-image-field_tags_figures'
+  $field_instances['file-image-field_tags_figures'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'media_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'media_original' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_tags_figures',
+    'label' => 'Figures',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'not_found_message' => 'The term \'@term\' will be added.',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'file-image-field_tags_places'
+  $field_instances['file-image-field_tags_places'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'media_link' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'media_original' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'file',
+    'field_name' => 'field_tags_places',
+    'label' => 'Places',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'not_found_message' => 'The term \'@term\' will be added.',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-book-body'
   $field_instances['node-book-body'] = array(
     'bundle' => 'book',
@@ -135,46 +381,6 @@ function content_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_book'
-  $field_instances['node-book-field_book'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_book',
-    'label' => 'Books',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'node_reference',
-      'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 43,
-    ),
-  );
-
   // Exported field_instance: 'node-book-field_diaries_letters'
   $field_instances['node-book-field_diaries_letters'] = array(
     'bundle' => 'book',
@@ -283,7 +489,7 @@ function content_book_field_default_field_instances() {
     'label' => 'Gallery - inner',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 1,
+      'alt_field' => 0,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -309,32 +515,19 @@ function content_book_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 1,
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-          'youtube' => 0,
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 0,
-          'upload' => 'upload',
-          'youtube' => 0,
-        ),
+        'file_entity_inline' => 1,
+        'file_entity_inline_fields' => array(),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_miw',
       'weight' => 30,
     ),
   );
@@ -367,7 +560,7 @@ function content_book_field_default_field_instances() {
     'label' => 'Main image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 1,
+      'alt_field' => 0,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -393,32 +586,40 @@ function content_book_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 1,
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-          'youtube' => 0,
+        'file_entity_inline' => 1,
+        'file_entity_inline_fields' => array(),
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
         ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 0,
-          'upload' => 'upload',
-          'youtube' => 0,
-        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => 28,
     ),
   );
@@ -1228,8 +1429,8 @@ function content_book_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Abstract');
   t('Artifacts/Gallery/Arts');
-  t('Books');
   t('Camps');
+  t('Description');
   t('Diaries/letters');
   t('Documents');
   t('Events');
@@ -1253,6 +1454,7 @@ function content_book_field_default_field_instances() {
   t('Video - Description');
   t('Video - Youtube embed');
   t('Video gallery');
+  t('credit');
 
   return $field_instances;
 }

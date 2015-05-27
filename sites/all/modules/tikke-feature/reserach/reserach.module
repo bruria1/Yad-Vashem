@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Reserach feature.
+ */
+
+include_once 'reserach.features.inc';

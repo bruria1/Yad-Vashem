@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * documents.features.field_instance.inc
+ * map.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function documents_field_default_field_instances() {
+function map_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-documents-body'
-  $field_instances['node-documents-body'] = array(
-    'bundle' => 'documents',
+  // Exported field_instance: 'node-maps_charts-body'
+  $field_instances['node-maps_charts-body'] = array(
+    'bundle' => 'maps_charts',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -39,7 +39,7 @@ function documents_field_default_field_instances() {
     'label' => 'Main Content',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 0,
+      'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -51,22 +51,25 @@ function documents_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-documents-field_files'
-  $field_instances['node-documents-field_files'] = array(
-    'bundle' => 'documents',
+  // Exported field_instance: 'node-maps_charts-field_map_images'
+  $field_instances['node-maps_charts-field_map_images'] = array(
+    'bundle' => 'maps_charts',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 3,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -76,13 +79,14 @@ function documents_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_files',
-    'label' => 'Files upload',
+    'field_name' => 'field_map_images',
+    'label' => 'Images',
     'required' => 0,
     'settings' => array(
-      'description_field' => 1,
+      'alt_field' => 1,
+      'default_image' => 0,
       'file_directory' => '',
-      'file_extensions' => 'pdf doc docx exl',
+      'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
         'active_updating' => 0,
         'file_name' => array(
@@ -97,35 +101,47 @@ function documents_field_default_field_instances() {
             'pathauto' => 0,
             'transliterate' => 0,
           ),
-          'value' => 'files/[node:nid]',
+          'value' => 'maps/[node:nid]',
         ),
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
       'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'dragndrop_upload_file',
+      'module' => 'media',
       'settings' => array(
-        'allow_replace' => 0,
-        'droppable_area_text' => 'Drop files here to upload',
-        'media_browser' => 0,
-        'multiupload' => 1,
-        'progress_indicator' => 'throbber',
-        'standard_upload' => 1,
-        'upload_button_text' => 'העלאה',
-        'upload_event' => 'auto',
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
       ),
-      'type' => 'dragndrop_upload_file',
-      'weight' => 7,
+      'type' => 'media_generic',
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-documents-field_terms'
-  $field_instances['node-documents-field_terms'] = array(
-    'bundle' => 'documents',
+  // Exported field_instance: 'node-maps_charts-field_tags_figures'
+  $field_instances['node-maps_charts-field_tags_figures'] = array(
+    'bundle' => 'maps_charts',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -135,7 +151,51 @@ function documents_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tags_figures',
+    'label' => 'Figures',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'not_found_message' => 'The term \'@term\' will be added.',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-maps_charts-field_terms'
+  $field_instances['node-maps_charts-field_terms'] = array(
+    'bundle' => 'maps_charts',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -163,13 +223,14 @@ function documents_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Files upload');
+  t('Figures');
+  t('Images');
   t('Keywords General');
   t('Main Content');
 

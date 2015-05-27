@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * content_book.features.inc
+ * map.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function content_book_ctools_plugin_api($module = NULL, $api = NULL) {
+function map_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
@@ -19,14 +19,14 @@ function content_book_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function content_book_node_info() {
+function map_node_info() {
   $items = array(
-    'book' => array(
-      'name' => t('Book'),
+    'maps_charts' => array(
+      'name' => t('Map/Chart'),
       'base' => 'node_content',
-      'description' => t('<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'),
+      'description' => '',
       'has_title' => '1',
-      'title_label' => t('כותרת'),
+      'title_label' => t('Title'),
       'help' => '',
     ),
   );
