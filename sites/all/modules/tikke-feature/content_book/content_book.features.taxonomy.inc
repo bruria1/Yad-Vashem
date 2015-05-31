@@ -59,6 +59,16 @@ function content_book_taxonomy_default_vocabularies() {
       'language' => 'und',
       'i18n_mode' => 1,
     ),
+    'keywords_general' => array(
+      'name' => 'keywords general',
+      'machine_name' => 'keywords_general',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+    ),
     'killing_sites' => array(
       'name' => 'killing sites',
       'machine_name' => 'killing_sites',

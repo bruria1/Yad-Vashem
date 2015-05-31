@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Manager feature.
+ */
+
+include_once 'manager.features.inc';

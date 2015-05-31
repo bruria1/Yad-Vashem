@@ -24,7 +24,6 @@ function documents_field_group_info() {
     'weight' => '10',
     'children' => array(
       0 => 'body',
-      1 => 'field_teaser_long_text',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -106,6 +105,14 @@ function documents_field_group_info() {
     'weight' => '12',
     'children' => array(
       0 => 'field_terms',
+      1 => 'field_tags_places',
+      2 => 'field_tags_figures',
+      3 => 'field_tags_camps',
+      4 => 'field_tags_ghettos',
+      5 => 'field_tags_killing_site',
+      6 => 'field_tags_events',
+      7 => 'field_atgs_nazi_organisation',
+      8 => 'field_tags_jewish_organisation',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
