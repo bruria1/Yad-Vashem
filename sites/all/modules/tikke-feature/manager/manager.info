@@ -1,0 +1,16 @@
+name = Manager
+core = 7.x
+package = Features
+dependencies[] = entity
+dependencies[] = features
+dependencies[] = menu
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[menu_custom][] = menu-manager
+features[user_role][] = Editor
+features[user_role][] = Secondary Editor
+features[views_view][] = books
+features[views_view][] = term_description
+features[views_view][] = users
+features_exclude[dependencies][ctools] = ctools

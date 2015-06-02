@@ -1,0 +1,11 @@
+name = footer menu
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_custom][] = management
+features[menu_custom][] = menu-recommended-links
+features[menu_custom][] = menu-useful-resource
+features[menu_links][] = management_recommended-links:admin/structure/menu/manage/menu-recommended-links
+features[menu_links][] = management_useful-resource:admin/structure/menu/manage/menu-useful-resource

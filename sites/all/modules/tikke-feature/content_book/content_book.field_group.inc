@@ -41,33 +41,6 @@ function content_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_book_contents|node|book|form';
-  $field_group->group_name = 'group_book_contents';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_related_content';
-  $field_group->data = array(
-    'label' => 'Book Contents',
-    'weight' => '35',
-    'children' => array(
-      0 => 'field_book',
-    ),
-    'format_type' => 'fieldset',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-book-contents field-group-fieldset',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_book_contents|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_content|node|book|form';
   $field_group->group_name = 'group_content';
   $field_group->entity_type = 'node';
@@ -96,6 +69,40 @@ function content_book_field_group_info() {
     ),
   );
   $export['group_content|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|file|image|form';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'file';
+  $field_group->bundle = 'image';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_file_image_alt_text',
+      1 => 'field_file_image_title_text',
+      2 => 'field_image_description',
+      3 => 'field_image_signatura',
+      4 => 'field_tags_figures',
+      5 => 'field_image_credit',
+      6 => 'field_tags_places',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-details field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $export['group_details|file|image|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

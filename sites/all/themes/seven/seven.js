@@ -21,7 +21,7 @@ Drupal.behaviors.my_custom_behavior = {
 
   $("#edit-language").change(function () {
     if ($(this).find("option:selected").val() == "en") {
-		$("#edit-menu-parent").val('main-menu:790');
+		$("#edit-menu-parent").val('main-menu:780');
     }
   });
 
