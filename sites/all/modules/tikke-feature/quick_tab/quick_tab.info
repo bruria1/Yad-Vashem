@@ -8,5 +8,6 @@ features[features_api][] = api:2
 features[image][] = tabs
 features[quicktabs][] = book_page
 features[views_view][] = books_tab
+features[views_view][] = explore
 features_exclude[dependencies][views] = views
 features_exclude[dependencies][image] = image

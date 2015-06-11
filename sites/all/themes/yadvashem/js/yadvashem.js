@@ -19,6 +19,30 @@ Drupal.behaviors.my_custom_behavior = {
 
   if ($("body").hasClass("node-type-book")){
 
+$( "#quicktabs-book_page .item-list" ).prepend( "<div class='left'></div>" );
+$( "#quicktabs-book_page .item-list" ).append( "<div class='right'></div>" );
+
+$j=$('#quicktabs-book_page .item-list ul li').length;
+if ($j<7){
+	$("#quicktabs-book_page .item-list").addClass("no-step");
+}
+
+$i=6;
+$( "#quicktabs-book_page .item-list .right" ).click(function() {
+	if ($j>$i){
+		$current = "step"+$i++;
+		$class="step"+$i;
+	  	$(this).parent().removeClass($current).addClass($class);
+  	}
+});
+$( "#quicktabs-book_page .item-list .left" ).click(function() {
+	if ($i>6){
+		$left1 = "step"+$i--;
+		$left2= "step"+$i;
+	  	$(this).parent().removeClass($left1).addClass($left2);
+  	}
+});
+
 
    $(".block-menu-block .nolink").each(function(){
    	if ($(this).hasClass("is-active-trail")){
@@ -44,7 +68,6 @@ Drupal.behaviors.my_custom_behavior = {
 	$strtitle = $strtitle.replace("[author]", "<div class='quote-author'>");
 	$strtitle = $strtitle.replace("[/author]", "</div>");
 	$('.field-name-body .field-item').html($strtitle);
-
 
 
 

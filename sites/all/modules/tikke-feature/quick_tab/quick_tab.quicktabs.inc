@@ -20,67 +20,84 @@ function quick_tab_quicktabs_default_quicktabs() {
   $quicktabs->title = 'Book page';
   $quicktabs->tabs = array(
     0 => array(
-      'vid' => 'books_tab',
-      'display' => 'block',
+      'vid' => 'explore',
+      'display' => 'block_8',
       'args' => '',
-      'title' => 'Photo',
+      'use_title' => 0,
+      'title' => 'Explore',
       'weight' => '-100',
       'type' => 'view',
     ),
     1 => array(
       'vid' => 'books_tab',
-      'display' => 'block_1',
+      'display' => 'block',
       'args' => '',
-      'title' => 'Artifacts',
+      'use_title' => 0,
+      'title' => 'Photo',
       'weight' => '-99',
       'type' => 'view',
     ),
     2 => array(
       'vid' => 'books_tab',
-      'display' => 'block_2',
+      'display' => 'block_1',
       'args' => '',
-      'title' => 'Art',
+      'use_title' => 0,
+      'title' => 'Artifacts',
       'weight' => '-98',
       'type' => 'view',
     ),
     3 => array(
       'vid' => 'books_tab',
-      'display' => 'block_3',
+      'display' => 'block_2',
       'args' => '',
-      'title' => 'Research',
+      'use_title' => 0,
+      'title' => 'Art',
       'weight' => '-97',
       'type' => 'view',
     ),
     4 => array(
       'vid' => 'books_tab',
-      'display' => 'block_4',
+      'display' => 'block_3',
       'args' => '',
-      'title' => 'Map',
+      'use_title' => 0,
+      'title' => 'Research',
       'weight' => '-96',
       'type' => 'view',
     ),
     5 => array(
       'vid' => 'books_tab',
-      'display' => 'block_5',
+      'display' => 'block_4',
       'args' => '',
-      'title' => 'Documents',
+      'use_title' => 0,
+      'title' => 'Map',
       'weight' => '-95',
       'type' => 'view',
     ),
     6 => array(
       'vid' => 'books_tab',
-      'display' => 'default',
+      'display' => 'block_5',
       'args' => '',
-      'title' => 'Diary',
+      'use_title' => 0,
+      'title' => 'Documents',
       'weight' => '-94',
       'type' => 'view',
     ),
     7 => array(
       'vid' => 'books_tab',
+      'display' => 'block_7',
+      'args' => '',
+      'use_title' => 0,
+      'title' => 'Diary',
+      'weight' => '-93',
+      'type' => 'view',
+    ),
+    8 => array(
+      'vid' => 'books_tab',
       'display' => 'block_6',
       'args' => '',
+      'use_title' => 0,
       'title' => 'Videos',
-      'weight' => '-93',
+      'weight' => '-92',
       'type' => 'view',
     ),
   );
@@ -95,6 +112,7 @@ function quick_tab_quicktabs_default_quicktabs() {
   t('Book page');
   t('Diary');
   t('Documents');
+  t('Explore');
   t('Map');
   t('Photo');
   t('Research');
