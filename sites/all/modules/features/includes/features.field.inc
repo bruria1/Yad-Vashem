@@ -275,12 +275,26 @@ function field_base_features_rebuild($module) {
       if (isset($existing_fields[$field['field_name']])) {
         $existing_field = $existing_fields[$field['field_name']];
         if ($field + $existing_field !== $existing_field) {
-          field_update_field($field);
+          try {
+            field_update_field($field);
+          } catch (Exception $e) {
+            watchdog('features',
+              'Attempt to update field base %label failed: %message',
+              array('%label' => $field['field_name'], '%message' => $e->getMessage()),
+              WATCHDOG_ERROR);
+          }
         }
       }
       else {
-        field_create_field($field);
-        $existing_fields[$field['field_name']] = $field;
+        try {
+          field_create_field($field);
+          $existing_fields[$field['field_name']] = $field;
+        } catch (Exception $e) {
+          watchdog('features',
+            'Attempt to create field base %label failed: %message',
+            array('%label' => $field['field_name'], '%message' => $e->getMessage()),
+            WATCHDOG_ERROR);
+        }
       }
       variable_set('menu_rebuild_needed', TRUE);
     }
@@ -311,18 +325,32 @@ function field_instance_features_rebuild($module) {
         if ($field_instance + $existing_instance !== $existing_instance) {
           try {
             field_update_instance($field_instance);
-          }
-          catch (FieldException $e) {
-            watchdog('features', 'Attempt to update field instance %label (in %entity entity type %bundle bundle) failed: %message', array('%label' => $field_instance['field_name'], '%entity' => $field_instance['entity_type'], '%bundle' => $field_instance['bundle'], '%message' => $e->getMessage()), WATCHDOG_ERROR);
+          } catch (Exception $e) {
+            watchdog('features',
+              'Attempt to update field instance %label (in %entity entity type %bundle bundle) failed: %message',
+              array(
+                '%label' => $field_instance['field_name'],
+                '%entity' => $field_instance['entity_type'],
+                '%bundle' => $field_instance['bundle'],
+                '%message' => $e->getMessage()
+              ),
+              WATCHDOG_ERROR);
           }
         }
       }
       else {
         try {
           field_create_instance($field_instance);
-        }
-        catch (FieldException $e) {
-          watchdog('features', 'Attempt to create field instance %label (in %entity entity type %bundle bundle) failed: %message', array('%label' => $field_instance['field_name'], '%entity' => $field_instance['entity_type'], '%bundle' => $field_instance['bundle'], '%message' => $e->getMessage()), WATCHDOG_ERROR);
+        } catch (Exception $e) {
+          watchdog('features',
+            'Attempt to create field instance %label (in %entity entity type %bundle bundle) failed: %message',
+            array(
+              '%label' => $field_instance['field_name'],
+              '%entity' => $field_instance['entity_type'],
+              '%bundle' => $field_instance['bundle'],
+              '%message' => $e->getMessage()
+            ),
+            WATCHDOG_ERROR);
         }
         $existing_instances[$field_instance['entity_type']][$field_instance['bundle']][$field_instance['field_name']] = $field_instance;
       }

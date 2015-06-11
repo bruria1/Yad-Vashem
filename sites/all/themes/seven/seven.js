@@ -18,18 +18,12 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
 
-
-  $("#edit-language").change(function () {
-    if ($(this).find("option:selected").val() == "en") {
-		$("#edit-menu-parent").val('main-menu:780');
-    }
-  });
-
-  $("#edit-language").change(function () {
-    if ($(this).find("option:selected").val() == "he") {
-		$("#edit-menu-parent").val('main-menu:781');
-    }
-  });
+$("#edit-field-gallery-und-actions-bundle").val("gallery");
+$("#edit-field-research-und-actions-bundle").val("research");
+$("#edit-field-map-chart-und-actions .form-select").val("maps_charts");
+$("#edit-field-documents-und-actions-bundle").val("documents");
+$("#edit-field-diaries-letters-und-actions .form-select").val("diaries_letters");
+$("#edit-field-video-gallery-und-actions .form-select").val("video_gallery");
 
 
 

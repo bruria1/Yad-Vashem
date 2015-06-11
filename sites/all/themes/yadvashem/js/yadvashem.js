@@ -57,8 +57,6 @@ Drupal.behaviors.my_custom_behavior = {
 
 
 
-
-
   }
 };
 

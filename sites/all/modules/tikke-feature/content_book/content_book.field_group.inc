@@ -18,25 +18,56 @@ function content_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_related_content';
+  $field_group->parent_name = 'group_content_horizontal';
   $field_group->data = array(
-    'label' => 'Artifacts/Gallery/Arts Contents',
-    'weight' => '34',
+    'label' => 'Gallery',
+    'weight' => '51',
     'children' => array(
-      0 => 'field_artifacts_gallery_arts',
+      0 => 'field_gallery',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Artifacts/Gallery/Arts Contents',
+      'label' => 'Gallery',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => 'group-artifacts-content field-group-fieldset',
+        'id' => '',
+        'classes' => '',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
     ),
   );
   $export['group_artifacts_content|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_content_horizontal|node|book|form';
+  $field_group->group_name = 'group_content_horizontal';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_page_related_content';
+  $field_group->data = array(
+    'label' => 'content horizontal',
+    'weight' => '27',
+    'children' => array(
+      0 => 'group_artifacts_content',
+      1 => 'group_diary_content',
+      2 => 'group_video_contents',
+      3 => 'group_documents_contents',
+      4 => 'group_map_contents',
+      5 => 'group_research_contents',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-content-horizontal field-group-htabs',
+      ),
+    ),
+  );
+  $export['group_content_horizontal|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -112,21 +143,23 @@ function content_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_related_content';
+  $field_group->parent_name = 'group_content_horizontal';
   $field_group->data = array(
-    'label' => 'Diary/letter Contents',
-    'weight' => '36',
+    'label' => 'Diary/letter',
+    'weight' => '55',
     'children' => array(
       0 => 'field_diaries_letters',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Diary/letter',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-diary-content field-group-fieldset',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_diary_content|node|book|form'] = $field_group;
@@ -139,22 +172,23 @@ function content_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_related_content';
+  $field_group->parent_name = 'group_content_horizontal';
   $field_group->data = array(
-    'label' => 'Documents Contents',
-    'weight' => '38',
+    'label' => 'Documents',
+    'weight' => '54',
     'children' => array(
       0 => 'field_documents',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Documents Contents',
+      'label' => 'Documents',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => 'group-documents-contents field-group-fieldset',
+        'id' => '',
+        'classes' => '',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
     ),
   );
   $export['group_documents_contents|node|book|form'] = $field_group;
@@ -170,7 +204,7 @@ function content_book_field_group_info() {
   $field_group->parent_name = 'group_page_inner';
   $field_group->data = array(
     'label' => 'main horizontal',
-    'weight' => '19',
+    'weight' => '26',
     'children' => array(
       0 => 'group_content',
       1 => 'group_term',
@@ -195,21 +229,23 @@ function content_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_related_content';
+  $field_group->parent_name = 'group_content_horizontal';
   $field_group->data = array(
-    'label' => 'Map/Chart Contents',
-    'weight' => '39',
+    'label' => 'Map/Chart',
+    'weight' => '53',
     'children' => array(
       0 => 'field_map_chart',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Map/Chart',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-map-contents field-group-fieldset',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_map_contents|node|book|form'] = $field_group;
@@ -256,13 +292,7 @@ function content_book_field_group_info() {
     'label' => 'Page related contents',
     'weight' => '34',
     'children' => array(
-      0 => 'group_artifacts_content',
-      1 => 'group_book_contents',
-      2 => 'group_diary_content',
-      3 => 'group_video_contents',
-      4 => 'group_documents_contents',
-      5 => 'group_map_contents',
-      6 => 'group_research_contents',
+      0 => 'group_content_horizontal',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -285,21 +315,23 @@ function content_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_related_content';
+  $field_group->parent_name = 'group_content_horizontal';
   $field_group->data = array(
-    'label' => 'Research Contents',
-    'weight' => '40',
+    'label' => 'Research',
+    'weight' => '52',
     'children' => array(
       0 => 'field_research',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Research',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-research-contents field-group-fieldset',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_research_contents|node|book|form'] = $field_group;
@@ -348,21 +380,23 @@ function content_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_related_content';
+  $field_group->parent_name = 'group_content_horizontal';
   $field_group->data = array(
-    'label' => 'Video Gallery Contents',
-    'weight' => '37',
+    'label' => 'Video',
+    'weight' => '56',
     'children' => array(
-      0 => 'field_video_gallery_inline',
+      0 => 'field_video_gallery',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Video',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-video-contents field-group-fieldset',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_video_contents|node|book|form'] = $field_group;

@@ -998,3 +998,7 @@ div.add-or-remove-shortcuts {
 #edit-field-title .cke_contents, #edit-field-sub-title .cke_contents{
   height: 35px!important;
 }
+
+.group-content-horizontal .container-inline select{
+    display: none;
+}

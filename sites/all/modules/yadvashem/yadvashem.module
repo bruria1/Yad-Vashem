@@ -1,0 +1,101 @@
+<?php 
+
+/**
+ * Implementation of hook_wysiwyg_editor_settings_alter().
+ */
+function yadvashem_wysiwyg_editor_settings_alter(&$settings, &$context) {
+  if($context['profile']->editor == 'ckeditor') {
+    $settings['forcePasteAsPlainText'] = TRUE;
+    $settings['disableNativeSpellChecker'] = FALSE;
+  }
+}
+
+
+/**
+ * Implements hook_rules_action_info()
+ */
+function yadvashem_rules_action_info()
+{
+  return array(
+    'yadvashem_action_node_translate' => array(
+      'label' => t('Translate a node into every enabled language'),
+      'group' => t('Node'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node', 
+          'label' => t('Content')
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_rules_condition_info()
+ */
+function yadvashem_rules_condition_info() {
+  return array(
+    'yadvashem_action_node_is_translation_source' => array(
+      'label' => t('Content is translation source'),
+      'group' => t('Node'),
+      'help' => t('Evaluates to TRUE if the given node is the translation source.'),
+      'arguments' => array(
+        'node' => array(
+            'type' => 'node', 
+            'label' => t('Current node')
+        ),
+      ),
+      'module' => 'yadvashem',
+    ),
+  );
+}
+
+function yadvashem_action_node_is_translation_source($node)
+{
+  return ($node->language == $node->translations->original) ? TRUE : FALSE;
+}
+
+/**
+ * Creates a translation for a node in every enabled language
+ * 
+ * @param $node (node object)
+*/
+function yadvashem_action_node_translate($node)
+{
+  $node->tnid = $node->nid;
+  
+  // GET THE ENABLED LANGUAGE LIST
+  $languages = i18n_language_list();
+  unset($languages[$node->language]);
+
+  foreach ($languages as $langcode => $language)
+  {
+    // CLONE THE CURRENT NODE
+    $new_node = clone $node;
+    
+    // CLEAR THE VALUES, SET THE LANGUAGE AND SAVE
+    $new_node->nid = NULL;
+    $new_node->vid = NULL;
+    $new_node->tnid = $node->tnid;
+    $new_node->created = NULL;
+    $new_node->book['mlid'] = NULL;
+    $new_node->path = NULL;
+    $new_node->files = array();
+    $new_node->language = $langcode;
+
+    node_save($new_node);
+  }
+
+  // IF WE HAVE AT LEAST ONE ENABLED LANGUAGE, UPDATE THE TRANSLATION SET
+  if(count($languages) > 0)
+    db_update('node')
+    ->fields(array(
+      'tnid' => $node->nid,
+    ))
+    ->condition('nid', $node->nid, '=')
+    ->execute();;
+
+  return array('node' => $node);
+}
+?>
+

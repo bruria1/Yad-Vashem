@@ -1,0 +1,214 @@
+***************
+*** 139,150 ****
+   *   - entity_type - The entity_type being managed.
+   *   - bundles - Bundles of entities that the user is allowed to create.
+   *   - column - The name of the ref. field column that stores the entity id.
+   */
+  function inline_entity_form_settings($field, $instance) {
+    $settings = array(
+      'entity_type' => NULL,
+      'bundles' => array(),
+      'column' => NULL,
+    );
+  
+    if ($field['type'] == 'commerce_product_reference') {
+--- 150,163 ----
+   *   - entity_type - The entity_type being managed.
+   *   - bundles - Bundles of entities that the user is allowed to create.
+   *   - column - The name of the ref. field column that stores the entity id.
++  *   - field_type - The type of the field being edited.
+   */
+  function inline_entity_form_settings($field, $instance) {
+    $settings = array(
+      'entity_type' => NULL,
+      'bundles' => array(),
+      'column' => NULL,
++     'field_type' => $field['type'],
+    );
+  
+    if ($field['type'] == 'commerce_product_reference') {
+***************
+*** 262,278 ****
+  
+        $delta++;
+      }
+- 
+-     // If no entities were found, try to open the add form.
+-     if (empty($form_state['inline_entity_form'][$ief_id]['entities'])) {
+-       if (count($settings['bundles']) == 1 && $instance['required']) {
+-         $form_state['inline_entity_form'][$ief_id]['form'] = 'add';
+-         $form_state['inline_entity_form'][$ief_id]['form settings'] = array(
+-           'bundle' => reset($settings['bundles']),
+-         );
+        }
+-     }
+-   }
+  
+    // If the reference field must always have one entity of a specific type,
+    // provide a simplified widget that shows the entity form inline, without any
+--- 275,281 ----
+  
+        $delta++;
+      }
+        }
+  
+    // If the reference field must always have one entity of a specific type,
+    // provide a simplified widget that shows the entity form inline, without any
+***************
+*** 665,670 ****
+  }
+  
+  /**
+   * Wraps and returns the delete form provided by the passed-in controller.
+   *
+   * @param $controller
+--- 686,834 ----
+  }
+  
+  /**
++  * Provides the entity attach form for attaching existing entities
++  *
++  * @param $entity_form
++  *   The form array that will receive the entity form.
++  * @param $form_state
++  *   The form state of the parent form.
++  *
++  * @return
++  *   The form array containing the embedded entity form.
++  */
++ function inline_entity_form_attach_entity_form($controller, $entity_form, &$form_state) {
++   $labels = $controller->labels();
++   $bundle = $form_state['inline_entity_form'][$entity_form['#ief_id']]['form settings']['bundle'];
++ 
++   $entity_form['existing_entity'] = array(
++     '#type' => 'textfield',
++     '#title' => t('@label', array('@label' => ucwords($labels['singular']))),
++     '#description' => t('Enter the @label to be referenced', array('@label' => $labels['singular'])),
++     '#required' => TRUE,
++   );
++ 
++   // Add the appropriate autocomplete path to the widget.
++   $settings = $form_state['inline_entity_form'][$entity_form['#ief_id']]['settings'];
++   switch ($settings['field_type']) {
++     case 'entityreference':
++       // Get the entity variables of the complete form to create the path for
++       // Entity reference's autocomplete.
++       $parents = $entity_form['#parents'];
++       array_pop($parents);
++       $element = drupal_array_get_nested_value($form_state['complete form'], $parents);
++       list($form_entity_id, ,) = entity_extract_ids($element['#entity_type'], $element['#entity']);
++       $autocomplete_path = 'entityreference/autocomplete/single';
++       $autocomplete_path .= '/' . $element['#field_name'] . '/' . $element['#entity_type'] . '/' . $element['#bundle'] . '/' . $form_entity_id;
++ 
++       $entity_form['existing_entity']['#autocomplete_path'] = $autocomplete_path;
++       // Entity reference autocomplete requires its validate handler to
++       // convert the values to the correct autocomplete path.
++       $entity_form['existing_entity']['#element_validate'] = array('_entityreference_autocomplete_validate');
++       break;
++     case 'commerce_product_reference':
++       $entity_form['existing_entity']['#autocomplete_path'] = 'commerce_product/autocomplete/commerce_product/commerce_product/' . $bundle;
++       break;
++   }
++    // Add the actions
++   $entity_form['actions'] = array(
++     '#type' => 'container',
++     '#weight' => 100,
++   );
++   $entity_form['actions']['ief_' . $entity_form['#op'] . '_save'] = array(
++     '#type' => 'submit',
++     '#value' => t('Attach @type_singular', array('@type_singular' => $labels['singular'])),
++     '#name' => 'ief-' . $entity_form['#op'] . '-submit-' . $entity_form['#ief_id'],
++     '#limit_validation_errors' => array($entity_form['#parents']),
++     '#attributes' => array('class' => array('ief-entity-submit')),
++     '#ajax' => array(
++       'callback' => 'inline_entity_form_get_element',
++       'wrapper' => 'inline-entity-form-' . $entity_form['#ief_id'],
++     ),
++   );
++   $entity_form['actions']['ief_' . $entity_form['#op'] . '_cancel'] = array(
++     '#type' => 'submit',
++     '#value' => t('Cancel'),
++     '#name' => 'ief-' . $entity_form['#op'] . '-cancel-' . $entity_form['#ief_id'],
++     '#limit_validation_errors' => array(),
++     '#ajax' => array(
++       'callback' => 'inline_entity_form_get_element',
++       'wrapper' => 'inline-entity-form-' . $entity_form['#ief_id'],
++     ),
++   );
++   // Add the appropriate submit handlers and their related data.
++   $entity_form['actions']['ief_' . $entity_form['#op'] . '_save']['#submit'] = array('inline_entity_form_close_form');
++   $entity_form['actions']['ief_' . $entity_form['#op'] . '_cancel']['#submit'] = array('inline_entity_form_close_form');
++   $entity_form['#element_validate'][] = 'inline_entity_form_process_attach_entity_form';
++   return $entity_form;
++ }
++ 
++ /**
++  * Processes an entity attach form submission.
++  *
++  * The entity attach form loads the entity using the subitted entity id/sku
++  * If the entity is loaded successfully, existing entities in the IEF array are
++  * compared to prevent duplicates. If all validation passes the entity is
++  * attached to the entities array and the IEF table is updated.
++  *
++  * @param $entity_form
++  *  The form of the entity being managed inline.
++  * @param $form_state
++  *   The form state of the parent form.
++  */
++ function inline_entity_form_process_attach_entity_form(&$entity_form, &$form_state) {
++   $ief_id = $entity_form['#ief_id'];
++   $entity_type = $entity_form['#entity_type'];
++   $parents_path = implode('][', $entity_form['#parents']);
++ 
++   $form_values = drupal_array_get_nested_value($form_state['values'], $entity_form['#parents']);
++   $existing_entity = $form_values['existing_entity'];
++ 
++   // Instantiate controller to access labels
++   $entity_info = entity_get_info($entity_type);
++   $type_settings = $form_state['inline_entity_form'][$ief_id]['type_settings'];
++   $controller = new $entity_info['inline entity form']['controller']($entity_type, $type_settings);
++   $labels = $controller->labels();
++ 
++   // The value we get from the autocomplete depends on the field type we're on.
++   $settings = $form_state['inline_entity_form'][$ief_id]['settings'];
++   switch ($settings['field_type']) {
++     case 'entityreference':
++       // $existing_entity is an entity ID.
++       $load_entity = entity_load($entity_form['#entity_type'], array($existing_entity));
++       $attach_entity = $load_entity[$existing_entity];
++       break;
++     case 'commerce_product_reference':
++       // Load commerce_product entity by SKU
++       $attach_entity = commerce_product_load_by_sku($existing_entity);
++       break;
++   }
++ 
++   // Check to see if entity is already referenced by current IEF widget
++   if (!empty($attach_entity)) {
++     foreach ($form_state['inline_entity_form'][$ief_id]['entities'] as $key => $entity) {
++       if ($entity['entity'] == $attach_entity) {
++         form_set_error($parents_path . '][existing_entity', t('This selected @label has already been referenced', array('@label' => $labels['singular'])));
++         unset($attach_entity);
++       }
++     }
++   }
++   else {
++     form_set_error($parents_path . '][existing_entity', t('This selected @label is not valid.', array('@label' => $labels['singular'])));
++   }
++ 
++   // If validation passes attach entity to the entities array
++   if (!empty($attach_entity)) {
++     $form_state['inline_entity_form'][$ief_id]['entities'][] = array(
++       'entity' => $attach_entity,
++       'weight' => $key + 1,
++       'form' => NULL,
++       'needs_save' => FALSE,
++     );
++   }
++ }
++ 
++ 
++ /**
+   * Wraps and returns the delete form provided by the passed-in controller.
+   *
+   * @param $controller

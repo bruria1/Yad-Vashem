@@ -34,9 +34,13 @@
     // We hide the comments and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
+    hide($content['field_title']); 
+    hide($content['book_navigation']); 
+
     ?>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="addthis_sharing_toolbox"></div>
+
     <?php print render($content);
   ?>
 
@@ -45,3 +49,4 @@
   <?php print render($content['comments']); ?>
 
 </article>
+ <?php print render($content['book_navigation']);?>

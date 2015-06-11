@@ -31,41 +31,6 @@ function content_book_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_artifacts_gallery_arts'
-  $field_bases['field_artifacts_gallery_arts'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_artifacts_gallery_arts',
-    'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'node_reference',
-    'settings' => array(
-      'referenceable_types' => array(
-        'artifacts_gallery_arts' => 'artifacts_gallery_arts',
-        'book' => 0,
-        'diaries_letters' => 0,
-        'documents' => 0,
-        'maps_charts' => 0,
-        'page' => 0,
-        'research' => 0,
-        'video_gallery' => 0,
-      ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'node_reference',
-  );
-
   // Exported field_base: 'field_atgs_nazi_organisation'
   $field_bases['field_atgs_nazi_organisation'] = array(
     'active' => 1,
@@ -101,31 +66,30 @@ function content_book_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_diaries_letters',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'artifacts_gallery_arts' => 0,
-        'book' => 0,
-        'diaries_letters' => 'diaries_letters',
-        'documents' => 0,
-        'maps_charts' => 0,
-        'page' => 0,
-        'research' => 0,
-        'video_gallery' => 0,
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_5',
+          'view_name' => 'all_gallery',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_documents'
@@ -136,31 +100,64 @@ function content_book_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_documents',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'artifacts_gallery_arts' => 0,
-        'book' => 0,
-        'diaries_letters' => 0,
-        'documents' => 'documents',
-        'maps_charts' => 0,
-        'page' => 0,
-        'research' => 0,
-        'video_gallery' => 0,
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_4',
+          'view_name' => 'all_gallery',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_gallery'
+  $field_bases['field_gallery'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_gallery',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'all_gallery',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_gallery_inner'
@@ -272,31 +269,30 @@ function content_book_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_map_chart',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'artifacts_gallery_arts' => 0,
-        'book' => 0,
-        'diaries_letters' => 0,
-        'documents' => 0,
-        'maps_charts' => 'maps_charts',
-        'page' => 0,
-        'research' => 0,
-        'video_gallery' => 0,
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_3',
+          'view_name' => 'all_gallery',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_quote_name'
@@ -353,31 +349,30 @@ function content_book_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_research',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'artifacts_gallery_arts' => 0,
-        'book' => 0,
-        'diaries_letters' => 0,
-        'documents' => 0,
-        'maps_charts' => 0,
-        'page' => 0,
-        'research' => 'research',
-        'video_gallery' => 0,
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_2',
+          'view_name' => 'all_gallery',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_sub_title'
@@ -397,6 +392,27 @@ function content_book_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_tabs'
+  $field_bases['field_tabs'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_tabs',
+    'indexes' => array(
+      'moddelta' => array(
+        0 => 'moddelta',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'blockreference',
+    'settings' => array(
+      'referenceable_modules' => array(),
+    ),
+    'translatable' => 0,
+    'type' => 'blockreference',
   );
 
   // Exported field_base: 'field_tags_camps'
@@ -672,39 +688,38 @@ function content_book_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_video_gallery_inline'
-  $field_bases['field_video_gallery_inline'] = array(
+  // Exported field_base: 'field_video_gallery'
+  $field_bases['field_video_gallery'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_video_gallery_inline',
+    'field_name' => 'field_video_gallery',
     'indexes' => array(
-      'nid' => array(
-        0 => 'nid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'node_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'referenceable_types' => array(
-        'artifacts_gallery_arts' => 0,
-        'book' => 0,
-        'diaries_letters' => 0,
-        'documents' => 0,
-        'maps_charts' => 0,
-        'page' => 0,
-        'research' => 0,
-        'video_gallery' => 'video_gallery',
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_6',
+          'view_name' => 'all_gallery',
+        ),
       ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'node_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_video_text_field'

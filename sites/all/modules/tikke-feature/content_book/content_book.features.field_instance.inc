@@ -268,7 +268,7 @@ function content_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -298,46 +298,6 @@ function content_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_artifacts_gallery_arts'
-  $field_instances['node-book-field_artifacts_gallery_arts'] = array(
-    'bundle' => 'book',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_artifacts_gallery_arts',
-    'label' => 'Artifacts/Gallery/Arts',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'node_reference',
-      'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 35,
-    ),
-  );
-
   // Exported field_instance: 'node-book-field_atgs_nazi_organisation'
   $field_instances['node-book-field_atgs_nazi_organisation'] = array(
     'bundle' => 'book',
@@ -349,7 +309,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -377,14 +337,13 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 25,
+      'weight' => 33,
     ),
   );
 
   // Exported field_instance: 'node-book-field_diaries_letters'
   $field_instances['node-book-field_diaries_letters'] = array(
     'bundle' => 'book',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -392,7 +351,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -410,21 +369,26 @@ function content_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'inline_entity_form',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'nodes',
+          'label_singular' => 'פריט תוכן',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 0,
+        ),
       ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 10,
+      'type' => 'inline_entity_form',
+      'weight' => 39,
     ),
   );
 
   // Exported field_instance: 'node-book-field_documents'
   $field_instances['node-book-field_documents'] = array(
     'bundle' => 'book',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -432,7 +396,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -450,14 +414,65 @@ function content_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'inline_entity_form',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'nodes',
+          'label_singular' => 'פריט תוכן',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 0,
+        ),
       ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 43,
+      'type' => 'inline_entity_form',
+      'weight' => 45,
+    ),
+  );
+
+  // Exported field_instance: 'node-book-field_gallery'
+  $field_instances['node-book-field_gallery'] = array(
+    'bundle' => 'book',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_gallery',
+    'label' => 'Gallery',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'inline_entity_form',
+      'settings' => array(
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'nodes',
+          'label_singular' => 'פריט תוכן',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 0,
+        ),
+      ),
+      'type' => 'inline_entity_form',
+      'weight' => 47,
     ),
   );
 
@@ -475,7 +490,7 @@ function content_book_field_default_field_instances() {
           'image_style' => 'thumbnail',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -627,7 +642,6 @@ function content_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_map_chart'
   $field_instances['node-book-field_map_chart'] = array(
     'bundle' => 'book',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -635,7 +649,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -653,14 +667,20 @@ function content_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'inline_entity_form',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'nodes',
+          'label_singular' => 'פריט תוכן',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 0,
+        ),
       ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 40,
+      'type' => 'inline_entity_form',
+      'weight' => 46,
     ),
   );
 
@@ -719,7 +739,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -747,7 +767,6 @@ function content_book_field_default_field_instances() {
   // Exported field_instance: 'node-book-field_research'
   $field_instances['node-book-field_research'] = array(
     'bundle' => 'book',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -755,7 +774,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -773,14 +792,20 @@ function content_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'inline_entity_form',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'nodes',
+          'label_singular' => 'פריט תוכן',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 0,
+        ),
       ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 41,
+      'type' => 'inline_entity_form',
+      'weight' => 47,
     ),
   );
 
@@ -824,6 +849,65 @@ function content_book_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-book-field_tabs'
+  $field_instances['node-book-field_tabs'] = array(
+    'bundle' => 'book',
+    'default_value' => array(
+      0 => array(
+        'moddelta' => 'quicktabs:book_page',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(),
+        'type' => 'blockreference_without_title',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tabs',
+    'label' => 'tabs',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'admin' => 0,
+        'backup_migrate' => 0,
+        'block' => 0,
+        'book' => 0,
+        'context_ui' => 0,
+        'lang_dropdown' => 0,
+        'locale' => 0,
+        'menu' => 0,
+        'menu_block' => 0,
+        'node' => 0,
+        'quicktabs' => 'quicktabs',
+        'search' => 0,
+        'site_map' => 0,
+        'system' => 0,
+        'user' => 0,
+        'views' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 48,
+    ),
+  );
+
   // Exported field_instance: 'node-book-field_tags_camps'
   $field_instances['node-book-field_tags_camps'] = array(
     'bundle' => 'book',
@@ -835,7 +919,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -863,7 +947,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 21,
+      'weight' => 29,
     ),
   );
 
@@ -878,7 +962,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -906,7 +990,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 24,
+      'weight' => 32,
     ),
   );
 
@@ -921,7 +1005,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -949,7 +1033,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 20,
+      'weight' => 28,
     ),
   );
 
@@ -964,7 +1048,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -992,7 +1076,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 22,
+      'weight' => 30,
     ),
   );
 
@@ -1007,7 +1091,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1035,7 +1119,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 26,
+      'weight' => 34,
     ),
   );
 
@@ -1050,7 +1134,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1078,7 +1162,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 23,
+      'weight' => 31,
     ),
   );
 
@@ -1093,7 +1177,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1121,7 +1205,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 18,
+      'weight' => 27,
     ),
   );
 
@@ -1216,7 +1300,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1244,7 +1328,7 @@ function content_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 17,
+      'weight' => 26,
     ),
   );
 
@@ -1272,7 +1356,7 @@ function content_book_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_title',
     'label' => 'Title',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -1288,10 +1372,9 @@ function content_book_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-book-field_video_gallery_inline'
-  $field_instances['node-book-field_video_gallery_inline'] = array(
+  // Exported field_instance: 'node-book-field_video_gallery'
+  $field_instances['node-book-field_video_gallery'] = array(
     'bundle' => 'book',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1299,7 +1382,7 @@ function content_book_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1309,7 +1392,7 @@ function content_book_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_video_gallery_inline',
+    'field_name' => 'field_video_gallery',
     'label' => 'Video gallery',
     'required' => 0,
     'settings' => array(
@@ -1317,14 +1400,20 @@ function content_book_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'node_reference',
+      'module' => 'inline_entity_form',
       'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'node_reference/autocomplete',
-        'size' => 60,
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'nodes',
+          'label_singular' => 'פריט תוכן',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 0,
+        ),
       ),
-      'type' => 'node_reference_autocomplete',
-      'weight' => 38,
+      'type' => 'inline_entity_form',
+      'weight' => 44,
     ),
   );
 
@@ -1340,7 +1429,7 @@ function content_book_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1381,7 +1470,7 @@ function content_book_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'media',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1428,13 +1517,13 @@ function content_book_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Abstract');
-  t('Artifacts/Gallery/Arts');
   t('Camps');
   t('Description');
   t('Diaries/letters');
   t('Documents');
   t('Events');
   t('Figures');
+  t('Gallery');
   t('Gallery - inner');
   t('Ghettos');
   t('Jewish Organizations');
@@ -1455,6 +1544,7 @@ function content_book_field_default_field_instances() {
   t('Video - Youtube embed');
   t('Video gallery');
   t('credit');
+  t('tabs');
 
   return $field_instances;
 }

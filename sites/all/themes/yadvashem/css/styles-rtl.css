@@ -392,30 +392,198 @@ html.js .collapsed .fieldset-legend {
   background-position: 98% 50%;
 }
 
-/********** global ****************/
-/* line 17, ../sass/components/_yadvashem-rtl.scss */
+/**********  header  ********/
+/* line 30, ../sass/components/_yadvashem-rtl.scss */
 #top-bar .left {
   float: right;
 }
-/* line 20, ../sass/components/_yadvashem-rtl.scss */
+/* line 33, ../sass/components/_yadvashem-rtl.scss */
 #top-bar .right {
   float: left;
 }
+/* line 35, ../sass/components/_yadvashem-rtl.scss */
+#top-bar .right .welcome {
+  background: url("../images/icon_user.png") no-repeat right center transparent;
+  padding-right: 20px;
+  padding-left: 0;
+}
+/* line 40, ../sass/components/_yadvashem-rtl.scss */
+#top-bar .right .logout {
+  margin-right: 47px;
+  margin-left: 0;
+}
 
-/* line 25, ../sass/components/_yadvashem-rtl.scss */
+/* line 48, ../sass/components/_yadvashem-rtl.scss */
+.top .top-left {
+  float: right;
+}
+/* line 51, ../sass/components/_yadvashem-rtl.scss */
+.top #block-menu-menu-top-menu {
+  float: right;
+}
+/* line 54, ../sass/components/_yadvashem-rtl.scss */
+.top #block-menu-menu-top-menu ul a {
+  border-right: 1px solid;
+  padding-right: 0px;
+  margin-right: 0px;
+  border-left: 1px solid;
+  padding-left: 7px;
+  margin-left: 7px;
+}
+
+/* line 66, ../sass/components/_yadvashem-rtl.scss */
+#block-menu-menu-square, #block-menu-menu-square--2 {
+  float: left;
+}
+/* line 68, ../sass/components/_yadvashem-rtl.scss */
+#block-menu-menu-square .menu a, #block-menu-menu-square--2 .menu a {
+  float: left;
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+/* line 75, ../sass/components/_yadvashem-rtl.scss */
+.region-header {
+  clear: left;
+}
+
+/**********  lang block  ********/
+/* line 81, ../sass/components/_yadvashem-rtl.scss */
 #block-lang-dropdown-language {
   float: left;
 }
-
-/* line 29, ../sass/components/_yadvashem-rtl.scss */
-.header__name-and-slogan {
+/* line 83, ../sass/components/_yadvashem-rtl.scss */
+#block-lang-dropdown-language .form-type-select {
   float: right;
+  background: url("../images/select.png") no-repeat left center #eee;
+  border-radius: 3px 3px 0 0;
+}
+/* line 88, ../sass/components/_yadvashem-rtl.scss */
+#block-lang-dropdown-language .form-type-select select {
+  padding: 0px 0px 0 23px;
+}
+
+/**********  main-menu ********/
+/* line 96, ../sass/components/_yadvashem-rtl.scss */
+#navigation #main-menu {
+  float: right;
+  background: url("../images/menu.png") no-repeat right center transparent;
+  padding: 11px 40px 0px 0px;
+}
+/* line 100, ../sass/components/_yadvashem-rtl.scss */
+#navigation #main-menu li {
+  padding-left: 22px;
+  padding-right: 0;
+}
+
+/* line 107, ../sass/components/_yadvashem-rtl.scss */
+#search-block-form {
+  float: left;
+}
+
+/**********  footer  ********/
+/* line 115, ../sass/components/_yadvashem-rtl.scss */
+#footer-wrapper #footer .block {
+  float: right;
+  padding-left: 5%;
+  padding-right: 0;
+}
+/* line 120, ../sass/components/_yadvashem-rtl.scss */
+#footer-wrapper #footer #block-block-3 {
+  padding-left: 0;
+}
+/* line 123, ../sass/components/_yadvashem-rtl.scss */
+#footer-wrapper #footer #block-menu-menu-square--2 {
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 126, ../sass/components/_yadvashem-rtl.scss */
+#footer-wrapper #footer #block-menu-menu-square--2 ul {
+  margin: 0;
+}
+/* line 129, ../sass/components/_yadvashem-rtl.scss */
+#footer-wrapper #footer #block-menu-menu-square--2 a {
+  float: left;
+  margin-left: 0;
+  margin-right: 15.5%;
+}
+/* line 134, ../sass/components/_yadvashem-rtl.scss */
+#footer-wrapper #footer #block-menu-menu-square--2 .last a {
+  margin-right: 0;
 }
 
 /**********  sidebar  ********/
-/* line 35, ../sass/components/_yadvashem-rtl.scss */
+/* line 143, ../sass/components/_yadvashem-rtl.scss */
 .sidebar-first #content {
   float: left;
+}
+
+/********  book page  ********/
+/* line 150, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .block-book {
+  margin-left: 5%;
+  margin-right: 0;
+  float: right;
+}
+/* line 155, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book article {
+  float: left;
+}
+/* line 159, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .page-links {
+  float: left;
+}
+/* line 162, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .right-arrow {
+  background: url("../images/left-arrow.png") no-repeat center center transparent;
+}
+/* line 165, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .left-arrow {
+  background: url("../images/right-arrow.png") no-repeat center center transparent;
+}
+/* line 168, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .current-page {
+  float: right;
+}
+/* line 171, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .page-previous {
+  margin-left: 2%;
+  margin-right: 0;
+}
+/* line 174, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .page-previous .left-arrow {
+  float: left;
+}
+/* line 177, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .page-previous .text {
+  float: right;
+}
+/* line 181, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .page-next {
+  margin-right: 2%;
+  margin-left: 0;
+}
+/* line 184, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .page-next .right-arrow {
+  float: right;
+}
+/* line 187, ../sass/components/_yadvashem-rtl.scss */
+.node-type-book .book-navigation .page-next .text {
+  float: left;
+}
+
+/* line 195, ../sass/components/_yadvashem-rtl.scss */
+#block-book-navigation .menu a {
+  padding: 10px 5px 10px 0px;
+}
+/* line 198, ../sass/components/_yadvashem-rtl.scss */
+#block-book-navigation .menu .is-collapsed > a {
+  background: url("../images/navigate-left.png") no-repeat right center transparent;
+}
+/* line 202, ../sass/components/_yadvashem-rtl.scss */
+#block-book-navigation .menu li li a {
+  padding-right: 30px;
+  padding-left: 0;
 }
 
 /* SMACSS theme rules */

@@ -530,20 +530,23 @@ function video_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-video_gallery-field_videos'
-  $field_instances['node-video_gallery-field_videos'] = array(
+  // Exported field_instance: 'node-video_gallery-field_video'
+  $field_instances['node-video_gallery-field_video'] = array(
     'bundle' => 'video_gallery',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'mediafield',
+        'label' => 'above',
+        'module' => 'video_embed_field',
         'settings' => array(
-          'file_view_mode' => 'default',
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'normal',
         ),
-        'type' => 'media',
-        'weight' => 1,
+        'type' => 'video_embed_field',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -553,37 +556,24 @@ function video_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_videos',
-    'label' => 'Videos',
+    'field_name' => 'field_video',
+    'label' => 'Video',
     'required' => 0,
     'settings' => array(
-      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm',
+      'allowed_providers' => array(
+        'vimeo' => 'vimeo',
+        'youtube' => 'youtube',
+      ),
+      'description_field' => 1,
+      'description_length' => 128,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-          'youtube' => 'youtube',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 0,
-          'video' => 'video',
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
-          'upload' => 0,
-          'youtube' => 'youtube',
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 3,
+      'active' => 0,
+      'module' => 'video_embed_field',
+      'settings' => array(),
+      'type' => 'video_embed_field_video',
+      'weight' => 4,
     ),
   );
 
@@ -601,7 +591,7 @@ function video_field_default_field_instances() {
   t('Nazi-Germany Organizations');
   t('Places');
   t('Teaser');
-  t('Videos');
+  t('Video');
 
   return $field_instances;
 }
