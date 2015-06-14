@@ -12,7 +12,7 @@
 }
 
 @mixin width(){
-  width: 1064px;
+  width: 1270px;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 3%;
@@ -415,6 +415,21 @@ body{
     width: 75%!important;
 }
 
+.sidebar-second .region-sidebar-second {
+    margin-left: 0!important;
+    margin-right: 0!important;
+    width: 20%!important;
+    padding: 0 0 0 4%;
+    float: right;
+}
+
+.sidebar-second #content {
+    float: left;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    width: 80%!important;
+}
+
 /********  breadcrumb  ********/
 
 .breadcrumb{
@@ -436,12 +451,12 @@ body{
     height: 21px;
   }
   .block-book{
-    width: 30%;
-    margin-right: 5%;
+    width: 24%;
+    margin-right: 4%;
     float: left;
   }
   article{
-    width: 65%;
+    width: 72%;
     float: right;
     margin-bottom: 40px;
     padding-top: 44px;
@@ -575,6 +590,7 @@ body{
       border-bottom: 1px solid #e3e3e3;
       clear: right;
       margin-left: 2%;
+      position: relative;
     }
     .views-row-1{
       clear: left;
@@ -582,14 +598,15 @@ body{
       margin: 0;
       padding: 0;
       border-bottom: none;
-      .caption{
-        p{
+      .video-sign{
+        display: none;
+      }
+      .field-name-field-file-image-title-text, .views-field-title{
           width: 100%;
           padding-left: 0;
-          font-size: 1.3em;
-        }
+          font-size: 1.3em!important;
       }
-      .views-field-field-artifacts-images a{
+      .views-field-field-artifacts-images a, .views-field-field-video a, .content img{
         width: 100%;
         margin-right: 0;
         display: block;
@@ -599,8 +616,7 @@ body{
       border-bottom: 0;
       margin-bottom: 0;
     }
-    .caption{
-      p{
+    .field-name-field-file-image-title-text, .views-field-title{
         margin: 0;
         font-size: 1.1em;       
         width: 67%;       
@@ -608,9 +624,15 @@ body{
         padding-left: 1%;
         color: #3399cc;
         text-align:left;
-      }
+        a{
+          text-decoration: none!important;
+        }
     }
-    .views-field-field-artifacts-images a{
+    .video-sign{
+      position: absolute;
+      top: 28px;
+    }
+    .views-field-field-artifacts-images a, .views-field-field-video a{
       width: 30%;
       float: left;
       margin-right: 2%;
@@ -708,9 +730,6 @@ body{
       right: 0;
     }
     .item-list.step9{
-      .right{
-        opacity: 0.4;
-      }
       .left{
         opacity: 1;
       }
@@ -718,6 +737,11 @@ body{
     .step7, .step8{
       .left{
         opacity: 1;
+      }
+    }
+    .last{
+      .right{
+        opacity: 0.4;
       }
     }
     .item-list.no-step{
@@ -728,3 +752,114 @@ body{
 }
 
 
+#quicktabs-tabpage-book_page-0{
+  .view-header > .view{
+    display: none;
+  }
+  .view-header > .place1, .view-header > .place2, .view-header > .place3, .view-header > .place4{
+    display: block;
+  }
+  .views-field-field-gallery-type{
+    font-size: 0.9em;
+  } 
+  .views-field-title a{
+    font-size: 1.3em;
+    text-decoration: none!important;
+  }
+  .view-header > .place2, .view-header > .place3, .view-header > .place4{
+    .views-row{
+        width: 48%!important;
+        float: right!important;
+        padding-bottom: 20px!important;
+        margin-bottom: 20px!important;
+        border-bottom: 1px solid #e3e3e3!important;
+        clear: right!important;
+        margin-left: 2%!important;
+        .views-field-field-artifacts-images a, .views-field-field-video a{
+          width: 30%!important;
+          float: left!important;
+          margin-right: 2%!important;
+          display: block!important;
+        }
+        .video-sign{
+          display: block;
+        }
+        .views-field-title{
+          font-size: 1.1em!important;
+          padding-left: 1%!important;
+          width: 67%!important;
+        }
+    }
+  }
+  .view-header > .place4{
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+}
+
+/*********  right links at page books  **********/
+
+.bx-wrapper .bx-viewport {
+    background: transparent none repeat scroll 0 0;
+    border: none;
+    box-shadow: none;
+    left: 0px;
+}
+
+.bx-prev{
+  display: none;
+}
+
+#block-views-right-links-at-book-block, #block-views-right-links-at-book-block-1{
+  font-family: 'Averia Serif Libre', arial;
+  margin-bottom: 40px;
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  .block-title{
+    color: #fff;
+    background-color: #1d8fc4;
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .views-field-title a, .views-field-field-second-title a, .views-field-field-text a{
+    background-color: #848484;
+    color: #fff;
+    font-style: italic;
+    display: block;
+    width: 100%;
+    padding: 5px 20px 0 20px;
+    box-sizing: border-box;
+  }
+  .views-field-field-second-title a{
+    font-size: 1.1em;
+    font-style: none;
+    padding: 0 20px;
+  }
+  .views-field-field-text a{
+    font-style: normal;
+    padding: 0 20px 20px;
+    line-height: 1.1em;
+  }
+  .views-field-field-image-links a{
+    display: block;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .bx-next{
+      background:  url("../images/right-arrow-white.png") no-repeat center center #000;
+      right: 0;
+      width: 35px;
+      top:40%;
+  }
+}
+
+#block-views-right-links-at-book-block-1{
+  .bx-next{
+      top:44.1%;
+  }
+}

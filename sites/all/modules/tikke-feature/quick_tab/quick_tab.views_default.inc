@@ -45,21 +45,13 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['fields']['field_artifacts_images']['label'] = '';
   $handler->display->display_options['fields']['field_artifacts_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_artifacts_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_artifacts_images']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_artifacts_images']['settings'] = array(
-    'image_style' => 'tabs',
-    'image_link' => 'content',
+    'file_view_mode' => 'teaser',
   );
+  $handler->display->display_options['fields']['field_artifacts_images']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_artifacts_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_artifacts_images']['delta_offset'] = '0';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'field_gallery_target_id';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -110,25 +102,33 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['fields']['field_artifacts_images']['label'] = '';
   $handler->display->display_options['fields']['field_artifacts_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_artifacts_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_artifacts_images']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_artifacts_images']['settings'] = array(
-    'image_style' => 'tabs',
-    'image_link' => 'content',
+    'file_view_mode' => 'teaser',
   );
-  $handler->display->display_options['fields']['field_artifacts_images']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_artifacts_images']['delta_offset'] = '0';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'field_gallery_target_id';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_artifacts_images']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_artifacts_images']['delta_limit'] = '0';
+  $handler->display->display_options['fields']['field_artifacts_images']['delta_offset'] = '3';
   $handler->display->display_options['block_description'] = 'טאב- גלרייה';
 
   /* Display: Artificates */
   $handler = $view->new_display('block', 'Artificates', 'block_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Gallery - inner */
+  $handler->display->display_options['fields']['field_artifacts_images']['id'] = 'field_artifacts_images';
+  $handler->display->display_options['fields']['field_artifacts_images']['table'] = 'field_data_field_artifacts_images';
+  $handler->display->display_options['fields']['field_artifacts_images']['field'] = 'field_artifacts_images';
+  $handler->display->display_options['fields']['field_artifacts_images']['relationship'] = 'field_gallery_target_id';
+  $handler->display->display_options['fields']['field_artifacts_images']['label'] = '';
+  $handler->display->display_options['fields']['field_artifacts_images']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_artifacts_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_artifacts_images']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_artifacts_images']['settings'] = array(
+    'file_view_mode' => 'teaser',
+  );
+  $handler->display->display_options['fields']['field_artifacts_images']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_artifacts_images']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_artifacts_images']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -240,7 +240,7 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['fields']['field_map_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_map_images']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_map_images']['settings'] = array(
-    'image_style' => 'tabs',
+    'image_style' => 'medium',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_map_images']['delta_limit'] = '1';
@@ -312,6 +312,7 @@ function quick_tab_views_default_views() {
 
   /* Display: Video */
   $handler = $view->new_display('block', 'Video', 'block_6');
+  $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_video_gallery_target_id']['id'] = 'field_video_gallery_target_id';
@@ -319,6 +320,13 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['relationships']['field_video_gallery_target_id']['field'] = 'field_video_gallery_target_id';
   $handler->display->display_options['relationships']['field_video_gallery_target_id']['label'] = 'תוכן entity referenced from field_video_gallery';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="video-sign"><img src="/sites/all/themes/yadvashem/images/video.png"></div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Video */
   $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
   $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
@@ -329,7 +337,7 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
   $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'image_style' => 'tabs',
+    'image_style' => 'medium',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_video']['delta_limit'] = '1';
@@ -381,7 +389,7 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['fields']['field_image_file_diary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_file_diary']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image_file_diary']['settings'] = array(
-    'file_view_mode' => 'default',
+    'file_view_mode' => 'teaser',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -438,6 +446,7 @@ function quick_tab_views_default_views() {
     t('טאב- Documents'),
     t('Video'),
     t('תוכן entity referenced from field_video_gallery'),
+    t('<div class="video-sign"><img src="/sites/all/themes/yadvashem/images/video.png"></div>'),
     t('טאב- Video'),
     t('Diary'),
     t('תוכן entity referenced from field_diaries_letters'),
@@ -487,6 +496,14 @@ function quick_tab_views_default_views() {
   );
   $handler->display->display_options['fields']['field_artifacts_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_artifacts_images']['delta_offset'] = '0';
+  /* Field: Content: Gallery Type */
+  $handler->display->display_options['fields']['field_gallery_type']['id'] = 'field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['table'] = 'field_data_field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['field'] = 'field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['relationship'] = 'field_gallery_target_id';
+  $handler->display->display_options['fields']['field_gallery_type']['label'] = '';
+  $handler->display->display_options['fields']['field_gallery_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_gallery_type']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -552,6 +569,14 @@ function quick_tab_views_default_views() {
   );
   $handler->display->display_options['fields']['field_artifacts_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_artifacts_images']['delta_offset'] = '0';
+  /* Field: Content: Gallery Type */
+  $handler->display->display_options['fields']['field_gallery_type']['id'] = 'field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['table'] = 'field_data_field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['field'] = 'field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['relationship'] = 'field_gallery_target_id';
+  $handler->display->display_options['fields']['field_gallery_type']['label'] = '';
+  $handler->display->display_options['fields']['field_gallery_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_gallery_type']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -630,6 +655,13 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['relationships']['field_research_target_id']['field'] = 'field_research_target_id';
   $handler->display->display_options['relationships']['field_research_target_id']['label'] = 'תוכן entity referenced from field_research';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['relationship'] = 'field_research_target_id';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -681,6 +713,13 @@ function quick_tab_views_default_views() {
   );
   $handler->display->display_options['fields']['field_map_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_map_images']['delta_offset'] = '0';
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['relationship'] = 'field_map_chart_target_id';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -718,6 +757,13 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['relationships']['field_documents_target_id']['field'] = 'field_documents_target_id';
   $handler->display->display_options['relationships']['field_documents_target_id']['label'] = 'תוכן entity referenced from field_documents';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['relationship'] = 'field_documents_target_id';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -755,6 +801,13 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['relationships']['field_video_gallery_target_id']['field'] = 'field_video_gallery_target_id';
   $handler->display->display_options['relationships']['field_video_gallery_target_id']['label'] = 'תוכן entity referenced from field_video_gallery';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="video-sign"><img src="/sites/all/themes/yadvashem/images/video.png"></div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Video */
   $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
   $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
@@ -770,6 +823,13 @@ function quick_tab_views_default_views() {
   );
   $handler->display->display_options['fields']['field_video']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_video']['delta_offset'] = '0';
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['relationship'] = 'field_video_gallery_target_id';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -819,6 +879,13 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['fields']['field_image_file_diary']['settings'] = array(
     'file_view_mode' => 'default',
   );
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['relationship'] = 'field_diaries_letters_target_id';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -854,49 +921,41 @@ function quick_tab_views_default_views() {
   $handler->display->display_options['header']['view']['id'] = 'view';
   $handler->display->display_options['header']['view']['table'] = 'views';
   $handler->display->display_options['header']['view']['field'] = 'view';
-  $handler->display->display_options['header']['view']['empty'] = TRUE;
   $handler->display->display_options['header']['view']['view_to_insert'] = 'explore:block';
   /* Header: Global: View area */
   $handler->display->display_options['header']['view_1']['id'] = 'view_1';
   $handler->display->display_options['header']['view_1']['table'] = 'views';
   $handler->display->display_options['header']['view_1']['field'] = 'view';
-  $handler->display->display_options['header']['view_1']['empty'] = TRUE;
   $handler->display->display_options['header']['view_1']['view_to_insert'] = 'explore:block_1';
   /* Header: Global: View area */
   $handler->display->display_options['header']['view_2']['id'] = 'view_2';
   $handler->display->display_options['header']['view_2']['table'] = 'views';
   $handler->display->display_options['header']['view_2']['field'] = 'view';
-  $handler->display->display_options['header']['view_2']['empty'] = TRUE;
   $handler->display->display_options['header']['view_2']['view_to_insert'] = 'explore:block_2';
   /* Header: Global: View area */
   $handler->display->display_options['header']['view_3']['id'] = 'view_3';
   $handler->display->display_options['header']['view_3']['table'] = 'views';
   $handler->display->display_options['header']['view_3']['field'] = 'view';
-  $handler->display->display_options['header']['view_3']['empty'] = TRUE;
   $handler->display->display_options['header']['view_3']['view_to_insert'] = 'books_tab:block_3';
   /* Header: Global: View area */
   $handler->display->display_options['header']['view_4']['id'] = 'view_4';
   $handler->display->display_options['header']['view_4']['table'] = 'views';
   $handler->display->display_options['header']['view_4']['field'] = 'view';
-  $handler->display->display_options['header']['view_4']['empty'] = TRUE;
   $handler->display->display_options['header']['view_4']['view_to_insert'] = 'explore:block_4';
   /* Header: Global: View area */
   $handler->display->display_options['header']['view_5']['id'] = 'view_5';
   $handler->display->display_options['header']['view_5']['table'] = 'views';
   $handler->display->display_options['header']['view_5']['field'] = 'view';
-  $handler->display->display_options['header']['view_5']['empty'] = TRUE;
   $handler->display->display_options['header']['view_5']['view_to_insert'] = 'explore:block_5';
   /* Header: Global: View area */
   $handler->display->display_options['header']['view_6']['id'] = 'view_6';
   $handler->display->display_options['header']['view_6']['table'] = 'views';
   $handler->display->display_options['header']['view_6']['field'] = 'view';
-  $handler->display->display_options['header']['view_6']['empty'] = TRUE;
   $handler->display->display_options['header']['view_6']['view_to_insert'] = 'explore:block_6';
   /* Header: Global: View area */
   $handler->display->display_options['header']['view_7']['id'] = 'view_7';
   $handler->display->display_options['header']['view_7']['table'] = 'views';
   $handler->display->display_options['header']['view_7']['field'] = 'view';
-  $handler->display->display_options['header']['view_7']['empty'] = TRUE;
   $handler->display->display_options['header']['view_7']['view_to_insert'] = 'explore:block_7';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Global: Custom text */
@@ -944,6 +1003,7 @@ function quick_tab_views_default_views() {
     t('טאב- Documents'),
     t('Video'),
     t('תוכן entity referenced from field_video_gallery'),
+    t('<div class="video-sign"><img src="/sites/all/themes/yadvashem/images/video.png"></div>'),
     t('טאב- Video'),
     t('Diary'),
     t('תוכן entity referenced from field_diaries_letters'),
