@@ -582,36 +582,39 @@ body{
       margin: 0;
       padding: 0;
       border-bottom: none;
-      .views-field-title{
-        width: 100%;
-        padding-left: 0;
-        a{
+      .caption{
+        p{
+          width: 100%;
+          padding-left: 0;
           font-size: 1.3em;
         }
       }
-      .views-field-field-artifacts-images{
+      .views-field-field-artifacts-images a{
         width: 100%;
         margin-right: 0;
+        display: block;
       }
     }
     .views-row-last{
       border-bottom: 0;
       margin-bottom: 0;
     }
-    .views-field-title{
-      font-size: 1.1em;
-      width: 67%;
-      float: right;  
-      padding-left: 1%;
-      a{
-        text-decoration: none!important;
+    .caption{
+      p{
+        margin: 0;
+        font-size: 1.1em;       
+        width: 67%;       
+        float: right;         
+        padding-left: 1%;
         color: #3399cc;
+        text-align:left;
       }
     }
-    .views-field-field-artifacts-images{
+    .views-field-field-artifacts-images a{
       width: 30%;
       float: left;
       margin-right: 2%;
+      display: block;
     }
   }
   .quicktabs-tabs{

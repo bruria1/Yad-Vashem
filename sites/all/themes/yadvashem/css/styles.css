@@ -2378,44 +2378,41 @@ body article a {
   padding: 0;
   border-bottom: none;
 }
-/* line 585, ../sass/components/_yadvashem.scss */
-#quicktabs-book_page .view-content .views-row-1 .views-field-title {
+/* line 586, ../sass/components/_yadvashem.scss */
+#quicktabs-book_page .view-content .views-row-1 .caption p {
   width: 100%;
   padding-left: 0;
-}
-/* line 588, ../sass/components/_yadvashem.scss */
-#quicktabs-book_page .view-content .views-row-1 .views-field-title a {
   font-size: 1.3em;
 }
 /* line 592, ../sass/components/_yadvashem.scss */
-#quicktabs-book_page .view-content .views-row-1 .views-field-field-artifacts-images {
+#quicktabs-book_page .view-content .views-row-1 .views-field-field-artifacts-images a {
   width: 100%;
   margin-right: 0;
+  display: block;
 }
-/* line 597, ../sass/components/_yadvashem.scss */
+/* line 598, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .view-content .views-row-last {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 601, ../sass/components/_yadvashem.scss */
-#quicktabs-book_page .view-content .views-field-title {
+/* line 603, ../sass/components/_yadvashem.scss */
+#quicktabs-book_page .view-content .caption p {
+  margin: 0;
   font-size: 1.1em;
   width: 67%;
   float: right;
   padding-left: 1%;
-}
-/* line 606, ../sass/components/_yadvashem.scss */
-#quicktabs-book_page .view-content .views-field-title a {
-  text-decoration: none !important;
   color: #3399cc;
+  text-align: left;
 }
-/* line 611, ../sass/components/_yadvashem.scss */
-#quicktabs-book_page .view-content .views-field-field-artifacts-images {
+/* line 613, ../sass/components/_yadvashem.scss */
+#quicktabs-book_page .view-content .views-field-field-artifacts-images a {
   width: 30%;
   float: left;
   margin-right: 2%;
+  display: block;
 }
-/* line 617, ../sass/components/_yadvashem.scss */
+/* line 620, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs {
   padding: 0 0 12px 30px;
   border-bottom: 1px solid #1d8fc4;
@@ -2423,14 +2420,14 @@ body article a {
   overflow: hidden;
   width: 183%;
 }
-/* line 623, ../sass/components/_yadvashem.scss */
+/* line 626, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs li {
   width: 6%;
   margin-right: 2.3%;
   display: block;
   float: left;
 }
-/* line 629, ../sass/components/_yadvashem.scss */
+/* line 632, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs li a {
   background: url("../images/tabs_icon.png") no-repeat center center transparent;
   font-size: 0.8em;
@@ -2441,64 +2438,64 @@ body article a {
   text-align: center;
   width: 100%;
 }
-/* line 639, ../sass/components/_yadvashem.scss */
+/* line 642, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs li.active a {
   background: url("../images/tabs_icon_active.png") no-repeat center center transparent;
   color: #2692c6;
 }
-/* line 643, ../sass/components/_yadvashem.scss */
+/* line 646, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-0 {
   background-position: 17px 0;
 }
-/* line 646, ../sass/components/_yadvashem.scss */
+/* line 649, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-1 {
   background-position: -72px 0;
 }
-/* line 649, ../sass/components/_yadvashem.scss */
+/* line 652, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-2 {
   background-position: -174px 0;
 }
-/* line 652, ../sass/components/_yadvashem.scss */
+/* line 655, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-3 {
   background-position: -300px 0;
 }
-/* line 655, ../sass/components/_yadvashem.scss */
+/* line 658, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-4 {
   background-position: -412px 0;
 }
-/* line 658, ../sass/components/_yadvashem.scss */
+/* line 661, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-5 {
   background-position: -72px 0;
 }
-/* line 661, ../sass/components/_yadvashem.scss */
+/* line 664, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-6 {
   background-position: -174px 0;
 }
-/* line 664, ../sass/components/_yadvashem.scss */
+/* line 667, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-7 {
   background-position: -300px 0;
 }
-/* line 667, ../sass/components/_yadvashem.scss */
+/* line 670, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-8 {
   background-position: -412px 0;
 }
-/* line 671, ../sass/components/_yadvashem.scss */
+/* line 674, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list {
   position: relative;
 }
-/* line 673, ../sass/components/_yadvashem.scss */
+/* line 676, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step7 .quicktabs-tabs {
   margin-left: -15.5%;
 }
-/* line 676, ../sass/components/_yadvashem.scss */
+/* line 679, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step8 .quicktabs-tabs {
   margin-left: -31%;
 }
-/* line 679, ../sass/components/_yadvashem.scss */
+/* line 682, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step9 .quicktabs-tabs {
   margin-left: -46.5%;
 }
-/* line 683, ../sass/components/_yadvashem.scss */
+/* line 686, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .left {
   background: url("../images/left-arrow.png") no-repeat center center transparent;
   width: 14px;
@@ -2509,13 +2506,13 @@ body article a {
   left: 0;
   opacity: 0.4;
 }
-/* line 693, ../sass/components/_yadvashem.scss */
+/* line 696, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   margin-left: 0;
 }
-/* line 698, ../sass/components/_yadvashem.scss */
+/* line 701, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .right {
   background: url("../images/right-arrow.png") no-repeat center center transparent;
   width: 14px;
@@ -2525,19 +2522,19 @@ body article a {
   top: 11px;
   right: 0;
 }
-/* line 708, ../sass/components/_yadvashem.scss */
+/* line 711, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step9 .right {
   opacity: 0.4;
 }
-/* line 711, ../sass/components/_yadvashem.scss */
+/* line 714, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step9 .left {
   opacity: 1;
 }
-/* line 716, ../sass/components/_yadvashem.scss */
+/* line 719, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .step7 .left, #quicktabs-book_page .step8 .left {
   opacity: 1;
 }
-/* line 721, ../sass/components/_yadvashem.scss */
+/* line 724, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.no-step .right, #quicktabs-book_page .item-list.no-step .left {
   display: none;
 }
