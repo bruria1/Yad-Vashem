@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Right Links feature.
+ */
+
+include_once 'right_links.features.inc';

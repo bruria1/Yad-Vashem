@@ -799,23 +799,15 @@ body{
 
 /*********  right links at page books  **********/
 
-.bx-wrapper .bx-viewport {
-    background: transparent none repeat scroll 0 0;
-    border: none;
-    box-shadow: none;
-    left: 0px;
-}
 
-.bx-prev{
-  display: none;
-}
 
 #block-views-right-links-at-book-block, #block-views-right-links-at-book-block-1{
   font-family: 'Averia Serif Libre', arial;
   margin-bottom: 40px;
-  ul{
-    margin: 0;
-    padding: 0;
+  background-color: #848484;
+  padding-bottom: 4px;
+  .views-slideshow-controls-text-previous-processed, .views-slideshow-controls-text-pause-processed{
+    display: none;
   }
   .block-title{
     color: #fff;
@@ -824,42 +816,40 @@ body{
     font-size: 1.2em;
     text-align: center;
   }
-  .views-field-title a, .views-field-field-second-title a, .views-field-field-text a{
-    background-color: #848484;
+  .bottom-text{
+    padding: 0px 20px 0;
+    margin-top: -4px;
+  }
+  .views-field-title a{
     color: #fff;
-    font-style: italic;
     display: block;
     width: 100%;
-    padding: 5px 20px 0 20px;
     box-sizing: border-box;
   }
-  .views-field-field-second-title a{
-    font-size: 1.1em;
-    font-style: none;
-    padding: 0 20px;
+  .title{
+    font-style: italic;
   }
-  .views-field-field-text a{
-    font-style: normal;
-    padding: 0 20px 20px;
+  .second-title{
+    font-size: 1.1em;
+  }
+  .text{
     line-height: 1.1em;
   }
-  .views-field-field-image-links a{
-    display: block;
-    width: 100%;
-    img{
-      width: 100%;
-    }
-  }
-  .bx-next{
-      background:  url("../images/right-arrow-white.png") no-repeat center center #000;
-      right: 0;
-      width: 35px;
-      top:40%;
+  .views-slideshow-controls-text-next a{
+    background: #000 url("../images/right-arrow-white.png") no-repeat scroll center center;
+    height: 33px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 40%;
+    width: 35px;
+    z-index: 200;
   }
 }
 
 #block-views-right-links-at-book-block-1{
-  .bx-next{
-      top:44.1%;
+  padding-bottom: 10px;
+  .views-slideshow-controls-text-next a{
+      top:46.3%;
   }
 }
