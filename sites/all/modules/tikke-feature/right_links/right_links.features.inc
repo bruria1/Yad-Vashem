@@ -68,7 +68,7 @@ function right_links_image_default_styles() {
 function right_links_node_info() {
   $items = array(
     'right_links' => array(
-      'name' => t('Right Links'),
+      'name' => t('Right Sidebar at book page'),
       'base' => 'node_content',
       'description' => t('Right Links at book page'),
       'has_title' => '1',

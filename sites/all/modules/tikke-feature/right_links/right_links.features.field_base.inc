@@ -28,6 +28,8 @@ function right_links_field_default_field_bases() {
       'allowed_values' => array(
         1 => 'Online Store',
         2 => 'Related Resources',
+        3 => 'Simple link',
+        4 => 'Workshop',
       ),
       'allowed_values_function' => '',
     ),
@@ -126,6 +128,21 @@ function right_links_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_video_youube'
+  $field_bases['field_video_youube'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_video_youube',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'video_embed_field',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'video_embed_field',
   );
 
   return $field_bases;

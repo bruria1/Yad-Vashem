@@ -26,7 +26,6 @@ Drupal.behaviors.my_custom_behavior = {
      		$(this).addClass($class); 
      	}
 	});
-
 $( "#quicktabs-book_page .item-list" ).prepend( "<div class='left'></div>" );
 $( "#quicktabs-book_page .item-list" ).append( "<div class='right'></div>" );
 

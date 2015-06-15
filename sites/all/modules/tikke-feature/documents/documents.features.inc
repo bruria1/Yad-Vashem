@@ -15,21 +15,3 @@ function documents_ctools_plugin_api($module = NULL, $api = NULL) {
     return array("version" => "1");
   }
 }
-
-/**
- * Implements hook_node_info().
- */
-function documents_node_info() {
-  $items = array(
-    'documents' => array(
-      'name' => t('Documents'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('כותרת'),
-      'help' => '',
-    ),
-  );
-  drupal_alter('node_info', $items);
-  return $items;
-}

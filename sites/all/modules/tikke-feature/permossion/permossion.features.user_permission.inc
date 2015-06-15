@@ -357,15 +357,6 @@ function permossion_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: 'administer superfish'.
-  $permissions['administer superfish'] = array(
-    'name' => 'administer superfish',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'superfish',
-  );
-
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',

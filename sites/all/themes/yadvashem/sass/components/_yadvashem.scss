@@ -606,7 +606,7 @@ body{
           padding-left: 0;
           font-size: 1.3em!important;
       }
-      .views-field-field-artifacts-images a, .views-field-field-video a, .content img{
+      .views-field-field-artifacts-images, .views-field-field-video{
         width: 100%;
         margin-right: 0;
         display: block;
@@ -630,9 +630,9 @@ body{
     }
     .video-sign{
       position: absolute;
-      top: 28px;
+      top: 33px;
     }
-    .views-field-field-artifacts-images a, .views-field-field-video a{
+    .views-field-field-artifacts-images, .views-field-field-video{
       width: 30%;
       float: left;
       margin-right: 2%;
@@ -775,7 +775,7 @@ body{
         border-bottom: 1px solid #e3e3e3!important;
         clear: right!important;
         margin-left: 2%!important;
-        .views-field-field-artifacts-images a, .views-field-field-video a{
+        .views-field-field-artifacts-images, .views-field-field-video{
           width: 30%!important;
           float: left!important;
           margin-right: 2%!important;
@@ -795,17 +795,23 @@ body{
       border-bottom: 0;
       margin-bottom: 0;
     }
+  .video-embed-description{
+    display: none;
+  }
 }
 
-/*********  right links at page books  **********/
+/*********  right sidebar at page books  **********/
 
-
+.region-sidebar-second .block{
+    margin-bottom: 40px;
+    font-family: 'Averia Serif Libre', arial;
+    background-color: #848484;
+    padding-bottom: 10px;
+}
 
 #block-views-right-links-at-book-block, #block-views-right-links-at-book-block-1{
-  font-family: 'Averia Serif Libre', arial;
-  margin-bottom: 40px;
-  background-color: #848484;
   padding-bottom: 4px;
+  position: relative;
   .views-slideshow-controls-text-previous-processed, .views-slideshow-controls-text-pause-processed{
     display: none;
   }
@@ -817,7 +823,7 @@ body{
     text-align: center;
   }
   .bottom-text{
-    padding: 0px 20px 0;
+    padding: 0px 14px;
     margin-top: -4px;
   }
   .views-field-title a{
@@ -848,8 +854,53 @@ body{
 }
 
 #block-views-right-links-at-book-block-1{
-  padding-bottom: 10px;
   .views-slideshow-controls-text-next a{
-      top:46.3%;
+      top:47.4%;
+  }
+}
+
+#block-views-right-links-at-book-block-2{
+  .bottom-text{
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.1em;
+    padding: 0px 14px;
+  }
+}
+
+#block-views-right-links-at-book-block-3{
+  background-color: #1d8fc4;
+  padding: 12px 14px 28px;
+  color: #fff;
+  .block-title{
+    font-style: italic;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  .views-field-title{
+    font-size: 1.4em;
+    margin: 5px 0 10px;
+  }
+  .views-field-field-second-title{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  .views-field-field-text .field-content{
+    float: left;
+    font-size: 1.2em;
+    color: #1d8fc4;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+  }
+  .views-field-field-link{
+    a{
+      font-size: 0.9em;
+      color: #fff;
+      background: url("../images/little-right-arrow.png") no-repeat scroll center right;
+      width: 90%;
+      display: block;
+      clear: left;
+    }
   }
 }
