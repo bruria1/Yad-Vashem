@@ -581,6 +581,12 @@ body{
   margin-bottom: 25px;
   border-bottom: 1px solid #1d8fc4;
   overflow: hidden;
+  article{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: none;
+  }
   .view-content{
     .views-row{
       width: 48%;
@@ -606,7 +612,7 @@ body{
           padding-left: 0;
           font-size: 1.3em!important;
       }
-      .views-field-field-artifacts-images, .views-field-field-video{
+      .views-field-field-artifacts-images, .views-field-field-video, .field-name-field-artifacts-images img{
         width: 100%;
         margin-right: 0;
         display: block;
@@ -632,7 +638,7 @@ body{
       position: absolute;
       top: 33px;
     }
-    .views-field-field-artifacts-images, .views-field-field-video{
+    .views-field-field-artifacts-images, .views-field-field-video, .field-name-field-artifacts-images img{
       width: 30%;
       float: left;
       margin-right: 2%;
@@ -751,7 +757,17 @@ body{
     }
 }
 
+#quicktabs-tabpage-book_page-0{
+  .node-artifacts-gallery-arts{
+    .node-title{
+      display: none;
+    }
+    .field-name-field-file-image-title-text{
+    }
+  }
+}
 
+/*
 #quicktabs-tabpage-book_page-0{
   .view-header > .view{
     display: none;
@@ -799,7 +815,7 @@ body{
     display: none;
   }
 }
-
+*/
 /*********  right sidebar at page books  **********/
 
 .region-sidebar-second .block{

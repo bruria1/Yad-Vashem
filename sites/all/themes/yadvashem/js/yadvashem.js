@@ -18,14 +18,14 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
   if ($("body").hasClass("node-type-book")){
-
+/*
    $i = 1;
    $(".view-explore > .view-header > .view").each(function(){
    		if ($(this).children().length > 0){
      		$class = "place"+$i++;
      		$(this).addClass($class); 
      	}
-	});
+	});*/
 $( "#quicktabs-book_page .item-list" ).prepend( "<div class='left'></div>" );
 $( "#quicktabs-book_page .item-list" ).append( "<div class='right'></div>" );
 

@@ -97,5 +97,18 @@ function yadvashem_action_node_translate($node)
 
   return array('node' => $node);
 }
-?>
 
+// add or between conexual fileter  
+function yadvashem_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
+
+function yadvashem_field_widget_form_alter(&$element, &$form_state, $context) {
+if ($context['field']['type'] == 'field_explore' && isset($element['#options'])) {
+$element['#options'] = array_reverse($element['#options'], TRUE);
+}
+}
+
+?>
