@@ -7,6 +7,6 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[quicktabs][] = book_page
 features[views_view][] = books_tab
-features[views_view][] = explore
+features[views_view][] = explore_tab
 features_exclude[dependencies][views] = views
 features_exclude[dependencies][image] = image

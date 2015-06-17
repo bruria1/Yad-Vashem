@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * video.strongarm.inc
+ * book_feature.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function video_strongarm() {
+function book_feature_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__video_gallery';
+  $strongarm->name = 'field_bundle_settings_node__book';
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
@@ -40,81 +40,94 @@ function video_strongarm() {
     ),
     'extra_fields' => array(
       'form' => array(
-        'language' => array(
-          'weight' => '0',
-        ),
         'title' => array(
           'weight' => '1',
         ),
+        'language' => array(
+          'weight' => '0',
+        ),
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '8',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'xmlsitemap' => array(
-          'weight' => '4',
+          'weight' => '7',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '2',
-            'visible' => FALSE,
-          ),
-          'teaser' => array(
-            'weight' => '0',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
       ),
     ),
   );
-  $export['field_bundle_settings_node__video_gallery'] = $strongarm;
+  $export['field_bundle_settings_node__book'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_video_gallery';
+  $strongarm->name = 'i18n_node_extended_book';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_book'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_book';
+  $strongarm->value = array(
+    0 => 'current',
+    1 => 'required',
+  );
+  $export['i18n_node_options_book'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_book';
   $strongarm->value = '2';
-  $export['language_content_type_video_gallery'] = $strongarm;
+  $export['language_content_type_book'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_video_gallery';
+  $strongarm->name = 'menu_options_book';
   $strongarm->value = array();
-  $export['menu_options_video_gallery'] = $strongarm;
+  $export['menu_options_book'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_video_gallery';
+  $strongarm->name = 'menu_parent_book';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_video_gallery'] = $strongarm;
+  $export['menu_parent_book'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_video_gallery';
+  $strongarm->name = 'node_options_book';
   $strongarm->value = array(
     0 => 'status',
   );
-  $export['node_options_video_gallery'] = $strongarm;
+  $export['node_options_book'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_video_gallery';
+  $strongarm->name = 'node_preview_book';
   $strongarm->value = '0';
-  $export['node_preview_video_gallery'] = $strongarm;
+  $export['node_preview_book'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_video_gallery';
+  $strongarm->name = 'node_submitted_book';
   $strongarm->value = 0;
-  $export['node_submitted_video_gallery'] = $strongarm;
+  $export['node_submitted_book'] = $strongarm;
 
   return $export;
 }

@@ -20,8 +20,8 @@ function quick_tab_quicktabs_default_quicktabs() {
   $quicktabs->title = 'Book page';
   $quicktabs->tabs = array(
     0 => array(
-      'vid' => 'explore',
-      'display' => 'block_8',
+      'vid' => 'explore_tab',
+      'display' => 'block',
       'args' => '',
       'use_title' => 0,
       'title' => 'Explore',
