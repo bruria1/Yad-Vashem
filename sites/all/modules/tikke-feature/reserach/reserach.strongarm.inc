@@ -32,16 +32,19 @@ function reserach_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '6',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '1',
+          'weight' => '2',
+        ),
+        'language' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(
@@ -49,6 +52,10 @@ function reserach_strongarm() {
           'default' => array(
             'weight' => '3',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => FALSE,
           ),
         ),
       ),

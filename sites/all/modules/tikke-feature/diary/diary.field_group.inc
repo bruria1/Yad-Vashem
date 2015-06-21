@@ -48,7 +48,7 @@ function diary_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Main',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'group_content',
       1 => 'group_media',
@@ -77,7 +77,7 @@ function diary_field_group_info() {
     'label' => 'Media',
     'weight' => '16',
     'children' => array(
-      0 => 'field_image_file_diary',
+      0 => 'field_files',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

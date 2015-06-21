@@ -102,7 +102,7 @@ function reserach_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Main',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'group_content',
       1 => 'group_files',

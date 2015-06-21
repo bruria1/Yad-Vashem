@@ -28,6 +28,15 @@ function gallery_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -38,19 +47,23 @@ function gallery_strongarm() {
           'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'xmlsitemap' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '13',
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),

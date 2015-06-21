@@ -607,12 +607,16 @@ body{
       .video-sign{
         display: none;
       }
-      .field-name-field-file-image-title-text, .views-field-title{
+      .node-type{
+        width: 100%;
+        float: right;
+      }
+      .field-name-field-file-image-title-text, .views-field-title, .title{
           width: 100%;
           padding-left: 0;
           font-size: 1.3em!important;
       }
-      .views-field-field-artifacts-images, .views-field-field-video, .field-name-field-artifacts-images img{
+      .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img{
         width: 100%;
         margin-right: 0;
         display: block;
@@ -622,7 +626,7 @@ body{
       border-bottom: 0;
       margin-bottom: 0;
     }
-    .field-name-field-file-image-title-text, .views-field-title{
+    .field-name-field-file-image-title-text, .views-field-title, .title{
         margin: 0;
         font-size: 1.1em;       
         width: 67%;       
@@ -630,15 +634,20 @@ body{
         padding-left: 1%;
         color: #3399cc;
         text-align:left;
+        text-decoration: none!important;
         a{
           text-decoration: none!important;
         }
+    }
+    .node-type{
+      width: 67%;
+      float: right;
     }
     .video-sign{
       position: absolute;
       top: 33px;
     }
-    .views-field-field-artifacts-images, .views-field-field-video, .field-name-field-artifacts-images img{
+    .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img{
       width: 30%;
       float: left;
       margin-right: 2%;
@@ -758,12 +767,24 @@ body{
 }
 
 #quicktabs-tabpage-book_page-0{
-  .node-artifacts-gallery-arts{
-    .node-title{
-      display: none;
+  .views-row-1{
+    .field-name-field-gallery-type{
+      width: 100%;
+      padding-top: 7px;
+    }
+    .field-name-field-artifacts-images{
+      position: relative;
+      overflow: hidden;
     }
     .field-name-field-file-image-title-text{
+      position: absolute;
+      bottom: -52px;
     }
+  }
+  .field-name-field-gallery-type{
+    width: 67%;
+    float: right;
+    font-style: italic;
   }
 }
 

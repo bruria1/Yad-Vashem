@@ -24,16 +24,10 @@ function right_links_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Online Store';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'עוד';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'התאמה';
-  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'איתחול';
-  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'מיין לפי';
-  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'עולה';
-  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'יורד';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'slideshow';
   $handler->display->display_options['style_options']['slideshow_type'] = 'views_slideshow_cycle';
@@ -77,7 +71,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* שדה: תוכן: link */
+  /* Field: Content: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -86,7 +80,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['type'] = 'link_absolute';
-  /* שדה: תוכן: image */
+  /* Field: Content: image */
   $handler->display->display_options['fields']['field_image_links']['id'] = 'field_image_links';
   $handler->display->display_options['fields']['field_image_links']['table'] = 'field_data_field_image_links';
   $handler->display->display_options['fields']['field_image_links']['field'] = 'field_image_links';
@@ -100,7 +94,7 @@ function right_links_views_default_views() {
     'image_style' => 'online_store',
     'image_link' => '',
   );
-  /* שדה: תוכן: כותרת */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -111,33 +105,33 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* קריטריון לסידור: תוכן: תאריך פירסום */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'right_links' => 'right_links',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* קריטריון לסינון: תוכן: Cube (field_cube) */
+  /* Filter criterion: Content: Cube (field_cube) */
   $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
   $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
   $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
@@ -150,7 +144,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Online Store';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* שדה: תוכן: link */
+  /* Field: Content: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -159,7 +153,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['type'] = 'link_absolute';
-  /* שדה: תוכן: image */
+  /* Field: Content: image */
   $handler->display->display_options['fields']['field_image_links']['id'] = 'field_image_links';
   $handler->display->display_options['fields']['field_image_links']['table'] = 'field_data_field_image_links';
   $handler->display->display_options['fields']['field_image_links']['field'] = 'field_image_links';
@@ -173,7 +167,7 @@ function right_links_views_default_views() {
     'image_style' => 'online_store',
     'image_link' => '',
   );
-  /* שדה: תוכן: כותרת */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -188,28 +182,28 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'right_links' => 'right_links',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* קריטריון לסינון: תוכן: Cube (field_cube) */
+  /* Filter criterion: Content: Cube (field_cube) */
   $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
   $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
   $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
@@ -223,7 +217,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Related Resources';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* שדה: תוכן: link */
+  /* Field: Content: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -232,7 +226,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['type'] = 'link_absolute';
-  /* שדה: תוכן: image */
+  /* Field: Content: image */
   $handler->display->display_options['fields']['field_image_links']['id'] = 'field_image_links';
   $handler->display->display_options['fields']['field_image_links']['table'] = 'field_data_field_image_links';
   $handler->display->display_options['fields']['field_image_links']['field'] = 'field_image_links';
@@ -246,7 +240,7 @@ function right_links_views_default_views() {
     'image_style' => 'related_resources',
     'image_link' => '',
   );
-  /* שדה: תוכן: Second Title */
+  /* Field: Content: Second Title */
   $handler->display->display_options['fields']['field_second_title']['id'] = 'field_second_title';
   $handler->display->display_options['fields']['field_second_title']['table'] = 'field_data_field_second_title';
   $handler->display->display_options['fields']['field_second_title']['field'] = 'field_second_title';
@@ -255,7 +249,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_second_title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_second_title']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_second_title']['element_label_colon'] = FALSE;
-  /* שדה: תוכן: text */
+  /* Field: Content: text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -264,7 +258,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* שדה: תוכן: כותרת */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -283,28 +277,28 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'right_links' => 'right_links',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* קריטריון לסינון: תוכן: Cube (field_cube) */
+  /* Filter criterion: Content: Cube (field_cube) */
   $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
   $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
   $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
@@ -327,7 +321,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* שדה: תוכן: link */
+  /* Field: Content: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -336,7 +330,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['type'] = 'link_absolute';
-  /* שדה: תוכן: image */
+  /* Field: Content: image */
   $handler->display->display_options['fields']['field_image_links']['id'] = 'field_image_links';
   $handler->display->display_options['fields']['field_image_links']['table'] = 'field_data_field_image_links';
   $handler->display->display_options['fields']['field_image_links']['field'] = 'field_image_links';
@@ -350,7 +344,7 @@ function right_links_views_default_views() {
     'image_style' => 'online_store',
     'image_link' => '',
   );
-  /* שדה: תוכן: כותרת */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -364,34 +358,34 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* קריטריון לסידור: כללי: אקראי */
+  /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'right_links' => 'right_links',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* קריטריון לסינון: תוכן: Cube (field_cube) */
+  /* Filter criterion: Content: Cube (field_cube) */
   $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
   $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
   $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
@@ -415,7 +409,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* שדה: תוכן: כותרת */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -430,21 +424,21 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* שדה: תוכן: Second Title */
+  /* Field: Content: Second Title */
   $handler->display->display_options['fields']['field_second_title']['id'] = 'field_second_title';
   $handler->display->display_options['fields']['field_second_title']['table'] = 'field_data_field_second_title';
   $handler->display->display_options['fields']['field_second_title']['field'] = 'field_second_title';
   $handler->display->display_options['fields']['field_second_title']['label'] = '';
   $handler->display->display_options['fields']['field_second_title']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_second_title']['element_label_colon'] = FALSE;
-  /* שדה: תוכן: text */
+  /* Field: Content: text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
   $handler->display->display_options['fields']['field_text']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* שדה: תוכן: link */
+  /* Field: Content: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -458,28 +452,28 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_link']['type'] = 'link_absolute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'right_links' => 'right_links',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* קריטריון לסינון: תוכן: Cube (field_cube) */
+  /* Filter criterion: Content: Cube (field_cube) */
   $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
   $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
   $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
@@ -490,12 +484,12 @@ function right_links_views_default_views() {
   $translatables['right_links_at_book'] = array(
     t('Master'),
     t('Online Store'),
-    t('עוד'),
-    t('התאמה'),
-    t('איתחול'),
-    t('מיין לפי'),
-    t('עולה'),
-    t('יורד'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
     t('<div class="bottom-text">[title]</div>'),
     t('Related Resources'),
     t('<div class="bottom-text">

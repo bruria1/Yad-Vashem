@@ -48,7 +48,7 @@ function map_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Main',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'group_content',
       1 => 'group_terms_relations',
@@ -75,7 +75,7 @@ function map_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Media',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_map_images',
     ),
@@ -102,7 +102,7 @@ function map_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Terms',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_terms',
       1 => 'field_tags_figures',

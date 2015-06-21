@@ -9,9 +9,9 @@
  */
 function diary_taxonomy_default_vocabularies() {
   return array(
-    'places' => array(
-      'name' => 'places',
-      'machine_name' => 'places',
+    'keywords_general' => array(
+      'name' => 'keywords general',
+      'machine_name' => 'keywords_general',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

@@ -43,8 +43,8 @@ function right_links_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'allowed_providers' => array(
-        'vimeo' => 'vimeo',
-        'youtube' => 'youtube',
+        0 => 'youtube',
+        1 => 'vimeo',
       ),
       'description_field' => 1,
       'description_length' => 500,

@@ -9,7 +9,6 @@ dependencies[] = i18n_taxonomy
 dependencies[] = list
 dependencies[] = media
 dependencies[] = mediafield
-dependencies[] = node
 dependencies[] = node_reference
 dependencies[] = options
 dependencies[] = strongarm

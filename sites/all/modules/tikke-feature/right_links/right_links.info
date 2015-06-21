@@ -8,7 +8,6 @@ dependencies[] = filefield_paths
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
-dependencies[] = node
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = text

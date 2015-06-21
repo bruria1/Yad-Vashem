@@ -75,7 +75,7 @@ function documents_content_type_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Main',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'group_content',
       1 => 'group_terms_relations',
