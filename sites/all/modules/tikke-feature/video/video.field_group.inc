@@ -115,6 +115,7 @@ function video_field_group_info() {
     'weight' => '11',
     'children' => array(
       0 => 'field_video',
+      1 => 'field_video_collection',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

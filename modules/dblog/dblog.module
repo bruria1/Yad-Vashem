@@ -144,6 +144,12 @@ function _dblog_get_message_types() {
  * Note: Some values may be truncated to meet database column size restrictions.
  */
 function dblog_watchdog(array $log_entry) {
+  if (!mb_detect_encoding($log_entry['message'], 'UTF-8', true))
+          $log_entry['message'] = mb_convert_encoding($log_entry['message'], 'UTF-8', 'ISO-8859-1');
+  if (!mb_detect_encoding($log_entry['request_uri'], 'UTF-8', true))
+          $log_entry['request_uri'] = mb_convert_encoding($log_entry['request_uri'], 'UTF-8', 'ISO-8859-1');
+  if (!mb_detect_encoding($log_entry['referer'], 'UTF-8', true))
+          $log_entry['referer'] = mb_convert_encoding($log_entry['referer'], 'UTF-8', 'ISO-8859-1');
   Database::getConnection('default', 'default')->insert('watchdog')
     ->fields(array(
       'uid' => $log_entry['uid'],

@@ -449,6 +449,14 @@ body{
 .node-type-book{
   .addthis_sharing_toolbox{
     height: 21px;
+      float: left;
+  margin-right: 10px;
+  width: 120px;
+  }
+  .share-links{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
   }
   .block-book{
     width: 24%;
@@ -574,21 +582,14 @@ body{
   }
 }
 
-#quicktabs-book_page{
-  font-family: 'Averia Serif Libre', arial;
-  margin-top: 60px;
-  padding-bottom: 40px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #1d8fc4;
-  overflow: hidden;
+#quicktabs-tabpage-book_page-0{
   article{
     margin: 0;
     padding: 0;
     width: 100%;
     float: none;
   }
-  .view-content{
-    .views-row{
+  .views-row{
       width: 48%;
       float: right;
       padding-bottom: 20px;
@@ -597,36 +598,62 @@ body{
       clear: right;
       margin-left: 2%;
       position: relative;
+  }
+  .views-row-1{
+    clear: left;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    .node-type{
+      width: 100%;
+      float: right;
     }
-    .views-row-1{
-      clear: left;
+    .field-name-field-gallery-type{
+      width: 100%;
+      padding-top: 7px;
+    }
+    .field-name-field-artifacts-images{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin-right: 0;
+      display: block;
+    }
+    .field-name-field-file-image-title-text{
+      position: absolute;
+      bottom: -52px;
+      width: 100%;
+      padding-left: 0;
+      font-size: 1.3em!important;
       float: left;
-      margin: 0;
-      padding: 0;
-      border-bottom: none;
-      .video-sign{
-        display: none;
-      }
-      .node-type{
-        width: 100%;
-        float: right;
-      }
-      .field-name-field-file-image-title-text, .views-field-title, .title{
-          width: 100%;
-          padding-left: 0;
-          font-size: 1.3em!important;
-      }
-      .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img{
-        width: 100%;
-        margin-right: 0;
-        display: block;
-      }
     }
-    .views-row-last{
-      border-bottom: 0;
-      margin-bottom: 0;
+    .field-collection-container{
+      width: 100%;
     }
-    .field-name-field-file-image-title-text, .views-field-title, .title{
+  }
+  .field-name-field-gallery-type{
+    width: 67%;
+    float: right;
+    font-style: italic;
+  }
+  .field-collection-container{
+      width: 30%;
+      float: left;
+      margin-right: 2%;
+      display: block;
+      .field-name-field-video{
+        width: 100%;
+      }
+  }
+  .field-name-field-video-title{
+    display: none;
+  }
+  .views-row-last{
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  .field-name-field-file-image-title-text, .views-field-title, .title{
         margin: 0;
         font-size: 1.1em;       
         width: 67%;       
@@ -638,22 +665,30 @@ body{
         a{
           text-decoration: none!important;
         }
-    }
-    .node-type{
+  }
+  .node-type{
       width: 67%;
       float: right;
-    }
-    .video-sign{
+  }
+  .video-sign{
       position: absolute;
       top: 33px;
-    }
-    .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img{
+  }
+  .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img{
       width: 30%;
       float: left;
       margin-right: 2%;
       display: block;
-    }
   }
+}
+
+#quicktabs-book_page{
+  font-family: 'Averia Serif Libre', arial;
+  margin-top: 60px;
+  padding-bottom: 40px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #1d8fc4;
+  overflow: hidden;
   .quicktabs-tabs{
     padding: 0 0 12px 30px;
     border-bottom: 1px solid #1d8fc4;
@@ -766,77 +801,32 @@ body{
     }
 }
 
-#quicktabs-tabpage-book_page-0{
-  .views-row-1{
-    .field-name-field-gallery-type{
-      width: 100%;
-      padding-top: 7px;
+
+
+.field-collection-container, .field-collection-view{
+  border:none;
+  margin: 0;
+  padding: 0;
+}
+  /*top links*/
+
+.node-type-book .top-links{
+    div{
+      float: left;
     }
-    .field-name-field-artifacts-images{
-      position: relative;
-      overflow: hidden;
+    a{
+      color: #0099cc;
+      font-style: 0.9em;
+      text-decoration: none!important;
+      text-transform: uppercase;
+      font-family: 'PT Sans', arial;
+      border-right: 1px solid;
+      margin-right: 10px;
+      padding-right: 10px;
     }
-    .field-name-field-file-image-title-text{
-      position: absolute;
-      bottom: -52px;
-    }
-  }
-  .field-name-field-gallery-type{
-    width: 67%;
-    float: right;
-    font-style: italic;
-  }
 }
 
-/*
-#quicktabs-tabpage-book_page-0{
-  .view-header > .view{
-    display: none;
-  }
-  .view-header > .place1, .view-header > .place2, .view-header > .place3, .view-header > .place4{
-    display: block;
-  }
-  .views-field-field-gallery-type{
-    font-size: 0.9em;
-  } 
-  .views-field-title a{
-    font-size: 1.3em;
-    text-decoration: none!important;
-  }
-  .view-header > .place2, .view-header > .place3, .view-header > .place4{
-    .views-row{
-        width: 48%!important;
-        float: right!important;
-        padding-bottom: 20px!important;
-        margin-bottom: 20px!important;
-        border-bottom: 1px solid #e3e3e3!important;
-        clear: right!important;
-        margin-left: 2%!important;
-        .views-field-field-artifacts-images, .views-field-field-video{
-          width: 30%!important;
-          float: left!important;
-          margin-right: 2%!important;
-          display: block!important;
-        }
-        .video-sign{
-          display: block;
-        }
-        .views-field-title{
-          font-size: 1.1em!important;
-          padding-left: 1%!important;
-          width: 67%!important;
-        }
-    }
-  }
-  .view-header > .place4{
-      border-bottom: 0;
-      margin-bottom: 0;
-    }
-  .video-embed-description{
-    display: none;
-  }
-}
-*/
+
 /*********  right sidebar at page books  **********/
 
 .region-sidebar-second .block{

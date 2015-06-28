@@ -38,9 +38,43 @@
     hide($content['book_navigation']); 
 
     ?>
+    <?php global $language;
+    global $base_url;
+    //get the current language
+    $current_lang = $language->language;
+    //get the default language
+    $default_language = language_default();
+    ?>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_sharing_toolbox"></div>
+    <div class="share-links">
+      <div class="addthis_sharing_toolbox"></div>
+      <div class="top-links">
+        <div class="print">
+        <a href="<?php
+  switch($current_lang) {
+    case($default_language):
+      $url = $base_url."/print/".$node->nid;
+      break;
+    default:
+      $url = $base_url."/".$current_lang ."/print/".$node->nid;
+      print $url;
+  }?>" target="_blank">READING MODE</a>
+        </div>
+        <div class="printpdf">
+        <a href="<?php
+  switch($current_lang) {
+    case($default_language):
+      $url = $base_url."/printpdf/".$node->nid;
+      break;
+    default:
+      $url = $base_url."/".$current_lang ."/printpdf/".$node->nid;
+      print $url;
+  }?>">Save</a>
+        </div>
+      </div>
 
+      
+    </div>
     <?php print render($content);
   ?>
 

@@ -26,10 +26,23 @@ Drupal.behaviors.my_custom_behavior = {
      		$(this).addClass($class); 
      	}
 	});*/
+
+/* check how mush videos  */
+$numbervideos=$(".view-books-tab .view-header").html();
+if ($numbervideos<3){
+	$(".view-books-tab").addClass("one-two");
+}
+else if ($numbervideos<6){
+	$(".view-books-tab").addClass("three-five");
+}
+else if ($numbervideos>5){
+	$(".view-books-tab").addClass("six-more");
+}
+/****  tabs  *****/
 $( "#quicktabs-book_page .item-list" ).prepend( "<div class='left'></div>" );
 $( "#quicktabs-book_page .item-list" ).append( "<div class='right'></div>" );
 
-$j=$('#quicktabs-book_page .item-list ul li').length;
+$j=$('#quicktabs-book_page .quicktabs-tabs li').length;
 if ($j<7){
 	$("#quicktabs-book_page .item-list").addClass("no-step");
 }

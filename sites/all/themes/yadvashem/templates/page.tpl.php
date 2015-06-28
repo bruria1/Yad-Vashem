@@ -52,24 +52,18 @@
       <div class="mail">
         <a href="mailto:information.hebrew@yadvashem.org.il" target="_blank" title="Mail Us"><img src="/sites/all/themes/yadvashem/images/mail.png"></a>
       </div>
+      <?php 
+        if ( !empty($node) ) {
+          global $language;
+          global $base_url;
+          $current_lang = $language->language;
+          $default_language = language_default();
+          $url = $base_url.$current_lang."/print/".$node->nid;
+      ?>
       <div class="print">
-        <a href="<?php global $language;
-global $base_url;
-//get the current language
-$current_lang = $language->language;
-//get the default language
-$default_language = language_default();
-
-switch($current_lang) {
-  case($default_language):
-    $url = $base_url."/print/".$node->nid;
-    break;
-  default:
-    $url = $base_url."/".$current_lang ."/print/".$node->nid;
-    print $url;
-}?>" target="_blank"><img src="/sites/all/themes/yadvashem/images/print.png"></a>
+        <a href="<?php print $url;?>" target="_blank"><img src="/sites/all/themes/yadvashem/images/print.png"></a>
       </div>
-      
+      <?php } ?>
     </div>
   </div>
   <?php print render($page['top']); ?>
