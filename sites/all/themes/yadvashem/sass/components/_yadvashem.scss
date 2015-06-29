@@ -613,16 +613,14 @@ body{
       width: 100%;
       padding-top: 7px;
     }
-    .field-name-field-artifacts-images{
+     .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img, .doc-image{
       position: relative;
       overflow: hidden;
       width: 100%;
       margin-right: 0;
       display: block;
     }
-    .field-name-field-file-image-title-text{
-      position: absolute;
-      bottom: -52px;
+    .field-name-field-file-image-title-text, .title, .file a{
       width: 100%;
       padding-left: 0;
       font-size: 1.3em!important;
@@ -630,6 +628,11 @@ body{
     }
     .field-collection-container{
       width: 100%;
+    }
+    .video-sign{
+      left: 8px;
+      position: absolute;
+      top: 160px;
     }
   }
   .field-name-field-gallery-type{
@@ -653,7 +656,7 @@ body{
     border-bottom: 0;
     margin-bottom: 0;
   }
-  .field-name-field-file-image-title-text, .views-field-title, .title{
+  .field-name-field-file-image-title-text, .views-field-title, .title, .file a{
         margin: 0;
         font-size: 1.1em;       
         width: 67%;       
@@ -666,6 +669,9 @@ body{
           text-decoration: none!important;
         }
   }
+  .file img{
+    display: none;
+  }
   .node-type{
       width: 67%;
       float: right;
@@ -674,7 +680,7 @@ body{
       position: absolute;
       top: 33px;
   }
-  .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img{
+  .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img, .doc-image{
       width: 30%;
       float: left;
       margin-right: 2%;
