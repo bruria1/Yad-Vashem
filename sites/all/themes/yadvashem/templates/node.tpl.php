@@ -71,6 +71,10 @@
     hide($content['field_gallery_type']);
 
     hide($content['field_files']); 
+
+    hide($content['field_video_collection']); 
+
+    
 }
     print render($content);
 
@@ -98,7 +102,7 @@
 
   <?php     
 
-  if (($teaser) && (!($node->type == "artifacts_gallery_arts")) && (!($node->type == "documents"))){?>
+  if (($teaser) && (!($node->type == "artifacts_gallery_arts")) && (!($node->type == "documents")) && (!($node->type == "maps_charts")) && (!($node->type == "video_gallery"))){?>
 
     <div class="node-type"><?php print node_type_get_name($node);?></div>
 
@@ -111,9 +115,9 @@
   <?php     
 
   if (($teaser) && ($node->type == "video_gallery")){?>
-
+    <div class="node-type"><?php print node_type_get_name($node);?></div>
     <div class="video-sign"><img src="/sites/all/themes/yadvashem/images/video.png"></div>
-
+    <div class="description"><?php print render($content['field_video_collection']); ?> </div>
   <?php } ?>
 
   <?php     
@@ -124,7 +128,15 @@
     <div class="description"><?php print render($content['field_files']); ?> </div>
 
   <?php } ?>
+
  
+  <?php     
+
+  if (($teaser) && ($node->type == "maps_charts")){?>
+    <div class="node-type"><?php print node_type_get_name($node);?></div>
+     <a class="title" href="<?php print $node_url; ?>"><?php print $node->field_map_images['und'][0]['title'];?></a>
+
+  <?php } ?>
 
   <?php print render($content['links']); ?>
 

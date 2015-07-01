@@ -69,7 +69,7 @@
     default:
       $url = $base_url."/".$current_lang ."/printpdf/".$node->nid;
       print $url;
-  }?>">Save</a>
+  }?>">Download</a>
         </div>
       </div>
 
@@ -81,6 +81,33 @@
   <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>
-
+   <div class="share-links">
+      <div class="addthis_sharing_toolbox"></div>
+      <div class="top-links">
+        <div class="print">
+        <a href="<?php
+  switch($current_lang) {
+    case($default_language):
+      $url = $base_url."/print/".$node->nid;
+      break;
+    default:
+      $url = $base_url."/".$current_lang ."/print/".$node->nid;
+      print $url;
+  }?>" target="_blank">READING MODE</a>
+        </div>
+        <div class="printpdf">
+        <a href="<?php
+  switch($current_lang) {
+    case($default_language):
+      $url = $base_url."/printpdf/".$node->nid;
+      break;
+    default:
+      $url = $base_url."/".$current_lang ."/printpdf/".$node->nid;
+      print $url;
+  }?>">Download</a>
+        </div>
+      </div>
 </article>
  <?php print render($content['book_navigation']);?>
+
+ 

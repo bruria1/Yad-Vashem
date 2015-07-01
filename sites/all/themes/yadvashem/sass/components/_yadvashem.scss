@@ -65,7 +65,7 @@ body{
 #page-title{
   color: $title;
   font-size: 2.5em;
-  font-family: 'Averia Serif Libre', arial;
+    font-family: 'PT Serif', arial;
   font-weight: normal;
   line-height: 0.9em;
   p{
@@ -122,6 +122,9 @@ body{
     .social-icons{
       div{
         display: inline;
+      }
+      .pinterest{
+        margin-right: 3px;
       }
     }
   }
@@ -254,7 +257,7 @@ body{
     width: auto;
     background:  url("../images/menu.png") no-repeat left center transparent;
     overflow: hidden;
-    padding: 11px 0 0px 40px;
+    padding: 11px 0 0px 53px;
     li{
       padding-right: 22px;
       height: 32px;
@@ -263,7 +266,7 @@ body{
       color: #fff;
       text-transform: uppercase;
       opacity: 0.85;
-      font-size: 1em;
+      font-size: 1.2em;
       height: 32px;
       display: block;
       &:after{
@@ -447,6 +450,15 @@ body{
 /********  book page  ********/
 
 .node-type-book{
+  #main-menu{
+    .menu-1095 a{
+      opacity: 1!important;
+    }
+    .menu-1095 a:after{
+        border-color: transparent transparent #fff!important;
+        opacity: 0.85!important;
+    }
+  }
   .addthis_sharing_toolbox{
     height: 21px;
       float: left;
@@ -473,7 +485,7 @@ body{
     clear: both;
     width: 100%;
     border-top: 1px solid #e7e7e7;
-    font-family: 'Averia Serif Libre', arial;
+    font-family: 'PT Serif', arial;
     padding: 40px 0;
     overflow: hidden;
     ul.menu{
@@ -613,14 +625,15 @@ body{
       width: 100%;
       padding-top: 7px;
     }
-     .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img, .doc-image{
+     .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img, .doc-image,
+     .field-name-field-map-images{
       position: relative;
       overflow: hidden;
       width: 100%;
       margin-right: 0;
       display: block;
     }
-    .field-name-field-file-image-title-text, .title, .file a{
+    .field-name-field-file-image-title-text, .title, .file a, .field-name-field-video-title{
       width: 100%;
       padding-left: 0;
       font-size: 1.3em!important;
@@ -635,7 +648,7 @@ body{
       top: 160px;
     }
   }
-  .field-name-field-gallery-type{
+  .field-name-field-gallery-type, .node-type{
     width: 67%;
     float: right;
     font-style: italic;
@@ -649,14 +662,11 @@ body{
         width: 100%;
       }
   }
-  .field-name-field-video-title{
-    display: none;
-  }
   .views-row-last{
     border-bottom: 0;
     margin-bottom: 0;
   }
-  .field-name-field-file-image-title-text, .views-field-title, .title, .file a{
+  .field-name-field-file-image-title-text, .views-field-title, .title, .file a, .field-name-field-video-title{
         margin: 0;
         font-size: 1.1em;       
         width: 67%;       
@@ -680,7 +690,8 @@ body{
       position: absolute;
       top: 33px;
   }
-  .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img, .doc-image{
+  .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img, .doc-image,
+  .field-name-field-map-images{
       width: 30%;
       float: left;
       margin-right: 2%;
@@ -689,7 +700,7 @@ body{
 }
 
 #quicktabs-book_page{
-  font-family: 'Averia Serif Libre', arial;
+    font-family: 'PT Serif', arial;
   margin-top: 60px;
   padding-bottom: 40px;
   margin-bottom: 25px;
@@ -837,7 +848,7 @@ body{
 
 .region-sidebar-second .block{
     margin-bottom: 40px;
-    font-family: 'Averia Serif Libre', arial;
+    font-family: 'PT Serif', arial;
     background-color: #848484;
     padding-bottom: 10px;
 }
@@ -935,5 +946,29 @@ body{
       display: block;
       clear: left;
     }
+  }
+}
+
+
+/*********  testemonies tabs **********/
+
+.view-books-tab.view-display-id-block_6{
+  .view-header{
+    display: none;
+  }
+  .views-row-odd{
+    float: left;
+  }
+  .views-row-even{
+    float: right;
+  }
+}
+
+.view-books-tab.view-display-id-block_6.one-two{
+  .views-row-1{
+    width: 48%;
+  }
+  .views-row-2{
+    width: 48%;
   }
 }

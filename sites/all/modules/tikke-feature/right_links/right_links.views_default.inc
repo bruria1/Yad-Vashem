@@ -122,7 +122,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'right_links' => 'right_links',
+    'online_store' => 'online_store',
   );
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
@@ -130,13 +130,6 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  );
-  /* Filter criterion: Content: Cube (field_cube) */
-  $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
-  $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['value'] = array(
-    1 => '1',
   );
 
   /* Display: Online Store */
@@ -194,7 +187,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'right_links' => 'right_links',
+    'online_store' => 'online_store',
   );
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
@@ -203,19 +196,17 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* Filter criterion: Content: Cube (field_cube) */
-  $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
-  $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['value'] = array(
-    1 => '1',
-  );
   $handler->display->display_options['block_description'] = 'Online Store';
 
   /* Display: Related Resources */
   $handler = $view->new_display('block', 'Related Resources', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Related Resources';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_related_resources_node']['id'] = 'reverse_field_related_resources_node';
+  $handler->display->display_options['relationships']['reverse_field_related_resources_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_related_resources_node']['field'] = 'reverse_field_related_resources_node';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
@@ -249,7 +240,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_second_title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_second_title']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_second_title']['element_label_colon'] = FALSE;
-  /* Field: Content: text */
+  /* Field: Content: date */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -275,6 +266,17 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_related_resources_node';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -289,7 +291,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'right_links' => 'right_links',
+    'related_resources' => 'related_resources',
   );
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
@@ -297,13 +299,6 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  );
-  /* Filter criterion: Content: Cube (field_cube) */
-  $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
-  $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['value'] = array(
-    2 => '2',
   );
   $handler->display->display_options['block_description'] = 'Related Resources';
 
@@ -376,7 +371,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'right_links' => 'right_links',
+    'simple_link_to_book_page' => 'simple_link_to_book_page',
   );
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
@@ -384,13 +379,6 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  );
-  /* Filter criterion: Content: Cube (field_cube) */
-  $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
-  $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['value'] = array(
-    3 => '3',
   );
   $handler->display->display_options['block_description'] = 'Simple link';
 
@@ -431,7 +419,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['fields']['field_second_title']['label'] = '';
   $handler->display->display_options['fields']['field_second_title']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_second_title']['element_label_colon'] = FALSE;
-  /* Field: Content: text */
+  /* Field: Content: date */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -464,7 +452,7 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'right_links' => 'right_links',
+    'workshops' => 'workshops',
   );
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
@@ -472,13 +460,6 @@ function right_links_views_default_views() {
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  );
-  /* Filter criterion: Content: Cube (field_cube) */
-  $handler->display->display_options['filters']['field_cube_value']['id'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['table'] = 'field_data_field_cube';
-  $handler->display->display_options['filters']['field_cube_value']['field'] = 'field_cube_value';
-  $handler->display->display_options['filters']['field_cube_value']['value'] = array(
-    4 => '4',
   );
   $handler->display->display_options['block_description'] = 'Workshops';
   $translatables['right_links_at_book'] = array(
@@ -492,11 +473,13 @@ function right_links_views_default_views() {
     t('Desc'),
     t('<div class="bottom-text">[title]</div>'),
     t('Related Resources'),
+    t('Content referencing Content from field_related_resources'),
     t('<div class="bottom-text">
   <div class="title">[title]</div>
   <div class="second-title">[field_second_title]</div>
   <div class="text">[field_text]</div>
 </div>'),
+    t('All'),
     t('Simple link'),
     t('Workshops'),
     t('Application Form'),
