@@ -116,7 +116,6 @@
 
   if (($teaser) && ($node->type == "video_gallery")){?>
     <div class="node-type"><?php print node_type_get_name($node);?></div>
-    <div class="video-sign"><img src="/sites/all/themes/yadvashem/images/video.png"></div>
     <div class="description"><?php print render($content['field_video_collection']); ?> </div>
   <?php } ?>
 

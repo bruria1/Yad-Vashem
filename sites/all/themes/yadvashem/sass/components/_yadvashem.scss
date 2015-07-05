@@ -567,7 +567,7 @@ body{
     display: block;
     width: 100%;
     border-bottom: 1px solid #bbb;
-    padding: 10px 0 10px 5px;
+    padding: 10px 20px 10px 5px;
     box-sizing: border-box;
   }
   .is-collapsed > a{
@@ -641,11 +641,6 @@ body{
     }
     .field-collection-container{
       width: 100%;
-    }
-    .video-sign{
-      left: 8px;
-      position: absolute;
-      top: 160px;
     }
   }
   .field-name-field-gallery-type, .node-type{
@@ -827,7 +822,8 @@ body{
 }
   /*top links*/
 
-.node-type-book .top-links{
+.node-type-book {
+  .top-links{
     div{
       float: left;
     }
@@ -841,6 +837,13 @@ body{
       margin-right: 10px;
       padding-right: 10px;
     }
+  }
+  .addthis_sharing_toolbox{
+    .at-svc-print span:before{
+      content: "PRINT";
+      background-image: none;
+    }
+  }
 }
 
 
@@ -957,6 +960,12 @@ body{
     display: none;
   }
   .views-row-odd{
+    clear: both;
+  }
+  .views-row{
+    width: 48%;
+  }
+  .views-row-odd{
     float: left;
   }
   .views-row-even{
@@ -971,4 +980,74 @@ body{
   .views-row-2{
     width: 48%;
   }
+}
+
+.view-books-tab.view-display-id-block_6.three-five{
+  .views-row{
+    .field-name-field-video{
+      float: left;
+      width: 50%;
+      margin-right: 2%;
+      margin-bottom: 20px;
+    }
+  }
+  .field-name-field-video-title{
+    float: right;
+    width: 48%;
+  }
+}
+
+.view-books-tab.view-display-id-block_6.six-more{
+  .views-row{
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+    .field-name-field-video{
+      float: left;
+      width: 30%;
+      margin-right: 5%;
+      margin-bottom: 20px;
+    }
+  }
+  .views-row-1, .views-row-2{
+    border: none;
+  }
+  .field-name-field-video-title{
+    float: right;
+    width: 65%;
+  }
+}
+
+.view-books-tab.view-display-id-block_5{
+    .views-field-field-files{
+        font-size: 1.1em;    
+        position: relative;   
+        a{
+          text-decoration: none!important;
+          position: relative;
+          padding-bottom: 35px;
+          width: 78%;
+          float: right;
+        }
+    }
+    .views-row-odd{
+      clear: both;
+    }
+    .views-row{
+      width: 48%;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 20px;
+    }
+    .views-row-odd{
+      float: left;
+    }
+    .views-row-even{
+      float: right;
+    }
+    .views-row-1, .views-row-2{
+      border: none;
+    }
+    img{
+      margin-right: 2%;
+      width: 20%;
+    }
 }
