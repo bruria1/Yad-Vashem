@@ -6,3 +6,4 @@
         $query->where[0]['type'] = 'OR';
       }
     }
+    

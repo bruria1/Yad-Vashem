@@ -106,9 +106,10 @@ function yadvashem_views_api() {
 }
 
 function yadvashem_field_widget_form_alter(&$element, &$form_state, $context) {
-if ($context['field']['type'] == 'field_explore' && isset($element['#options'])) {
-$element['#options'] = array_reverse($element['#options'], TRUE);
+  if ($context['field']['type'] == 'field_explore' && isset($element['#options'])) {
+    $element['#options'] = array_reverse($element['#options'], TRUE);
+  }
 }
-}
+
 
 ?>

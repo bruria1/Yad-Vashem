@@ -81,6 +81,7 @@ body{
   clear: both;
   display: block;
 }
+
 /**********  header  ********/
 
 #top-bar{
@@ -450,6 +451,16 @@ body{
 /********  book page  ********/
 
 .node-type-book{
+    #content {
+      float: left;
+      margin-left: 0!important;
+      margin-right: 0!important;
+      width: 80%!important;
+  }
+  .field-name-body, .field-name-field-teaser-long-text, .field-name-field-teaser-qoate, .field-name-field-quote-name{
+    font-size: 1.1em;
+    line-height: 2em;
+  }
   #main-menu{
     .menu-1095 a{
       opacity: 1!important;
@@ -643,10 +654,13 @@ body{
       width: 100%;
     }
   }
-  .field-name-field-gallery-type, .node-type{
+  .field-name-field-gallery-type, .node-type, .Testimonies{
     width: 67%;
     float: right;
     font-style: italic;
+  }
+  .Testimonies .field-name-field-video-title{
+    width: 100%;
   }
   .field-collection-container{
       width: 30%;
@@ -670,6 +684,8 @@ body{
         color: #3399cc;
         text-align:left;
         text-decoration: none!important;
+        max-height: 72px;
+        overflow: hidden;
         a{
           text-decoration: none!important;
         }
@@ -699,23 +715,24 @@ body{
   margin-top: 60px;
   padding-bottom: 40px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #1d8fc4;
+  border-bottom: 1px solid #d7d7d7;
   overflow: hidden;
   .quicktabs-tabs{
-    padding: 0 0 12px 30px;
-    border-bottom: 1px solid #1d8fc4;
+    padding: 0 0 12px 26px;
+    border-bottom: 1px solid #d7d7d7;
     margin-bottom: 30px;
     overflow: hidden;
     width: 183%;
     li{
       width: 6%;
-      margin-right: 2.3%;
       display: block;
       float: left;
+      padding: 10px 1.2%;
     }
     li a{
-        background:  url("../images/tabs_icon.png") no-repeat center center transparent;
-        font-size: 0.8em;
+        background:  url("../images/tabs_icons.png") no-repeat center center transparent;
+        font-size: 0.85em;
+        font-family: 'PT Sans', arial;
         color: #333;
         text-decoration: none!important;
         display: inline-block;
@@ -723,24 +740,27 @@ body{
         text-align: center;
         width: 100%;
     }
+    li.active{
+      background-color: #f1f1f1;
+    }
     li.active a{
-        background:  url("../images/tabs_icon_active.png") no-repeat center center transparent;
+        background:  url("../images/tabs_icons_active.png") no-repeat center center transparent;
         color: #2692c6;
     }
     a#quicktabs-tab-book_page-0{
-      background-position: 17px 0;
+      background-position: 22px 0;
     }
     a#quicktabs-tab-book_page-1{
-      background-position: -72px 0;
+      background-position: -68px 0;
     }
     a#quicktabs-tab-book_page-2{
       background-position: -174px 0;
     }
     a#quicktabs-tab-book_page-3{
-      background-position: -300px 0;
+      background-position: -297px 0;
     }    
     a#quicktabs-tab-book_page-4{
-      background-position: -412px 0;
+      background-position: -410px 0;
     }
     a#quicktabs-tab-book_page-5{
       background-position: -72px 0;
@@ -749,7 +769,7 @@ body{
       background-position: -174px 0;
     }
     a#quicktabs-tab-book_page-7{
-      background-position: -300px 0;
+      background-position: -489px -4px;
     }   
     a#quicktabs-tab-book_page-8{
       background-position: -412px 0;
@@ -757,6 +777,7 @@ body{
   }
   .item-list{
     position: relative;
+    overflow: hidden;
     &.step7 .quicktabs-tabs{
       margin-left: -15.5%;
     }
@@ -768,12 +789,12 @@ body{
     }
   }
   .left{
-      background:  url("../images/left-arrow.png") no-repeat center center transparent;
+      background:  url("../images/left-arrow.png") no-repeat center center #fff;
       width: 14px;
       height: 23px;
       cursor: pointer;
       position: absolute;
-      top: 11px;
+      top: 22px;
       left: 0;
       opacity: 0.4;
   }
@@ -783,12 +804,12 @@ body{
     margin-left: 0;
   }
   .right{
-      background:  url("../images/right-arrow.png") no-repeat center center transparent;
+      background:  url("../images/right-arrow.png") no-repeat center center #fff;
       width: 14px;
       height: 23px;
       cursor: pointer;
       position: absolute;
-      top: 11px;
+      top: 22px;
       right: 0;
     }
     .item-list.step9{
@@ -870,20 +891,20 @@ body{
     text-align: center;
   }
   .bottom-text{
-    padding: 0px 14px;
+    padding: 0px 14px 10px;
     margin-top: -4px;
   }
-  .views-field-title a{
+  .views-field-field-second-title a{
     color: #fff;
     display: block;
     width: 100%;
     box-sizing: border-box;
   }
   .title{
-    font-style: italic;
+    font-size: 1.1em;
   }
   .second-title{
-    font-size: 1.1em;
+    font-style: italic;
   }
   .text{
     line-height: 1.1em;
@@ -897,6 +918,12 @@ body{
     top: 40%;
     width: 35px;
     z-index: 200;
+  }
+}
+
+#block-views-right-links-at-book-block{
+  .block-title{
+    background-color: #792a67;
   }
 }
 
@@ -971,6 +998,10 @@ body{
   .views-row-even{
     float: right;
   }
+  .field-name-field-video-title{
+    max-height: 72px;
+    overflow: hidden;
+  }
 }
 
 .view-books-tab.view-display-id-block_6.one-two{
@@ -1020,13 +1051,15 @@ body{
 .view-books-tab.view-display-id-block_5{
     .views-field-field-files{
         font-size: 1.1em;    
-        position: relative;   
+        position: relative;  
         a{
           text-decoration: none!important;
           position: relative;
-          padding-bottom: 35px;
+          margin-bottom: 35px;
           width: 78%;
           float: right;
+          max-height: 72px;
+          overflow: hidden; 
         }
     }
     .views-row-odd{
