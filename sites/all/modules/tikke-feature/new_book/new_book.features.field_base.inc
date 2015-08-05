@@ -182,6 +182,23 @@ function new_book_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_helpful'
+  $field_bases['field_helpful'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_helpful',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'is_useful',
+    'settings' => array(
+      'axis' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'is_useful',
+  );
+
   // Exported field_base: 'field_main_image'
   $field_bases['field_main_image'] = array(
     'active' => 1,
@@ -783,6 +800,25 @@ function new_book_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'video_embed_field',
+  );
+
+  // Exported field_base: 'field_why_helpful'
+  $field_bases['field_why_helpful'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_why_helpful',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_workshops'

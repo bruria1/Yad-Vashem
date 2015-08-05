@@ -120,6 +120,17 @@ $title: #1f769b;
     #block-block-3{
       padding-left: 0;
     }
+    #block-block-5{
+      padding-right: 0;
+      padding-left: 0;
+      .content div{
+        margin-left: 2px;
+        margin-right: 0;
+        a{
+          float: right;
+        }
+      }
+    }
     #block-menu-menu-square--2{
       padding-right: 0;
       padding-left: 0;
@@ -204,4 +215,288 @@ $title: #1f769b;
       padding-left: 0;
     }
   }
+}
+
+/********  book page  ********/
+
+.node-type-book{
+    #content {
+      float: right;
+  }
+  .addthis_sharing_toolbox{
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  .block-book{
+    margin-left: 4%;
+    margin-right: 0;
+    float: right;
+  }
+  article{
+    float: left;
+  }
+  .book-navigation{
+   .page-links{
+      float: left;
+    }
+    .page-title{
+      float: right;
+    }
+    .page-previous{
+      margin-left: 2%;
+      margin-right: 0;
+      float: right;
+      .left-arrow{
+        float: left;
+      }
+      .text{
+        float: right;
+      }
+    }
+    .page-next{
+      margin-left: 0;
+      margin-right: 2%;
+      float: left;
+      .right-arrow{
+        float: right;
+      }
+      .text{
+        float: left;
+      }
+    }
+  }
+}
+
+#block-book-navigation .menu{
+  a{
+    padding: 10px 5px 10px 20px;
+  }
+  .is-collapsed > a{
+    background:  url("../images/navigate-right.png") no-repeat left center transparent;
+  }
+  .is-expanded > a{
+    background:  url("../images/navigate-bottom.png") no-repeat left center transparent;
+  }
+  li{
+    li a{
+      padding-right: 30px;
+      padding-left: 0;
+    }
+  }
+}
+
+#quicktabs-tabpage-book_page-0{
+  .views-row{
+      float: left;
+      clear: left;
+      margin-right: 2%;
+      margin-left: 0;
+  }
+  .views-row-1{
+    clear: right;
+    float: right;
+    margin-right: 0;
+    .node-type{
+      float: left;
+    }
+    .field-name-field-file-image-title-text, .title, .file a, .field-name-field-video-title{
+      float: right;
+    }
+  }
+  .field-name-field-gallery-type, .node-type, .Testimonies{
+    float: left;
+  }
+  .field-collection-container{
+      float: right;
+      margin-left: 2%;
+      margin-right: 0;
+  }
+  .field-name-field-file-image-title-text, .views-field-title, .title, .file a, .field-name-field-video-title{       
+        float: left;         
+        padding-right: 1%;
+        padding-left: 0;
+        text-align:right;
+  }
+  .node-type{
+      float: left;
+  }
+  .views-field-field-artifacts-images, .field-type-video-embed-field, .field-name-field-artifacts-images img, .doc-image,
+  .field-name-field-map-images{
+      float: right;
+      margin-left: 2%;
+      margin-right: 0;
+  }
+}
+
+#quicktabs-book_page{
+  .quicktabs-tabs{
+    padding: 0 26px 12px 0px;
+    li{
+      float: right;
+    }
+  }
+  .item-list{
+    &.step7 .quicktabs-tabs{
+      margin-right: -15.5%;
+      margin-left: 0;
+    }
+    &.step8 .quicktabs-tabs{
+      margin-right: -31%;
+      margin-left: 0;
+    }
+    &.step9 .quicktabs-tabs{
+      margin-right: -46.5%;
+      margin-left: 0;
+    }
+  }
+  .left{
+      right: 0;
+      left: auto;
+  }
+  .quicktabs-tabs{
+    margin-right: 0;
+  }
+  .right{
+      left: 0;
+      right: auto;
+    }
+}
+
+  /*top links*/
+
+.node-type-book {
+  .top-links{
+    div{
+      float: right;
+    }
+    a{
+      border-left: 1px solid;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-right: none;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+/*********  right sidebar at page books  **********/
+
+#block-views-right-links-at-book-block, #block-views-right-links-at-book-block-1{
+  .views-slideshow-controls-text-next a{
+    right: auto;
+    left: 0;
+  }
+}
+
+#block-views-right-links-at-book-block-3{
+  .views-field-field-text .field-content{
+    float: right;
+  }
+  .views-field-field-link{
+    a{
+      background: url("../images/little-right-arrow.png") no-repeat scroll center left;
+      clear: right;
+    }
+  }
+}
+
+
+/*********  testemonies tabs **********/
+
+.view-books-tab.view-display-id-block_6{
+  .views-row-odd{
+    float: right;
+  }
+  .views-row-even{
+    float: left;
+  }
+}
+
+.view-books-tab.view-display-id-block_6.three-five{
+  .views-row{
+    .field-name-field-video{
+      float: right;
+      margin-left: 2%;
+      margin-right: 0;
+    }
+  }
+  .field-name-field-video-title{
+    float: right;
+    width: 48%;
+  }
+}
+
+.view-books-tab.view-display-id-block_6.six-more{
+  .views-row{
+    .field-name-field-video{
+      float: right;
+      margin-left: 5%;
+      margin-right: 0;
+    }
+  }
+  .field-name-field-video-title{
+    float: left;
+  }
+}
+
+.view-books-tab.view-display-id-block_5{
+    .views-field-field-files{ 
+        a{
+          float: left;
+        }
+    }
+    .views-row-odd{
+      float: right;
+    }
+    .views-row-even{
+      float: left;
+    }
+    img{
+      margin-left: 2%;
+      margin-right: 0;
+    }
+}
+
+/********   usefull article   **********/
+
+.field-name-field-helpful{
+  .is-useful-link{
+    float: right;
+    margin-left: 0px;
+    margin-right: 20px;
+    a{
+      background: url("../images/useful.png") no-repeat right center #e6e6e6;
+      padding: 9px 35px 9px 18px;
+    }
+  }
+  .is-useful-yes a{
+    background-position: right -146px;
+  }
+  .is-useful-yes.selected a{
+    background-position: right -56px;
+
+  }
+  .is-useful-no a{
+    background-position: right -100px;
+  }
+  .is-useful-no.selected a{
+    background-position: righ -7px;
+  }
+  label{
+    float: right;
+  }
+}
+
+.node-type-book #comments{
+  input.form-submit{
+    float: left;
+  }
+}
+
+.ajax-progress-throbber {
+    right: auto;
+    left: 0;
 }

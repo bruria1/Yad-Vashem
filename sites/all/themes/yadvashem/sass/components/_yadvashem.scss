@@ -457,9 +457,15 @@ body{
       margin-right: 0!important;
       width: 80%!important;
   }
-  .field-name-body, .field-name-field-teaser-long-text, .field-name-field-teaser-qoate, .field-name-field-quote-name{
+  .field-name-body, .field-name-field-teaser-long-text, .field-name-field-teaser-qoate{
     font-size: 1.1em;
     line-height: 2em;
+  }
+  .field-name-field-teaser-qoate, .quote{
+    font-style: italic;
+  }
+  .field-name-field-quote-name, .quote-author{
+    font-size: 0.9em;
   }
   #main-menu{
     .menu-1095 a{
@@ -506,6 +512,7 @@ body{
       border:none;
       width: 85%;
       float: right;
+      position: relative;
     }
     .right-arrow{
         background:  url("../images/right-arrow.png") no-repeat center center transparent;
@@ -519,8 +526,10 @@ body{
       height: 23px;
     }
     .current-page{
-      width: 26%;
-      float: left;
+      margin: 0 auto;
+      position: absolute;
+      width: 100%;
+      z-index: -2;
       .book-title{
         font-size: 1.1em;
         color: #000;
@@ -533,9 +542,11 @@ body{
     }
     .page-title{
       width: 35%;
+      float: left;
     }
     .page-previous{
       margin-right: 2%;
+      float: left;
       .left-arrow{
         float: right;
         width: 10%;
@@ -547,6 +558,7 @@ body{
     }
     .page-next{
       margin-left: 2%;
+      float: right;
       .right-arrow{
         float: left;
         width: 10%;
@@ -893,8 +905,9 @@ body{
   .bottom-text{
     padding: 0px 14px 10px;
     margin-top: -4px;
+    color: #fff;
   }
-  .views-field-field-second-title a{
+  .views-field-field-second-title a, a .views-field-field-second-title{
     color: #fff;
     display: block;
     width: 100%;
@@ -1083,4 +1096,86 @@ body{
       margin-right: 2%;
       width: 20%;
     }
+}
+
+/********   usefull article   **********/
+
+.field-name-field-helpful{
+  clear: both;
+  margin-top: 55px;
+  .is-useful-maybe{
+    display: none;
+  }
+  .is-useful-link{
+    float: left;
+    margin-left: 20px;
+    a{
+      color: #666;
+      background: url("../images/useful.png") no-repeat left center #e6e6e6;
+      text-decoration: none!important;
+      padding: 9px 18px 9px 35px;
+    }
+    &.selected a{
+      background-color: #ea8418;
+      color: #fff;
+    }
+  }
+  .is-useful-yes a{
+    background-position: left -146px;
+  }
+  .is-useful-yes.selected a{
+    background-position: left -56px;
+
+  }
+  .is-useful-no a{
+    background-position: left -100px;
+  }
+  .is-useful-no.selected a{
+    background-position: left -7px;
+  }
+  label{
+    font-family: 'PT Sans', arial;
+    font-weight: normal;
+    font-size: 1.2em;
+    float: left;
+  }
+}
+
+.node-type-book #comments{
+  display: none;
+  #field-why-helpful-add-more-wrapper, #comment-body-add-more-wrapper{
+    label{
+      font-family: 'PT Sans', arial;
+      font-weight: normal;
+    }
+    .grippie, .form-required{
+      display: none;
+    }
+    textarea{
+      border: 1px solid #b8b8b8;
+    }
+    .form-item{
+      margin-bottom: 5px;
+    }
+  }
+  input.form-submit{
+    background-color: #238ec3;
+    color: #fff;
+    border: none;
+    padding: 0 5px;
+    float: right;
+  }
+}
+
+.node-type-book #comments.display{
+  display: block;
+}
+
+.is_useful-processed{
+  position: relative;
+}
+
+.ajax-progress-throbber {
+    position: absolute;
+    right: 0;
 }

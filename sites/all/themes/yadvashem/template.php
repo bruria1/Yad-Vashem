@@ -211,3 +211,17 @@ function yadvashem_preprocess_file_icon(&$variables) {
   $variables['icon_directory'] = drupal_get_path('theme', 'yadvashem') . '/file_icons';
 }
 
+function yadvashem_form_comment_form_alter(&$form, &$form_state) {
+  $form['author']['#access'] = FALSE;
+}
+
+function yadvashem_preprocess_html(&$vars) {
+// ... there might be other stuff here ...
+$body_classes = array($vars['classes_array']);
+if ($vars['user']) {
+foreach($vars['user']->roles as $key => $role){
+$role_class = 'role-' . str_replace(' ', '-', $role);
+$vars['classes_array'][] = $role_class;
+}
+}
+}

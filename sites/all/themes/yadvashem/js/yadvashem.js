@@ -38,23 +38,24 @@ Drupal.behaviors.my_custom_behavior = {
 
   if ($("body").hasClass("node-type-book")){
 
-/*
+if ((!$('body').hasClass("role-administrator")) && (!$('body').hasClass("role-Editor"))){
+	$( ".count" ).remove();
+}
 
-   $i = 1;
+ if ($(".is-useful-no").hasClass("selected")){
+       $('#comments').addClass("display");
+ }
 
-   $(".view-explore > .view-header > .view").each(function(){
+$( ".is-useful-no a" ).click(function() {
+       $('#comments').addClass("display");
 
-   		if ($(this).children().length > 0){
+});
 
-     		$class = "place"+$i++;
+$( ".is-useful-yes a" ).click(function() {
+       $('#comments').removeClass("display");
 
-     		$(this).addClass($class); 
+});
 
-     	}
-
-	});*/
-
-/* check how mush videos  */
 
 $numbervideos=$(".view-books-tab .view-header").html();
 
@@ -182,24 +183,22 @@ $( "#quicktabs-book_page .item-list .left" ).click(function() {
 
 	$strtitle = $(".field-name-body .field-item").html()
 
-	$strtitle = $strtitle.replace("[quote]", "<div class='quote'>");
+	$strtitle = $strtitle.replace("[quote]", '<div class="quote">"');
 
-	$strtitle = $strtitle.replace("[/quote]", "</div>");
+	$strtitle = $strtitle.replace("[/quote]", '"</div>');
 
 	$strtitle = $strtitle.replace("[author]", "<div class='quote-author'>");
 
-	$strtitle = $strtitle.replace("[/author]", "</div>");
+	$strtitle = $strtitle.replace("[/author]", "<div>");
 
 	$('.field-name-body .field-item').html($strtitle);
 
+	$quote = $(".field-name-field-teaser-qoate .field-item").html();
+	$quote = '"' + $quote + '"';
+	$('.field-name-field-teaser-qoate .field-item').html($quote);
 
 
-
-
-
-
-
-
+/********   useful comment  *************/
 
 
 
