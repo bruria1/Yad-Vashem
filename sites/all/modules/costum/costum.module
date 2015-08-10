@@ -2,9 +2,10 @@
 function pa($obj){
 	drupal_set_message("<pre>".print_r($obj,true)."</pre>");
 }
-function render_node_layout_galllery($node) {	
+function render_node_layout_galllery($node , $field_name = "field_artifacts_images") {	
+	
 	if($node->type=="artifacts_gallery_arts"){		
-		$img_count = count($node->field_artifacts_images[LANGUAGE_NONE]);
+		$img_count = count($node->{$field_name}[LANGUAGE_NONE]);
 		if(!$img_count>0) return "";		
 		drupal_add_js(drupal_get_path("module","costum")."/fotorama.js");	
 		drupal_add_css(drupal_get_path("module","costum")."/fotorama.css");	
@@ -58,7 +59,7 @@ $gallery =  "<div id='fotorama' class='fotorama'
 		$img_data = array();
 		$max_thumbs = $img_count>5?5:$img_count;
 		
-		foreach($node->field_artifacts_images[LANGUAGE_NONE] as $i=>$img){
+		foreach($node->{$field_name}[LANGUAGE_NONE] as $i=>$img){
 			$uri = $img['uri'];			
 			$img['path'] = file_create_url($uri);	
 			$desc = "";			
@@ -100,7 +101,17 @@ function costum_block_view($delta = '') {
 		$gal_id = $node->field_gallery[LANGUAGE_NONE][0]['target_id'];
 		$gallery = node_load($gal_id);		
         $block['subject'] = t('Recent content');   
-        $block['content'] = render_node_layout_galllery($gallery);        
+        $block['content'] = render_node_layout_galllery($gallery, "field_artifacts_images");        
+      }
+    break;
+    case 'video_tab':
+      if (user_access('access content')) {
+		$node = menu_get_object();
+		if($node->type!="book")return;
+		$gal_id = $node->field_gallery[LANGUAGE_NONE][0]['target_id'];
+		$gallery = node_load($gal_id);		
+        $block['subject'] = t('Recent content');   
+        $block['content'] = render_node_layout_galllery($gallery, "field_videos");        
       }
     break;
   }
