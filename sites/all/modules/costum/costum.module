@@ -85,9 +85,13 @@ $gallery =  "<div id='fotorama' class='fotorama'
 		return $output.$gallery;
 	}
 }
+
 function costum_block_info() {
   $blocks['photo_tab'] = array(
     'info' => t('Photo Tab'),   
+  );
+  $blocks['video_tab'] = array(
+    'info' => t('Video Tab'),   
   );
   return $blocks;
 }

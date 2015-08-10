@@ -1023,3 +1023,16 @@ td.checkbox input.form-checkbox {
 .node-book-form .field-type-text-long {
   margin: 20px 0;
 }
+
+.node-book-form .group-media tr.odd {
+  background: #D6D3D3;
+}
+.node-book-form .group-media .field-name-field-file-image-title-text,
+.node-book-form .group-media .field-name-field-file-image-alt-text {
+  width: 49%;
+  float: left;
+  padding-right: 1%;
+}
+.node-book-form .group-media .field-name-field-image-description {
+  clear: both;
+}

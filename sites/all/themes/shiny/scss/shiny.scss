@@ -724,3 +724,25 @@ td.checkbox input.form-checkbox {
     margin: 20px 0;
   }
 }
+
+// Fighting the inline media width creating bug
+.node-book-form {
+  .group-media {
+    tr.odd {
+      background: #D6D3D3;
+    }
+    .field-name-field-file-image-title-text , 
+    .field-name-field-file-image-alt-text {
+      width: 49%;
+      float: left;
+      padding-right:1%;
+    }
+    .field-name-field-image-description {
+      clear: both;
+    }
+  }
+}
+
+
+
+
