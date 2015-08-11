@@ -693,3 +693,56 @@ td.checkbox input.form-checkbox {
   width: 17px;
   border: 1px solid #a1a1a1;
 }
+
+/*
+ *   Extra change by TIK-KE
+ ************************************************************/ 
+
+.node-book-form {
+  .ds-3col-stacked-equal {
+    .group-left {
+      width: 31%;
+    }
+    .group-middle {
+      width: 33%;
+      padding: 0 20px;
+    }
+    .group-right {
+      width: 31%;
+    }
+  }
+  .autocomplete-deluxe-container {
+    width: 100%;
+  }
+  .group-header {
+    margin-bottom: 20px;
+  }
+  .text-format-wrapper fieldset {
+    display: none;
+  }
+  .field-type-text-long {
+    margin: 20px 0;
+  }
+}
+
+// Fighting the inline media width creating bug
+.node-book-form {
+  .group-media {
+    tr.odd {
+      background: #D6D3D3;
+    }
+    .field-name-field-file-image-title-text , 
+    .field-name-field-file-image-alt-text {
+      width: 49%;
+      float: left;
+      padding-right:1%;
+    }
+    .field-name-field-image-description {
+      clear: both;
+    }
+  }
+}
+
+
+
+

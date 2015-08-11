@@ -85,6 +85,7 @@ $gallery =  "<div id='fotorama' class='fotorama'
 		return $output.$gallery;
 	}
 }
+
 function costum_block_info() {
   $blocks['photo_tab'] = array(
     'info' => t('Photo Tab'),   
@@ -92,8 +93,13 @@ function costum_block_info() {
   $blocks['video_tab'] = array(
     'info' => t('Video Tab'),   
   );
+<<<<<<< HEAD
   $blocks['book_navigation'] = array(
     'info' => t('YadVahsem Book Nav'),   
+=======
+  $blocks['artifacts_tab'] = array(
+    'info' => t('artifacts_tab'),   
+>>>>>>> cf8931fdf922191281d591f7294a850881ac42a2
   );
   return $blocks;
 }
@@ -110,14 +116,24 @@ function costum_block_view($delta = '') {
         $block['content'] = render_node_layout_galllery($gallery, "field_artifacts_images");        
       }
     break;
-    case 'video_tab':
+    case 'artifacts_tab':
       if (user_access('access content')) {
 		$node = menu_get_object();
 		if($node->type!="book")return;
 		$gal_id = $node->field_gallery[LANGUAGE_NONE][0]['target_id'];
 		$gallery = node_load($gal_id);		
         $block['subject'] = t('Recent content');   
-        $block['content'] = render_node_layout_galllery($gallery, "field_videos");        
+        $block['content'] = render_node_layout_galllery($gallery, "field_artifacts_images");        
+      }
+    break;
+    case 'video_tab':
+      if (user_access('access content')) {
+		$node = menu_get_object();
+		if($node->type!="book")return;
+		$gal_id = $node->field_video_gallery[LANGUAGE_NONE][0]['target_id'];
+		$gallery = node_load($gal_id);		
+        $block['subject'] = t('Recent content');   
+        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");        
       }
     break;
     case 'book_navigation':
