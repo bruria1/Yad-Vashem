@@ -4,20 +4,29 @@ function pa($obj){
 }
 function render_node_layout_galllery($node , $field_name = "field_artifacts_images") {	
 	
-	if($node->type=="artifacts_gallery_arts"){		
-		$img_count = count($node->{$field_name}[LANGUAGE_NONE]);
-		if(!$img_count>0) return "";		
-		drupal_add_js(drupal_get_path("module","costum")."/fotorama.js");	
-		drupal_add_css(drupal_get_path("module","costum")."/fotorama.css");	
-		drupal_add_js(drupal_get_path("module","costum")."/gallery.js");	
-		drupal_add_css(drupal_get_path("module","costum")."/gallery.css");		
-		$thmb_style = "thumbnail";
-		$lrg_style = "large";
-		$gal_width = 600; 
-		$galOvr_width = 600;
-		$output = "";     
-		$output .="<a onClick='overlay()' id='tgl_overlay' ></a>";
-		$output .= <<<HTML
+	switch($node->type){
+		case "artifacts_gallery_arts":
+		break;
+		case "video_gallery":
+		break;
+		default:
+		return "";
+		
+	}
+	$img_count = count($node->{$field_name}[LANGUAGE_NONE]);
+	if(!$img_count>0) return "";		
+	drupal_add_js(drupal_get_path("module","costum")."/fotorama.js");	
+	drupal_add_css(drupal_get_path("module","costum")."/fotorama.css");	
+	drupal_add_js(drupal_get_path("module","costum")."/gallery.js");	
+	drupal_add_css(drupal_get_path("module","costum")."/gallery.css");		
+	$thmb_style = "thumbnail";
+	$lrg_style = "large";
+	$gal_width = 600; 
+	$gal_width = 600; 
+	$galOvr_width = 600;
+	$output = "";     
+	$output .="<a onClick='overlay()' id='tgl_overlay' ></a>";
+	$output .= <<<HTML
 		<div id="my_overlay">	
 	 <div id='right_bar' class='myoverlay'>
 		 <div class='wrapper'>	
@@ -25,16 +34,16 @@ function render_node_layout_galllery($node , $field_name = "field_artifacts_imag
 		 
 HTML;
 	
-		$output .="<h3>".$node->title."</h3>";
-		if(isset($node->body[LANGUAGE_NONE])){
-			$output .= $node->body[LANGUAGE_NONE][0]['value'];
-		}
-		$output.= "<div id='img_description'></div>";
-		$output.= "<div id='img_credit'></div>";
-		$output.= "<div class='addthis_sharing_toolbox'></div>";
+	$output .="<h3>".$node->title."</h3>";
+	if(isset($node->body[LANGUAGE_NONE])){
+		$output .= $node->body[LANGUAGE_NONE][0]['value'];
+	}
+	$output.= "<div id='img_description'></div>";
+	$output.= "<div id='img_credit'></div>";
+	$output.= "<div class='addthis_sharing_toolbox'></div>";
 		
 		//drupal_add_html_head("","costum");
-		$output .="</div>
+	$output .="</div>
 	 </div>
 		<div id='mid' class='myoverlay'>".
 		//addThis js
@@ -60,32 +69,45 @@ $gallery =  "<div id='fotorama' class='fotorama'
 		$max_thumbs = $img_count>5?5:$img_count;
 		
 		foreach($node->{$field_name}[LANGUAGE_NONE] as $i=>$img){
-			$uri = $img['uri'];			
-			$img['path'] = file_create_url($uri);	
-			$desc = "";			
-			if(isset($img['field_image_description'][LANGUAGE_NONE])){
-				$desc = $img['field_image_description'][LANGUAGE_NONE][0]['value'];				
+			$uri = $link = $desc = $credit = $alt =  $title = ""; 
+			if($field_name == "field_video_collection"){
+				$video = field_collection_item_load($img['value']);
+				$link = $video->field_video[LANGUAGE_NONE][0]['video_url'];
+				$uri = $video->field_video[LANGUAGE_NONE][0]['thumbnail_path'];	
+				$desc = $video->field_video_description[LANGUAGE_NONE][0]['value'];		
 			}
-			$credit = "";
-			if(isset($img['field_image_credit'][LANGUAGE_NONE])){
-				$credit = $img['field_image_credit'][LANGUAGE_NONE][0]['value'];				
-			}			
+			else {
+				$uri = $img['uri'];	
+				$alt = $img['alt'];
+				$title = $img['title'];
+				if(isset($img['field_image_description'][LANGUAGE_NONE])){
+					$desc = $img['field_image_description'][LANGUAGE_NONE][0]['value'];				
+				}
+				if(isset($img['field_image_credit'][LANGUAGE_NONE])){
+					$credit = $img['field_image_credit'][LANGUAGE_NONE][0]['value'];				
+				}	
+			}
+			$img['path'] = file_create_url($uri);				
 			$img_data[$i]['desc'] = $desc;
 			$img_data[$i]['credit'] = $credit;
 			$img['attributes'] = array(
-				'alt'=>$img['alt'],				
+				'alt'=> $alt,				
 			);			
-			$output .=	theme_image($img);	
-			$img['attributes']['data-caption'] = $img['title']; 		
-			$gallery .= theme_image($img);	
+			$output .=	_addGalImg($img , $link);	
+			$img['attributes']['data-caption'] = $title; 		
+			$gallery .= _addGalImg($img , $link);	
 		}
 	$gallery .= "</div><scan class='img_count'><span id='img_i'>1</span> of ".$img_count."</scan>";
 	$output .="</div></div></div></div>";	
 	drupal_add_js(array("costum"=>array('imgData'=>$img_data)),'setting');
-		return $output.$gallery;
-	}
+		return $output.$gallery;	
 }
-
+function _addGalImg($img , $videoLink = ""){	
+	if($videoLink == ""){
+		return theme_image($img);
+	}
+	return l(theme_image($img),$videoLink , array("attributes"=>array("data-video"=>"true")));
+}
 function costum_block_info() {
   $blocks['photo_tab'] = array(
     'info' => t('Photo Tab'),   
@@ -123,12 +145,13 @@ function costum_block_view($delta = '') {
     break;
     case 'video_tab':
       if (user_access('access content')) {
+		
 		$node = menu_get_object();
 		if($node->type!="book")return;
 		$gal_id = $node->field_video_gallery[LANGUAGE_NONE][0]['target_id'];
 		$gallery = node_load($gal_id);		
         $block['subject'] = t('Recent content');   
-        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");        
+        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");
       }
     break;
   }
