@@ -25,16 +25,14 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_gallery',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Gallery',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
     ),
   );
   $export['group_artifacts_content|node|book|form'] = $field_group;
@@ -59,11 +57,11 @@ function new_book_field_group_info() {
       4 => 'group_research_contents',
       5 => 'group_video_contents',
     ),
-    'format_type' => 'htabs',
+    'format_type' => 'tabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => 'group-content-horizontal field-group-htabs',
+        'classes' => '',
       ),
     ),
   );
@@ -81,21 +79,14 @@ function new_book_field_group_info() {
   $field_group->data = array(
     'label' => 'Content',
     'weight' => '20',
-    'children' => array(
-      0 => 'field_teaser_qoate',
-      1 => 'field_quote_name',
-      2 => 'body',
-      3 => 'field_teaser_long_text',
-      4 => 'field_quote_or_abstract',
-    ),
-    'format_type' => 'htab',
+    'children' => array(),
+    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -116,16 +107,14 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_diaries_letters',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Diary/letter',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
     ),
   );
   $export['group_diary_content|node|book|form'] = $field_group;
@@ -145,16 +134,14 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_documents',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Documents',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
     ),
   );
   $export['group_documents_contents|node|book|form'] = $field_group;
@@ -167,25 +154,51 @@ function new_book_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'book';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_page_inner';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'main horizontal',
-    'weight' => '26',
+    'weight' => '23',
     'children' => array(
       0 => 'group_content',
       1 => 'group_media',
       2 => 'group_term',
       3 => 'group_video',
     ),
-    'format_type' => 'htabs',
+    'format_type' => 'tabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => 'group-main-horizontal field-group-htabs',
+        'classes' => '',
       ),
     ),
   );
   $export['group_main_horizontal|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_main|node|book|form';
+  $field_group->group_name = 'group_main';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Main',
+    'weight' => '22',
+    'children' => array(
+      0 => 'group_page_related_content',
+      1 => 'group_related_resources',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => '',
+      ),
+    ),
+  );
+  $export['group_main|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -202,16 +215,14 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_map_chart',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Map/Chart',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
     ),
   );
   $export['group_map_contents|node|book|form'] = $field_group;
@@ -229,17 +240,16 @@ function new_book_field_group_info() {
     'label' => 'Media',
     'weight' => '23',
     'children' => array(
-      0 => 'field_main_image',
-      1 => 'field_gallery_inner',
+      0 => 'field_gallery_inner',
+      1 => 'field_main_image',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -260,18 +270,73 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_online_store',
     ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_online_store|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_page_related_content|node|book|form';
+  $field_group->group_name = 'group_page_related_content';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_main';
+  $field_group->data = array(
+    'label' => 'Page related contents',
+    'weight' => '34',
+    'children' => array(
+      0 => 'group_content_horizontal',
+    ),
     'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-online-store field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
         'id' => '',
       ),
     ),
   );
-  $export['group_online_store|node|book|form'] = $field_group;
+  $export['group_page_related_content|node|book|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_related_resources|node|book|form';
+  $field_group->group_name = 'group_related_resources';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'book';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_main';
+  $field_group->data = array(
+    'label' => 'Right content',
+    'weight' => '35',
+    'children' => array(
+      0 => 'group_right',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_related_resources|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -288,14 +353,13 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_related_resources',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-relatedresources field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -316,16 +380,14 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_research',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Research',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
     ),
   );
   $export['group_research_contents|node|book|form'] = $field_group;
@@ -348,11 +410,11 @@ function new_book_field_group_info() {
       2 => 'group_simple_link',
       3 => 'group_workshops',
     ),
-    'format_type' => 'htabs',
+    'format_type' => 'tabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => 'group-right field-group-htabs',
+        'classes' => '',
       ),
     ),
   );
@@ -373,14 +435,13 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_simple_link',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-simple-link field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -398,25 +459,14 @@ function new_book_field_group_info() {
   $field_group->data = array(
     'label' => 'Terms & Relations',
     'weight' => '22',
-    'children' => array(
-      0 => 'field_terms',
-      1 => 'field_tags_places',
-      2 => 'field_tags_figures',
-      3 => 'field_tags_camps',
-      4 => 'field_tags_ghettos',
-      5 => 'field_tags_killing_site',
-      6 => 'field_tags_events',
-      7 => 'field_atgs_nazi_organisation',
-      8 => 'field_tags_jewish_organisation',
-    ),
-    'format_type' => 'htab',
+    'children' => array(),
+    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
         'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -437,16 +487,14 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_video_gallery',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Video',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
     ),
   );
   $export['group_video_contents|node|book|form'] = $field_group;
@@ -493,14 +541,13 @@ function new_book_field_group_info() {
     'children' => array(
       0 => 'field_workshops',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-workshops field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
