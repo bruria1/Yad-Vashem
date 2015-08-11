@@ -31,6 +31,8 @@
  *
  * @ingroup themeable
  */
+ //$node = node_load($next_nid);
+ 
 ?>
 <?php if ($tree || $has_links): ?>
   <div id="book-navigation-<?php print $book_id; ?>" class="book-navigation">
@@ -38,9 +40,20 @@
 
     <?php if ($has_links): ?>
     <div class="page-links clearfix">
-      <?php if ($prev_url): ?>
+      <?php if ($prev_url): 	
+      ?>
         <a href="<?php print $prev_url; ?>" class="page-title page-previous" title="<?php print t('Go to previous page'); ?>">
           <div class="text">
+			<?php
+				$prev_node = node_load($prev_nid);
+				if(isset($prev_node->field_main_image[LANGUAGE_NONE][0])){
+					$prev_thmb = $prev_node->field_main_image[LANGUAGE_NONE][0];
+					echo theme_image_style(array(				
+						"style_name"=>"thumbnail",
+						"path"=>$prev_thmb['uri']
+					));			
+				}			
+			?>
             <div class="title"><?php print $prev_title; ?></div>
             <div class="previous">Previous</div>
           </div>
@@ -53,6 +66,16 @@
       <?php if ($next_url): ?>
         <a href="<?php print $next_url; ?>" class="page-title page-next" title="<?php print t('Go to next page'); ?>">
           <div class="text">
+			 <?php
+				$next_node = node_load($next_nid);
+				if(isset($next_node->field_main_image[LANGUAGE_NONE][0])){
+					$next_thmb = $next_node->field_main_image[LANGUAGE_NONE][0];
+					echo theme_image_style(array(				
+						"style_name"=>"thumbnail",
+						"path"=>$next_thmb['uri']
+					));						
+				}
+			 ?>
             <div class="title"><?php print $next_title; ?></div>
             <div class="next">Next</div>
           </div>

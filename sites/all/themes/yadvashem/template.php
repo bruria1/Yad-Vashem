@@ -225,3 +225,65 @@ $vars['classes_array'][] = $role_class;
 }
 }
 }
+function yadvashem_preprocess_book_navigation(&$variables) {
+  $book_link = $variables['book_link'];
+ 
+  // Provide extra variables for themers. Not needed by default.
+  $variables['book_id'] = $book_link['bid'];
+  $variables['book_title'] = check_plain($book_link['link_title']);
+  $variables['book_url'] = 'node/' . $book_link['bid'];
+  $variables['current_depth'] = $book_link['depth'];
+
+  $variables['tree'] = '';
+  if ($book_link['mlid']) {
+    $variables['tree'] = book_children($book_link);
+
+    if ($prev = book_prev($book_link)) {
+      $prev_href = url($prev['href']);
+      //drupal_add_link(array('rel' => 'prev', 'href' => $prev_href));
+      $variables['prev_url'] = $prev_href;
+      $variables['prev_title'] = check_plain($prev['title']);
+      $prev_nid = str_replace("node/","",$prev['link_path']);
+      if(is_numeric($prev_nid)){
+		$variables['prev_nid'] = $prev_nid;
+	  }
+    }
+    if ($book_link['plid'] && $parent = book_link_load($book_link['plid'])) {
+      $parent_href = url($parent['href']);
+      //drupal_add_link(array('rel' => 'up', 'href' => $parent_href));
+      $variables['parent_url'] = $parent_href;
+      $variables['parent_title'] = check_plain($parent['title']);
+    }
+    if ($next = book_next($book_link)) {		
+      $next_href = url($next['href']);
+     // drupal_add_link(array('rel' => 'next', 'href' => $next_href));
+      $variables['next_url'] = $next_href;
+      $variables['next_title'] = check_plain($next['title']);   
+      $next_nid = str_replace("node/","",$next['link_path']);
+      if(is_numeric($next_nid)){
+		$variables['next_nid'] = $next_nid;
+	  }     
+    }
+  }
+
+  $variables['has_links'] = FALSE;
+  // Link variables to filter for values and set state of the flag variable.
+  $links = array(
+    'prev_url',
+    'prev_title',
+    'parent_url',
+    'parent_title',
+    'next_url',
+    'next_title',
+  );
+  foreach ($links as $link) {
+    if (isset($variables[$link])) {
+      // Flag when there is a value.
+      $variables['has_links'] = TRUE;
+    }
+    else {
+      // Set empty to prevent notices.
+      $variables[$link] = '';
+    }
+  }
+}

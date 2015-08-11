@@ -93,13 +93,8 @@ function costum_block_info() {
   $blocks['video_tab'] = array(
     'info' => t('Video Tab'),   
   );
-<<<<<<< HEAD
-  $blocks['book_navigation'] = array(
-    'info' => t('YadVahsem Book Nav'),   
-=======
   $blocks['artifacts_tab'] = array(
     'info' => t('artifacts_tab'),   
->>>>>>> cf8931fdf922191281d591f7294a850881ac42a2
   );
   return $blocks;
 }
@@ -135,13 +130,6 @@ function costum_block_view($delta = '') {
         $block['subject'] = t('Recent content');   
         $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");        
       }
-    break;
-    case 'book_navigation':
-		$node = menu_get_object();
-		//if($node->type!="book")return;
-drupal_set_message("<pre>".print_r($node->type,true)."</pre>");
-		//drupal_set_message("<pre>".print_r(book_get_flat_menu($node->book),true)."</pre>");
-		$block['content'] = "next/prev";
     break;
   }
   return $block;

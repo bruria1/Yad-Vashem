@@ -168,3 +168,28 @@
 [10-Aug-2015 13:39:51 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 125
 [10-Aug-2015 13:46:37 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/modules/book/book.module on line 767
 [10-Aug-2015 13:46:40 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/modules/book/book.module on line 767
+[11-Aug-2015 06:53:59 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:00 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:02 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:02 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:15 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:15 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:18 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:18 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 96
+[11-Aug-2015 06:54:55 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 06:54:55 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 06:54:56 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 06:54:56 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 06:54:56 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 06:54:56 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 06:54:56 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 06:54:57 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[11-Aug-2015 07:09:27 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 255
+[11-Aug-2015 07:09:52 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 256
+[11-Aug-2015 07:23:11 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 243
+[11-Aug-2015 07:23:13 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 243
+[11-Aug-2015 07:23:35 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 253
+[11-Aug-2015 07:23:36 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 253
+[11-Aug-2015 07:23:37 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 253
+[11-Aug-2015 07:23:37 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 253
+[11-Aug-2015 07:23:40 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_add_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/template.php on line 253
