@@ -162,3 +162,9 @@
 [03-Aug-2015 08:03:12 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '.' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 42
 [03-Aug-2015 15:56:13 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 7
 [03-Aug-2015 15:56:15 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 7
+[10-Aug-2015 13:38:56 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 125
+[10-Aug-2015 13:38:59 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 125
+[10-Aug-2015 13:39:50 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 125
+[10-Aug-2015 13:39:51 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 125
+[10-Aug-2015 13:46:37 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/modules/book/book.module on line 767
+[10-Aug-2015 13:46:40 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/modules/book/book.module on line 767
