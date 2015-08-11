@@ -88,7 +88,7 @@ function new_book_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 23,
+      'weight' => 4,
     ),
   );
 
@@ -131,7 +131,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 33,
+      'weight' => 12,
     ),
   );
 
@@ -259,6 +259,7 @@ function new_book_field_default_field_instances() {
         'fields' => array(),
         'type_settings' => array(
           'allow_existing' => 1,
+          'allow_new' => 1,
           'delete_references' => 0,
           'label_plural' => 'nodes',
           'label_singular' => 'פריט תוכן',
@@ -380,7 +381,7 @@ function new_book_field_default_field_instances() {
       'module' => 'is_useful',
       'settings' => array(),
       'type' => 'is_useful_exposed',
-      'weight' => 65,
+      'weight' => 24,
     ),
   );
 
@@ -608,7 +609,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 21,
+      'weight' => 7,
     ),
   );
 
@@ -648,7 +649,7 @@ function new_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 18,
+      'weight' => 5,
     ),
   );
 
@@ -890,7 +891,7 @@ function new_book_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 18,
     ),
   );
 
@@ -933,7 +934,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 29,
+      'weight' => 16,
     ),
   );
 
@@ -976,7 +977,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 32,
+      'weight' => 11,
     ),
   );
 
@@ -1019,7 +1020,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 28,
+      'weight' => 15,
     ),
   );
 
@@ -1062,7 +1063,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 30,
+      'weight' => 9,
     ),
   );
 
@@ -1105,7 +1106,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 34,
+      'weight' => 17,
     ),
   );
 
@@ -1148,7 +1149,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 31,
+      'weight' => 10,
     ),
   );
 
@@ -1191,7 +1192,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 27,
+      'weight' => 14,
     ),
   );
 
@@ -1234,7 +1235,7 @@ function new_book_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 22,
+      'weight' => 8,
     ),
   );
 
@@ -1277,7 +1278,7 @@ function new_book_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 20,
+      'weight' => 6,
     ),
   );
 
@@ -1320,7 +1321,7 @@ function new_book_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 26,
+      'weight' => 13,
     ),
   );
 
