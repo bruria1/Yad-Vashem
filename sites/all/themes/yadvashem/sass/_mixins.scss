@@ -36,3 +36,33 @@
   }
 }
 
+// Media queries
+ @mixin res($media) {
+  @if $media == s {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $media == m {
+    @media (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @if $media == s-m {
+    @media (max-width: 767px) { @content; }
+  }
+}
+
+// Width mixin
+@mixin width(){
+  width: 1270px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+
+@mixin rounded() {
+  border-radius: 5px !important;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; /* future proofing */
+  -khtml-border-radius: 5px; /* for old Konqueror browsers */
+}
+

@@ -84,7 +84,7 @@
     <?php print render($content['field_quote_name']); ?>
     <?php print render($content['field_teaser_long_text']); ?>
     <div class="jump_link">
-      <a href="#jump">Read more</a>
+      <div class="read">Read more</div>
     </div>
   </div>
   <div id="nerative_tabs">

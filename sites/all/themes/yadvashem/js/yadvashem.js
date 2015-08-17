@@ -119,6 +119,7 @@ $( "#quicktabs-book_page .item-list .right" ).click(function() {
 
 });
 
+
 $( "#quicktabs-book_page .item-list .left" ).click(function() {
 
 	if ($i>6){
@@ -142,6 +143,13 @@ $( "#quicktabs-book_page .item-list .left" ).click(function() {
 
 
 
+
+/********  read more at book page   ************/
+
+  $('.read').click(function(){
+    $("html, body").animate({ scrollTop: $("#nerative_body").offset().top -200 }, 2000);
+    return false;
+  });
 
 
 

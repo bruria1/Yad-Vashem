@@ -1,29 +1,4 @@
 
- @mixin res($media) {
-  @if $media == s {
-    @media (max-width: 480px) { @content; }
-  }
-  @else if $media == m {
-    @media (min-width: 481px) and (max-width: 767px) { @content; }
-  }
-  @if $media == s-m {
-    @media (max-width: 767px) { @content; }
-  }
-}
-
-@mixin width(){
-  width: 1270px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 3%;
-  box-sizing: border-box;
-}
-
-$default: #020101;
-$blue: #114560;
-$azure: #208dc9;
-$title: #1f769b;
-
 /********** global ****************/
 
 a, a:link, a:visited{
@@ -457,6 +432,11 @@ body{
       margin-right: 0!important;
       width: 80%!important;
   }
+  .jump_link .read{
+    color: $azure;
+    cursor: pointer;
+    text-decoration: underline;
+  }
   .field-name-body, .field-name-field-teaser-long-text, .field-name-field-teaser-qoate{
     font-size: 1.1em;
     line-height: 2em;
@@ -724,15 +704,16 @@ body{
 
 #quicktabs-book_page{
     font-family: 'PT Serif', arial;
-  margin-top: 60px;
-  padding-bottom: 40px;
+  margin-top: 30px;
+  padding-bottom: 10px;
   margin-bottom: 25px;
   border-bottom: 1px solid #d7d7d7;
   overflow: hidden;
+  ul.quicktabs-tabs {
+    margin-bottom: 0;
+  }
   .quicktabs-tabs{
     padding: 0 0 12px 26px;
-    border-bottom: 1px solid #d7d7d7;
-    margin-bottom: 30px;
     overflow: hidden;
     width: 183%;
     li{
@@ -799,6 +780,15 @@ body{
     &.step9 .quicktabs-tabs{
       margin-left: -46.5%;
     }
+    &.step10 .quicktabs-tabs{
+      margin-left: -62%;
+    }
+    &.step11 .quicktabs-tabs{
+      margin-left: -77.5%;
+    }
+    &.step12 .quicktabs-tabs{
+      margin-left: -93%;
+    }
   }
   .left{
       background:  url("../images/left-arrow.png") no-repeat center center #fff;
@@ -824,12 +814,12 @@ body{
       top: 22px;
       right: 0;
     }
-    .item-list.step9{
+    .item-list.step12{
       .left{
         opacity: 1;
       }
     }
-    .step7, .step8{
+    .step7, .step8, .step9, .step10, .step11{
       .left{
         opacity: 1;
       }
@@ -1179,3 +1169,99 @@ body{
     position: absolute;
     right: 0;
 }
+
+
+// Theme the gallery 
+#fotorama {
+  background-color: #EAEAEA;
+  .fotorama__wrap , 
+  .fotorama__stage ,
+  .fotorama__stage__frame ,
+  .fotorama__stage__shaft  {
+    width: 100% !important;
+  }
+  .fotorama__stage {
+    border:0; 
+  }
+  .fotorama__stage__frame.fotorama__active {
+    max-width: 687px !important;
+    width: 100%;
+    img {
+      max-width: 688px !important;
+      width: 100%;
+    }
+  }
+  .fotorama__nav-wrap {
+    height: 80px;
+    .fotorama__nav {
+      position: relative;
+      top: 5px;
+    }
+    img {
+      @include rounded;
+      top: 0 !important;
+    }
+    .fotorama__nav__frame {
+      border: 2px solid #fff !important;
+      @include rounded;
+      padding:0 !important;
+      margin-right: 5px;
+    }
+    .fotorama__thumb {
+      background-color: none !important;
+    }
+    .fotorama__thumb-border {
+      border: 0 !important;
+      background-image: none !important;
+    }
+  }
+}
+
+// The enlarge icon
+.block-costum {
+  position: relative;
+  #tgl_overlay {
+    width: 31px;
+    height: 31px;
+    top: 10px;
+    position: absolute;
+    right: 10px;
+    left: none;
+  }
+}
+
+// The overlay
+.my_overlay {
+  background-color: rgba(0, 0, 0, 0.71);
+  .img_count {
+    float: left;
+  }
+  .addthis_native_toolbox {
+    margin-right: -40px;
+  }
+  #right_bar {
+    width: 28%;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+  div.myoverlay {
+    width: 72%;
+  }
+  div#mid .wrapper,
+  #fotorama_ovr {
+    max-width:750px;
+    width: 100%;
+  }
+  .fotorama__stage {
+    border: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@
 function pa($obj){
 	drupal_set_message("<pre>".print_r($obj,true)."</pre>");
 }
-function render_node_layout_galllery($node , $field_name = "field_artifacts_images") {	
+function render_node_layout_galllery($node , $field_name = "field_artifacts_images" , $dist_id = "") {	
 	
 	switch($node->type){
 		case "artifacts_gallery_arts":
@@ -26,41 +26,38 @@ function render_node_layout_galllery($node , $field_name = "field_artifacts_imag
 	$gal_width = 600; 
 	$galOvr_width = 600;
 	$output = "";     
-	$output .="<a onClick='overlay()' id='tgl_overlay' ></a>";
-	$output .= <<<HTML
-		<div id="my_overlay">	
-	 <div id='right_bar' class='myoverlay'>
-		 <div class='wrapper'>	
-			 <a id='closeBtn' onClick='overlay()'>Close</a>		 
-		 
-HTML;
+	$output .="<a onClick='overlay(\"my_overlay_$dist_id\")' class='tgl_overlay' ></a>";
+	$output .= '<div id="my_overlay_'.$dist_id.'" class="main_overlay">	
+	 <div class="myoverlay right_bar">
+		 <div class="wrapper">	
+			 <a class="closeBtn" onClick="overlay(\'close\')">Close</a>';
 	
 	$output .="<h3>".$node->title."</h3>";
 	if(isset($node->body[LANGUAGE_NONE])){
-		$output .= $node->body[LANGUAGE_NONE][0]['value'];
+		//$output .= $node->body[LANGUAGE_NONE][0]['value'];
 	}
-	$output.= "<div id='img_description'></div>";
-	$output.= "<div id='img_credit'></div>";
+	$output.= "<div id='img_description_".$dist_id."'></div>";
+	$output.= "<div id='img_credit_".$dist_id."'></div>";
 	$output.= "<div class='addthis_sharing_toolbox'></div>";
 		
 		//drupal_add_html_head("","costum");
 	$output .="</div>
 	 </div>
-		<div id='mid' class='myoverlay'>".
+		<div id='mid_".$dist_id."' class='mid myoverlay'>".
 		//addThis js
 	
 		'<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55bdda9d02f9bea1" async="async"></script>'.
 		"<div class='wrapper'>
-		<div id='share_section'>
+		<div class='share_section'>
 			<span class='img_count'><span id='cur_img'>1</span>/".$img_count."</span>
 			<div class='addthis_native_toolbox'></div>			
 		</div>
 		 ";
-$output .=  "<div id='fotorama_ovr' class='fotorama'
+$output .=  "<div id='fotorama_ovr_".$dist_id."' class='fotorama'
 					data-width='".$galOvr_width."'
 					data-nav='thumbs'
 					data-max-width='100%'>";
-$gallery =  "<div id='fotorama' class='fotorama' 
+$gallery =  "<div id='fotorama_".$dist_id."' class='fotorama' 
 				data-width='".$gal_width."'
 				data-nav='thumbs'
 				data-max-width='100%'>";
@@ -98,9 +95,9 @@ $gallery =  "<div id='fotorama' class='fotorama'
 			$img['attributes']['data-caption'] = $title; 		
 			$gallery .= _addGalImg($img , $link);	
 		}
-	$gallery .= "</div><scan class='img_count'><span id='img_i'>1</span> of ".$img_count."</scan>";
+	$gallery .= "</div><scan class='img_count'><span class='img_i'>1</span> of ".$img_count."</scan>";
 	$output .="</div></div></div></div>";	
-	drupal_add_js(array("costum"=>array('imgData'=>$img_data)),'setting');
+	drupal_add_js(array("costum_".$dist_id=>array('imgData'=>$img_data)),'setting');
 		return $output.$gallery;	
 }
 function _addGalImg($img , $videoLink = ""){	
@@ -150,7 +147,7 @@ function costum_block_view($delta = '') {
 			}
 		}		
 		if($gallery == null) return; 
-        $block['content'] = render_node_layout_galllery($gallery, "field_artifacts_images");        
+        $block['content'] = render_node_layout_galllery($gallery, "field_artifacts_images" ,"d".$current_type);        
       }
   
   }
@@ -162,10 +159,11 @@ function costum_block_view($delta = '') {
 		$node = menu_get_object();
 		if($node->type!="book")return;
 		$gallery = null;
+		if(empty($node->field_video_gallery[LANGUAGE_NONE]))return;
 		foreach( $node->field_video_gallery[LANGUAGE_NONE] as $gal_item){
 			$gal_id = $gal_item['target_id'];							
 			$gallery = node_load($gal_id);		
-			if($gallery->field_video_type[LANGUAGE_NONE][0]['value'] != $current_type){
+			if(empty($gallery->field_video_type[LANGUAGE_NONE]) || $gallery->field_video_type[LANGUAGE_NONE][0]['value'] != $current_type){
 				$gallery = null;
 			}		
 			else {

@@ -11,8 +11,8 @@
 ?>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5146dc9e16a60b6f" async="async"></script>
+
 <div id="top-bar">
   <div class="wrapper wrapper-top">
     <div class="left">
