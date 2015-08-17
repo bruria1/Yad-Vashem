@@ -181,18 +181,14 @@ $( "#quicktabs-book_page .item-list .left" ).click(function() {
 
 
 
-	$strtitle = $(".field-name-body .field-item").html()
-
-	$strtitle = $strtitle.replace("[quote]", '<div class="quote">"');
-
-	$strtitle = $strtitle.replace("[/quote]", '"</div>');
-
-	$strtitle = $strtitle.replace("[author]", "<div class='quote-author'>");
-
-	$strtitle = $strtitle.replace("[/author]", "<div>");
-
-	$('.field-name-body .field-item').html($strtitle);
-
+	$strtitle = $(".field-name-body .field-item").html();
+	if($strtitle){
+		$strtitle = $strtitle.replace("[quote]", '<div class="quote">"');
+		$strtitle = $strtitle.replace("[/quote]", '"</div>');
+		$strtitle = $strtitle.replace("[author]", "<div class='quote-author'>");
+		$strtitle = $strtitle.replace("[/author]", "<div>");
+		$('.field-name-body .field-item').html($strtitle);
+	}
 	$quote = $(".field-name-field-teaser-qoate .field-item").html();
 	$quote = '"' + $quote + '"';
 	$('.field-name-field-teaser-qoate .field-item').html($quote);

@@ -1,4 +1,5 @@
 <?php
+
 function pa($obj){
 	drupal_set_message("<pre>".print_r($obj,true)."</pre>");
 }
@@ -109,51 +110,58 @@ function _addGalImg($img , $videoLink = ""){
 	return l(theme_image($img),$videoLink , array("attributes"=>array("data-video"=>"true")));
 }
 function costum_block_info() {
-  $blocks['photo_tab'] = array(
-    'info' => t('Photo Tab'),   
-  );
   $blocks['video_tab'] = array(
     'info' => t('Video Tab'),   
   );
-  $blocks['artifacts_tab'] = array(
-    'info' => t('artifacts_tab'),   
-  );
+  $field_vals = field_info_field("field_gallery_type");
+  foreach($field_vals['settings']['allowed_values'] as $k=>$typeName){
+	  $blocks['costume_tab_'.$k] = array(
+		'info' => t('!tab Tab',array("!tab"=>$typeName)),       
+	  );
+  }
+  
   return $blocks;
 }
 function costum_block_view($delta = '') {  
   $block = array();
-  switch ($delta) {    
-    case 'photo_tab':
-      if (user_access('access content')) {
+  if(strpos($delta,"costume_tab_")===0){
+	if (user_access('access content')) {
+		$field_vals = field_info_field("field_gallery_type");
+		$current_type = str_replace("costume_tab_","",$delta);
+	//	$field_vals['settings']['allowed_values'];
 		$node = menu_get_object();
 		if($node->type!="book")return;
-		$gal_id = $node->field_gallery[LANGUAGE_NONE][0]['target_id'];
-		$gallery = node_load($gal_id);		
-        $block['subject'] = t('Recent content');   
+		$gallery = null;
+		foreach( $node->field_gallery[LANGUAGE_NONE] as $gal_item){
+			$gal_id = $gal_item['target_id'];							
+			$gallery = node_load($gal_id);		
+			if($gallery->field_gallery_type[LANGUAGE_NONE][0]['value'] != $current_type){
+				$gallery = null;
+			}		
+			else {
+				break;
+			}
+		}		
+		if($gallery == null) return; 
         $block['content'] = render_node_layout_galllery($gallery, "field_artifacts_images");        
       }
-    break;
-    case 'artifacts_tab':
-      if (user_access('access content')) {
-		$node = menu_get_object();
-		if($node->type!="book")return;
-		$gal_id = $node->field_gallery[LANGUAGE_NONE][0]['target_id'];
-		$gallery = node_load($gal_id);		
-        $block['subject'] = t('Recent content');   
-        $block['content'] = render_node_layout_galllery($gallery, "field_artifacts_images");        
-      }
-    break;
-    case 'video_tab':
-      if (user_access('access content')) {
-		
-		$node = menu_get_object();
-		if($node->type!="book")return;
-		$gal_id = $node->field_video_gallery[LANGUAGE_NONE][0]['target_id'];
-		$gallery = node_load($gal_id);		
-        $block['subject'] = t('Recent content');   
-        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");
-      }
-    break;
+  
+  }
+  else {
+	  switch ($delta) {  
+		case 'video_tab':
+		  if (user_access('access content')) {
+			
+			$node = menu_get_object();
+			if($node->type!="book")return;
+			$gal_id = $node->field_video_gallery[LANGUAGE_NONE][0]['target_id'];
+			$gallery = node_load($gal_id);		
+			$block['subject'] = t('Recent content');   
+			$block['content'] = render_node_layout_galllery($gallery, "field_video_collection");
+		  }
+		break;
+	  }
   }
   return $block;
 }
+/***/
