@@ -154,32 +154,27 @@ function costum_block_view($delta = '') {
       }
   
   }
-  else {
-	  switch ($delta) {  
-		case(strpos($delta,"video_tab_")===0){
-			if (user_access('access content')) {
-				$field_vals = field_info_field("field_video_type");
-				$current_type = str_replace("video_tab_","",$delta);
-			//	$field_vals['settings']['allowed_values'];
-				$node = menu_get_object();
-				if($node->type!="book")return;
+  elseif (strpos($delta,"video_tab_")===0) {
+  	if (user_access('access content')) {
+		$field_vals = field_info_field("field_video_type");
+		$current_type = str_replace("video_tab_","",$delta);
+	//	$field_vals['settings']['allowed_values'];
+		$node = menu_get_object();
+		if($node->type!="book")return;
+		$gallery = null;
+		foreach( $node->field_video_gallery[LANGUAGE_NONE] as $gal_item){
+			$gal_id = $gal_item['target_id'];							
+			$gallery = node_load($gal_id);		
+			if($gallery->field_video_type[LANGUAGE_NONE][0]['value'] != $current_type){
 				$gallery = null;
-				foreach( $node->field_video_gallery[LANGUAGE_NONE] as $gal_item){
-					$gal_id = $gal_item['target_id'];							
-					$gallery = node_load($gal_id);		
-					if($gallery->field_video_type[LANGUAGE_NONE][0]['value'] != $current_type){
-						$gallery = null;
-					}		
-					else {
-						break;
-					}
-				}		
-				if($gallery == null) return; 
-		        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");        
-		      }
-		  
-		  }
-	  }
+			}		
+			else {
+				break;
+			}
+		}		
+		if($gallery == null) return; 
+        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");        
+      }
   }
   return $block;
 }
