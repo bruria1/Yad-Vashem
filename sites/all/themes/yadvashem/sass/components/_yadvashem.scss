@@ -1,3 +1,17 @@
+ @mixin res($media) {
+  @if $media == s {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $media == m {
+    @media (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @if $media == s-m {
+    @media (max-width: 767px) { @content; }
+  }
+  @if $media == l {
+    @media (max-width: 1195px) { @content; }
+  }
+}
 
 /********** global ****************/
 
@@ -33,11 +47,23 @@ body{
   @include width;
 }
 
+#page{
+  @include res(s-m){
+    padding: 0;
+  }
+}
+
+#main{
+  @include res(s-m){
+    padding: 0;
+  }
+}
+
 .block{
   margin-bottom: 0;
 }
 
-#page-title{
+#page-title, .page-title{
   color: $title;
   font-size: 2.5em;
     font-family: 'PT Serif', arial;
@@ -45,6 +71,19 @@ body{
   line-height: 0.9em;
   p{
     margin: 0;
+  }
+}
+
+#page-title{
+  @include res(s-m){
+    display: none;
+  }
+}
+
+.page-title{
+  display: none;
+  @include res(s-m){
+    display: block;
   }
 }
 
@@ -64,6 +103,9 @@ body{
   background-color: #2f2f2f;
   color: #fff;
   overflow: hidden;
+  @include res(s-m){
+    display: none;
+  }
   a{
     color: #fff;
   }
@@ -93,6 +135,9 @@ body{
 .top{
   font-family: 'PT Sans', arial;
   padding-top: 19px;
+  @include res(s-m){
+    display: none;
+  }
   .top-left{
     float: left;
     .social-icons{
@@ -129,12 +174,48 @@ body{
   }
 }
 
+.wrapper-navigation{
+  position: relative;
+  z-index: 300;
+}
+
 #header{
   clear: both;
   @include width;
   padding: 15px 3% 0;
   #logo{
     padding-bottom: 50px;
+    @include res(s-m){
+      display: none;
+    }
+  }
+  #name-and-slogan{
+    @include res(s-m){
+      width: 74%;
+      text-align: center;
+    }
+  }
+  #site-name a{
+      font-family: "Oswald",arial;
+      font-size: 1.24em;
+      letter-spacing: 4px;
+      padding-top: 2px;
+      text-transform: uppercase;
+      color: #303030;
+      margin-left: 23px;
+      font-weight: normal;
+      @include res(s-m){
+        color: #fff;
+        font-size: 0.8em;
+        margin: 0;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  @include res(s-m){
+    padding: 0;
+    background-color: $blue;
   }
 }
 
@@ -177,6 +258,96 @@ body{
 .region-header{
   clear: right;
 }
+
+#block-menu-menu-square{
+  @include res(s-m){
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 300;
+    li{
+      a{
+        border-radius: 0!important;
+        margin: 0!important;
+        width: 33.3%!important;
+        padding: 10px 0!important;
+        text-decoration: none!important;
+      }
+    }
+  }
+}
+
+#block-menu-menu-square--2{
+  @include res(s-m){
+    display: none;
+  }
+}
+
+/***********  responsive menu ************/
+
+.menu-button{
+  display: none;
+  z-index: 200;
+  cursor: pointer;
+  width: 13%;
+  float: left;
+  margin-top: 10px;
+  @include res(s-m){
+    display: inline-block;
+  }
+  span{
+    width: 20px;
+    height: 2px;
+    margin-bottom: 4px;
+    background-color: #fff;
+    display: block;  
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  .lines{
+    float: left;
+    padding-left: 7px;
+    padding-top: 6px;
+  }
+}
+
+.display-menu .menu-button{
+  span{
+    margin: 0;
+  }
+  .line1{
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    margin-top: 6px;
+  }
+  .line2{
+    display: none;
+  }
+  .line3{
+    margin-top: -2px;
+    transform: rotate(135deg);
+    -ms-transform: rotate(135deg); 
+    -webkit-transform: rotate(135deg); 
+  }
+}
+
+.inside-page{
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.display-menu{
+  #navigation{
+    margin: 0;
+  }
+  /*.inside-page{
+    margin-left: 100%;
+    height: 0;
+    overflow: hidden;
+  }*/
+}
+
 
 /**********  lang block  ********/
 
@@ -228,15 +399,27 @@ body{
   width: 100%;
   padding: 0;
   overflow: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  @include res(s-m){
+    margin-left: -100%;
+    position: absolute;
+  }
   #main-menu{
     float: left;
     width: auto;
     background:  url("../images/menu.png") no-repeat left center transparent;
     overflow: hidden;
     padding: 11px 0 0px 53px;
+    @include res(s-m){
+      background: none;
+    }
     li{
       padding-right: 22px;
       height: 32px;
+      @include res(s-m){
+        width: 100%;
+      }
     }
     a{
       color: #fff;
@@ -254,6 +437,9 @@ body{
         content: "";
         margin: -1px auto 0;
         display: block;
+        @include res(s-m){
+          display: none;
+        }
       }
     }
     a:hover, a.active{
@@ -283,6 +469,9 @@ body{
 #footer-wrapper{
   background-color: #2f2f2f;
   font-family: 'PT Sans', arial;
+  @include res(s-m){
+    display: none;
+  }
   #footer{
     @include width;
     .block{
@@ -371,6 +560,10 @@ body{
   font-size: 0.9em;
   color: #fff;
   padding: 36px 0;
+  @include res(s-m){
+    padding-bottom: 75px;
+    background-color: #2f2f2f;
+  }
   .region-bottom{
     @include width;
     p{
@@ -415,6 +608,9 @@ body{
     background-color: #e8e8e8;
     padding: 9px 0;
     font-family: 'PT Sans', arial;
+    @include res(s-m){
+      display: none;
+    }
     ol{
       @include width;
     }
@@ -426,11 +622,19 @@ body{
 /********  book page  ********/
 
 .node-type-book{
+  &.sidebar-second .region-sidebar-second{
+    @include res(s-m){
+      display: none;
+    }
+  }
     #content {
       float: left;
       margin-left: 0!important;
       margin-right: 0!important;
       width: 80%!important;
+      @include res(s-m){
+        width: 100%!important;
+      }
   }
   .jump_link .read{
     color: $azure;
@@ -467,16 +671,27 @@ body{
     overflow: hidden;
     margin-bottom: 20px;
   }
+  #at4m-dock, .at4m-dock-toggle{
+    display: none;
+  }
   .block-book{
     width: 24%;
     margin-right: 4%;
     float: left;
+    h2{
+      display: none;
+    }
   }
   article{
     width: 72%;
     float: right;
     margin-bottom: 40px;
     padding-top: 44px;
+    @include res(s-m){
+      width: 100%;
+      padding: 0 3%;
+      box-sizing: border-box;
+    }
   }
   .book-navigation{
     clear: both;
@@ -484,8 +699,12 @@ body{
     border-top: 1px solid #e7e7e7;
     font-family: 'PT Serif', arial;
     padding: 40px 0;
-    overflow: hidden;
+    @include res(s-m){
+      padding: 6px 0;
+      overflow: hidden;
+    }
     ul.menu{
+    overflow: hidden;
       display: none;
     }
    .page-links{
@@ -493,12 +712,24 @@ body{
       width: 85%;
       float: right;
       position: relative;
+      @include res(s-m){
+        width: 100%;
+        padding: 0;
+      }
     }
     .right-arrow{
         background:  url("../images/right-arrow.png") no-repeat center center transparent;
+        @include res(s-m){
+          clear: right;
+          float: right!important;
+        }
     }
     .left-arrow{
         background:  url("../images/left-arrow.png") no-repeat center center transparent;
+        @include res(s-m){
+          clear: left;
+          float: left!important;
+        }
     }
     .arrow{
       padding-top: 24px;
@@ -510,6 +741,9 @@ body{
       position: absolute;
       width: 100%;
       z-index: -2;
+      @include res(s-m){
+        display: none;
+      }
       .book-title{
         font-size: 1.1em;
         color: #000;
@@ -527,6 +761,12 @@ body{
     .page-previous{
       margin-right: 2%;
       float: left;
+      @include res(s-m){
+        width: 49%;
+        margin: 0;
+        float: left;
+        background-color: #ecedee;
+      }
       .left-arrow{
         float: right;
         width: 10%;
@@ -534,11 +774,20 @@ body{
       .text{
         float: left;
         width: 85%;
+        @include res(s-m){
+          width: 100%;
+        }
       }
     }
     .page-next{
       margin-left: 2%;
       float: right;
+      @include res(s-m){
+        width: 49%;
+        margin: 0;
+        float: right;
+        background-color: #ecedee;
+      }
       .right-arrow{
         float: left;
         width: 10%;
@@ -582,6 +831,9 @@ body{
   }
   a.active{
     color: $title;
+    @include res(s-m){
+      font-weight: bold;
+    }
   }
   li{
     list-style-type: none;
@@ -593,6 +845,10 @@ body{
     li a.active{
       background-color: #1d8fc4;
       color: #fff!important;
+      @include res(s-m){
+        color: $azure!important;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -699,6 +955,70 @@ body{
       float: left;
       margin-right: 2%;
       display: block;
+  }
+}
+
+// responsive book-menu
+
+.node-type-book .block-book{
+    @include res(s-m){
+      width: 100%;
+      h2{
+        background-color: $azure;
+        padding: 10px;
+        color: #fff;
+        display: block;
+        font-size: 1.2em;
+        cursor: pointer;
+        &:before{
+          content: "+";
+          padding-right: 15px;
+          font-weight: bold;
+        }
+      }
+      ul{
+        max-height: 0;
+        overflow: hidden;
+        margin: 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+      }
+      li a{
+        padding: 10px 10px 10px 20px!important;
+        background-color: #ebedee!important;
+        color: $azure!important;
+        background-image: none!important;
+        border-bottom: 1px solid #fff!important;
+
+      }
+      li ul{
+        a{
+          background-color: #fff!important;
+          padding: 10px 10px 10px 55px!important; 
+        }
+      }
+      li.is-collapsed > a{
+        &:before{
+          content: "+";
+          padding-right: 15px;
+          font-weight: bold;
+        }
+      }
+      li.expanded > a.active-trail:before{
+          content: "-";
+          padding-right: 15px;
+          font-weight: bold;
+      }
+    }
+}
+
+.node-type-book.display-menu-book .block-book{
+  ul{
+    height: auto;
+    max-height: 2000px;
+  }
+  h2:before{
+    content: "-";
   }
 }
 
@@ -847,6 +1167,9 @@ body{
 
 .node-type-book {
   .top-links{
+    @include res(s-m){
+      display: none;
+    }
     div{
       float: left;
     }

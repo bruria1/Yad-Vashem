@@ -202,7 +202,6 @@ $( "#quicktabs-book_page .item-list .left" ).click(function() {
 	$('.field-name-field-teaser-qoate .field-item').html($quote);
 
 
-/********   useful comment  *************/
 
 
 
@@ -211,10 +210,25 @@ $( "#quicktabs-book_page .item-list .left" ).click(function() {
 
 }
 
+/********   responsive menu  *************/
 
+$(".menu-button").click(function(){
+  if ($("body").hasClass("display-menu")){
+    $("body").removeClass("display-menu");
+  }
+  else {
+    $("body").addClass("display-menu");
+  }
+ });
 
-
-
+$(".node-type-book .block-book h2").click(function(){
+  if ($("body").hasClass("display-menu-book")){
+    $("body").removeClass("display-menu-book");
+  }
+  else {
+    $("body").addClass("display-menu-book");
+  }
+ });
 
 
 

@@ -11,6 +11,18 @@
 ?>
 
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+<h1 class="page-title">
+  <?php
+        if(isset($node->field_title['und'][0]['value'])) {  
+                print $node->field_title['und'][0]['value'];
+         }
+         else{
+          print $title;
+         }
+  ?>
+</h1>
+
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
@@ -83,9 +95,11 @@
     <?php print render($content['field_teaser_qoate']); ?>
     <?php print render($content['field_quote_name']); ?>
     <?php print render($content['field_teaser_long_text']); ?>
-    <div class="jump_link">
-      <div class="read">Read more</div>
-    </div>
+    <?php if (render($content['body'])) { ?>
+      <div class="jump_link">
+        <div class="read">Read more</div>
+      </div>
+    <?php } ?>
   </div>
   <div id="nerative_tabs">
     <?php print render($content['field_tabs']); ?>

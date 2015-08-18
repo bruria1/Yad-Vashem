@@ -71,9 +71,15 @@
   </div>
   <?php print render($page['top']); ?>
 </div>
-
 <header class="header wrapper" id="header" role="banner">
 
+  <div class="menu-button">
+      <div class="lines">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+      </div>
+  </div>
 
 <?php if ($logo): ?>
    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
@@ -110,6 +116,7 @@
 
     <?php print render($page['header']); ?>
   </header>
+<div class="wrapper-navigation">
 
     <div id="navigation">
     <div class="wrapper">
@@ -136,6 +143,9 @@
       <?php print render($page['navigation']); ?>
    </div>
    </div>
+</div>
+
+  <div class="inside-page">
       <?php print $breadcrumb; ?>
 <div id="page">
   <div id="main">
@@ -233,3 +243,5 @@
   <?php print render($page['bottom']); ?>
 
 </div>
+
+</div> 
