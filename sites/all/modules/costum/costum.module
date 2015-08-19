@@ -25,8 +25,10 @@ function render_node_layout_galllery($node , $field_name = "field_artifacts_imag
 	$gal_width = 600; 
 	$gal_width = 600; 
 	$galOvr_width = 600;
-	$output = "";     
-	$output .="<a onClick='overlay(\"my_overlay_$dist_id\")' class='tgl_overlay' ></a>";
+	$output = "";   
+	if($field_name != "field_video_collection"){  
+		$output .="<a onClick='overlay(\"my_overlay_$dist_id\")' class='tgl_overlay' ></a>";
+	}
 	$output .= '<div id="my_overlay_'.$dist_id.'" class="main_overlay">	
 	 <div class="myoverlay right_bar">
 		 <div class="wrapper">	
@@ -49,7 +51,7 @@ function render_node_layout_galllery($node , $field_name = "field_artifacts_imag
 		'<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55bdda9d02f9bea1" async="async"></script>'.
 		"<div class='wrapper'>
 		<div class='share_section'>
-			<span class='img_count'><span id='cur_img'>1</span>/".$img_count."</span>
+			<span class='img_count'><span id='cur_img_".$dist_id."'>1</span>/".$img_count."</span>
 			<div class='addthis_native_toolbox'></div>			
 		</div>
 		 ";
@@ -98,7 +100,25 @@ $gallery =  "<div id='fotorama_".$dist_id."' class='fotorama'
 	$gallery .= "</div><scan class='img_count'><span class='img_i'>1</span> of ".$img_count."</scan>";
 	$output .="</div></div></div></div>";	
 	drupal_add_js(array("costum_".$dist_id=>array('imgData'=>$img_data)),'setting');
-		return $output.$gallery;	
+	if($field_name == "field_video_collection"){
+		$gallery = "<div id='video_gal_".$dist_id."' class='video_gal'>";
+		//$gallery .= views_embed_view("books_tab","block_6");		
+		$view = views_get_view('books_tab');
+		$view->set_display('block_6');
+		$new_view_filters = $view->display_handler->get_option('filters');
+		$video_gal_type = str_replace("v","",$dist_id);
+		$new_view_filters['field_video_type_value']['value'] = array($video_gal_type=>$video_gal_type);
+		$view_overrides = array();
+        $view_overrides['filters'] = $new_view_filters;
+        foreach ($view_overrides as $option => $definition) {
+           $view->display_handler->override_option($option, $definition);
+        }
+		$view->pre_execute();
+		$view->execute();
+		$gallery .= $view->render();
+		$gallery .= "</div>";
+	}
+	return $output.$gallery;	
 }
 function _addGalImg($img , $videoLink = ""){	
 	if($videoLink == ""){
@@ -112,13 +132,13 @@ function costum_block_info() {
   $field_vals = field_info_field("field_video_type");
   foreach($field_vals['settings']['allowed_values'] as $k=>$typeName){
 	  $blocks['video_tab_'.$k] = array(
-		'info' => t('!tab Tab',array("!tab"=>$typeName)),       
+		'info' => t('Costume Video !tab Tab',array("!tab"=>$typeName)),       
 	  );
   };
   $field_vals = field_info_field("field_gallery_type");
   foreach($field_vals['settings']['allowed_values'] as $k=>$typeName){
 	  $blocks['costume_tab_'.$k] = array(
-		'info' => t('!tab Tab',array("!tab"=>$typeName)),       
+		'info' => t('Costume Gallery !tab Tab',array("!tab"=>$typeName)),       
 	  );
   };
   
@@ -171,7 +191,7 @@ function costum_block_view($delta = '') {
 			}
 		}		
 		if($gallery == null) return; 
-        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection");        
+        $block['content'] = render_node_layout_galllery($gallery, "field_video_collection" , "v".$current_type);        
       }
   }
   return $block;

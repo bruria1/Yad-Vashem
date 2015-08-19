@@ -214,3 +214,20 @@
 [17-Aug-2015 10:05:56 Asia/Jerusalem] PHP Fatal error:  Call to undefined function dsm() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 144
 [17-Aug-2015 10:11:45 Asia/Jerusalem] PHP Fatal error:  require_once(): Failed opening required '/home/yadvashem/public_html/core/includes/install.inc' (include_path='/usr/local/src/drush/vendor/phpunit/php-token-stream:/usr/local/src/drush/vendor/phpunit/php-text-template:/usr/local/src/drush/vendor/phpunit/phpunit-mock-objects:/usr/local/src/drush/vendor/phpunit/php-timer:/usr/local/src/drush/vendor/phpunit/php-file-iterator:/usr/local/src/drush/vendor/phpunit/php-code-coverage:/usr/local/src/drush/vendor/phpunit/phpunit:/usr/local/src/drush/vendor/symfony/yaml:.:/usr/lib/php:/usr/local/lib/php:/usr/local/php54/lib/php') in /usr/local/src/drush/commands/core/core.drush.inc on line 1122
 [17-Aug-2015 11:39:40 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '{' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 159
+[18-Aug-2015 10:33:31 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[18-Aug-2015 10:33:32 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[18-Aug-2015 10:33:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 102
+[18-Aug-2015 10:49:58 Asia/Jerusalem] PHP Fatal error:  Call to a member function set_display() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 107
+[18-Aug-2015 10:50:00 Asia/Jerusalem] PHP Fatal error:  Call to a member function set_display() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 107
+[18-Aug-2015 10:50:11 Asia/Jerusalem] PHP Fatal error:  Call to a member function set_display() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 107
+[18-Aug-2015 10:50:12 Asia/Jerusalem] PHP Fatal error:  Call to a member function set_display() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 107
+[18-Aug-2015 10:51:33 Asia/Jerusalem] PHP Fatal error:  Call to a member function set_display() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 107
+[18-Aug-2015 10:51:34 Asia/Jerusalem] PHP Fatal error:  Call to a member function set_display() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 107
+[18-Aug-2015 11:05:54 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[18-Aug-2015 11:05:58 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[18-Aug-2015 11:06:00 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[18-Aug-2015 11:06:00 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[18-Aug-2015 11:06:02 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[18-Aug-2015 11:06:02 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[18-Aug-2015 11:06:03 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[18-Aug-2015 11:06:12 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
