@@ -699,3 +699,40 @@ td.checkbox input.form-checkbox {
   width: 17px;
   border: 1px solid #a1a1a1;
 }
+
+/*
+ * Theme changes by TIK-KE
+ ***************************************************/
+.field-type-text-long ,
+.field-type-text-with-summary {
+  .text-format-wrapper fieldset {
+    display: none;
+  }
+}
+.node-book-form {
+  .group-header {
+    margin-bottom: 30px;
+  }
+  .group-left {
+    width: 32%;
+    padding-right:20px;
+  }
+  .group-middle {
+    width: 32%;
+  }
+  .group-right {
+    width: 32%;
+  }
+  .autocomplete-deluxe-container {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
