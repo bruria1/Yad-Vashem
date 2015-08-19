@@ -1495,7 +1495,7 @@ body{
 
 
 // Theme the gallery 
-#fotorama {
+#fotorama_d1 {
   background-color: #EAEAEA;
   .fotorama__wrap , 
   .fotorama__stage ,
@@ -1538,6 +1538,18 @@ body{
       background-image: none !important;
     }
   }
+  .fotorama__caption {
+    position: absolute;
+    z-index: 12;
+    bottom: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    .fotorama__caption__wrap {
+      background-color: rgba(3, 0, 0, 0.5) !important;
+    }
+  }
 }
 
 // The enlarge icon
@@ -1554,21 +1566,23 @@ body{
 }
 
 // The overlay
-.my_overlay {
+#my_overlay_d1 {
   background-color: rgba(0, 0, 0, 0.71);
+  .right_bar {
+    width: 28%;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+  #mid_d1 {
+    width: 72%;
+    margin: 7% auto;
+  }
   .img_count {
     float: left;
   }
   .addthis_native_toolbox {
     margin-right: -40px;
   }
-  #right_bar {
-    width: 28%;
-    background-color: rgba(0, 0, 0, 0.39);
-  }
-  div.myoverlay {
-    width: 72%;
-  }
+
   div#mid .wrapper,
   #fotorama_ovr {
     max-width:750px;
@@ -1576,6 +1590,22 @@ body{
   }
   .fotorama__stage {
     border: 10px;
+  }
+  // Right side overlay
+  .wrapper {
+    margin-top: 60px;
+    padding:0 10% 0 3%;
+  }
+  .closeBtn {
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  h3 {
+    clear: both;
+    padding: 10px 0px !important;
+    border-top: 2px solid;
   }
 }
 
