@@ -13,33 +13,6 @@ function new_book_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_artifacts_content|node|book|form';
-  $field_group->group_name = 'group_artifacts_content';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content_horizontal';
-  $field_group->data = array(
-    'label' => 'Gallery',
-    'weight' => '51',
-    'children' => array(
-      0 => 'field_gallery',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_artifacts_content|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_content_horizontal|node|book|form';
   $field_group->group_name = 'group_content_horizontal';
   $field_group->entity_type = 'node';
@@ -61,118 +34,11 @@ function new_book_field_group_info() {
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => 'group-content-horizontal field-group-htabs',
       ),
     ),
   );
   $export['group_content_horizontal|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_content|node|book|form';
-  $field_group->group_name = 'group_content';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_main_horizontal';
-  $field_group->data = array(
-    'label' => 'Content',
-    'weight' => '20',
-    'children' => array(),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_content|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_diary_content|node|book|form';
-  $field_group->group_name = 'group_diary_content';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content_horizontal';
-  $field_group->data = array(
-    'label' => 'Diary/letter',
-    'weight' => '56',
-    'children' => array(
-      0 => 'field_diaries_letters',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_diary_content|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_documents_contents|node|book|form';
-  $field_group->group_name = 'group_documents_contents';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content_horizontal';
-  $field_group->data = array(
-    'label' => 'Documents',
-    'weight' => '55',
-    'children' => array(
-      0 => 'field_documents',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_documents_contents|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_main_horizontal|node|book|form';
-  $field_group->group_name = 'group_main_horizontal';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'main horizontal',
-    'weight' => '23',
-    'children' => array(
-      0 => 'group_content',
-      1 => 'group_media',
-      2 => 'group_term',
-      3 => 'group_video',
-    ),
-    'format_type' => 'tabs',
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(
-        'classes' => '',
-      ),
-    ),
-  );
-  $export['group_main_horizontal|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -185,7 +51,7 @@ function new_book_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Main',
-    'weight' => '22',
+    'weight' => '19',
     'children' => array(
       0 => 'group_page_related_content',
       1 => 'group_related_resources',
@@ -199,61 +65,6 @@ function new_book_field_group_info() {
     ),
   );
   $export['group_main|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_map_contents|node|book|form';
-  $field_group->group_name = 'group_map_contents';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content_horizontal';
-  $field_group->data = array(
-    'label' => 'Map/Chart',
-    'weight' => '54',
-    'children' => array(
-      0 => 'field_map_chart',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_map_contents|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_media|node|book|form';
-  $field_group->group_name = 'group_media';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_main_horizontal';
-  $field_group->data = array(
-    'label' => 'Media',
-    'weight' => '23',
-    'children' => array(
-      0 => 'field_gallery_inner',
-      1 => 'field_main_image',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_media|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -275,40 +86,13 @@ function new_book_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_online_store|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_page_related_content|node|book|form';
-  $field_group->group_name = 'group_page_related_content';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_main';
-  $field_group->data = array(
-    'label' => 'Page related contents',
-    'weight' => '34',
-    'children' => array(
-      0 => 'group_content_horizontal',
-    ),
-    'format_type' => 'htab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
+        'classes' => 'group-online-store field-group-htab',
         'required_fields' => 1,
         'id' => '',
       ),
     ),
   );
-  $export['group_page_related_content|node|book|form'] = $field_group;
+  $export['group_online_store|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -358,39 +142,13 @@ function new_book_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => 'group-relatedresources field-group-htab',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
   $export['group_relatedresources|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_research_contents|node|book|form';
-  $field_group->group_name = 'group_research_contents';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content_horizontal';
-  $field_group->data = array(
-    'label' => 'Research',
-    'weight' => '52',
-    'children' => array(
-      0 => 'field_research',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_research_contents|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -414,7 +172,7 @@ function new_book_field_group_info() {
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => 'group-right field-group-htabs',
       ),
     ),
   );
@@ -440,91 +198,13 @@ function new_book_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => 'group-simple-link field-group-htab',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
   $export['group_simple_link|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_term|node|book|form';
-  $field_group->group_name = 'group_term';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_main_horizontal';
-  $field_group->data = array(
-    'label' => 'Terms & Relations',
-    'weight' => '22',
-    'children' => array(),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_term|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_video_contents|node|book|form';
-  $field_group->group_name = 'group_video_contents';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content_horizontal';
-  $field_group->data = array(
-    'label' => 'Video',
-    'weight' => '57',
-    'children' => array(
-      0 => 'field_video_gallery',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_video_contents|node|book|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_video|node|book|form';
-  $field_group->group_name = 'group_video';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_main_horizontal';
-  $field_group->data = array(
-    'label' => 'Video',
-    'weight' => '24',
-    'children' => array(
-      0 => 'field_video_youube',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-video field-group-tab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_video|node|book|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -546,8 +226,9 @@ function new_book_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => 'group-workshops field-group-htab',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
