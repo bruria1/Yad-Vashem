@@ -25,13 +25,14 @@ function diary_field_group_info() {
     'children' => array(
       0 => 'body',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-content field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -54,11 +55,11 @@ function diary_field_group_info() {
       1 => 'group_media',
       2 => 'group_terms_relations',
     ),
-    'format_type' => 'tabs',
+    'format_type' => 'htabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => 'group-main field-group-tabs',
+        'classes' => '',
       ),
     ),
   );
@@ -74,18 +75,19 @@ function diary_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
-    'label' => 'Media',
+    'label' => 'Files',
     'weight' => '16',
     'children' => array(
       0 => 'field_files',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-media field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -114,15 +116,15 @@ function diary_field_group_info() {
       7 => 'field_atgs_nazi_organisation',
       8 => 'field_tags_jewish_organisation',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Terms',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => 'group-terms-relations field-group-tab',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
     ),
   );
   $export['group_terms_relations|node|diaries_letters|form'] = $field_group;
