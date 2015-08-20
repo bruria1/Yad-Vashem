@@ -25,14 +25,16 @@ function video_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_teaser_long_text',
+      2 => 'field_video_sub_title',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-content field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -49,17 +51,17 @@ function video_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Main',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'group_content',
       1 => 'group_terms_relations',
       2 => 'group_video',
     ),
-    'format_type' => 'tabs',
+    'format_type' => 'htabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => 'group-main field-group-tabs',
+        'classes' => '',
       ),
     ),
   );
@@ -76,7 +78,7 @@ function video_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Terms & Relations',
-    'weight' => '12',
+    'weight' => '13',
     'children' => array(
       0 => 'field_terms',
       1 => 'field_tags_places',
@@ -89,17 +91,47 @@ function video_field_group_info() {
       8 => 'field_tags_jewish_organisation',
       9 => 'field_content_relation',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-terms-relations field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
   $export['group_terms_relations|node|video_gallery|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_testimonies|field_collection_item|field_video_collection|token';
+  $field_group->group_name = 'group_testimonies';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_video_collection';
+  $field_group->mode = 'token';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Testimonies',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_video_title',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Testimonies',
+      'instance_settings' => array(
+        'classes' => 'Testimonies',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $export['group_testimonies|field_collection_item|field_video_collection|token'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -114,16 +146,16 @@ function video_field_group_info() {
     'label' => 'Video',
     'weight' => '11',
     'children' => array(
-      0 => 'field_video',
-      1 => 'field_video_collection',
+      0 => 'field_video_collection',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-video field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
