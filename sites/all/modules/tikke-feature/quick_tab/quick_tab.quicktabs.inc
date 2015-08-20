@@ -24,81 +24,85 @@ function quick_tab_quicktabs_default_quicktabs() {
       'display' => 'block',
       'args' => '',
       'use_title' => 0,
-      'title' => 'Explore',
+      'title' => 'Featured',
       'weight' => '-100',
       'type' => 'view',
     ),
     1 => array(
       'vid' => 'books_tab',
-      'display' => 'block',
+      'display' => 'block_7',
       'args' => '',
       'use_title' => 0,
-      'title' => 'Photo',
+      'title' => 'Diary',
       'weight' => '-99',
       'type' => 'view',
     ),
     2 => array(
       'vid' => 'books_tab',
-      'display' => 'block_1',
+      'display' => 'block_5',
       'args' => '',
       'use_title' => 0,
-      'title' => 'Artifacts',
+      'title' => 'Docs',
       'weight' => '-98',
       'type' => 'view',
     ),
     3 => array(
-      'vid' => 'books_tab',
-      'display' => 'block_2',
-      'args' => '',
-      'use_title' => 0,
-      'title' => 'Art',
+      'bid' => 'costum_delta_costume_tab_1',
+      'hide_title' => 1,
+      'title' => 'Gallery',
       'weight' => '-97',
-      'type' => 'view',
+      'type' => 'block',
     ),
     4 => array(
-      'vid' => 'books_tab',
-      'display' => 'block_3',
-      'args' => '',
-      'use_title' => 0,
-      'title' => 'Research',
+      'bid' => 'costum_delta_video_tab_1',
+      'hide_title' => 1,
+      'title' => 'Testamonies',
       'weight' => '-96',
-      'type' => 'view',
+      'type' => 'block',
     ),
     5 => array(
+      'bid' => 'costum_delta_video_tab_2',
+      'hide_title' => 1,
+      'title' => 'Archive film',
+      'weight' => '-95',
+      'type' => 'block',
+    ),
+    6 => array(
+      'bid' => 'costum_delta_video_tab_3',
+      'hide_title' => 1,
+      'title' => 'Lectures',
+      'weight' => '-94',
+      'type' => 'block',
+    ),
+    7 => array(
+      'bid' => 'costum_delta_costume_tab_2',
+      'hide_title' => 1,
+      'title' => 'Art',
+      'weight' => '-93',
+      'type' => 'block',
+    ),
+    8 => array(
+      'bid' => 'costum_delta_costume_tab_3',
+      'hide_title' => 1,
+      'title' => 'Artifact',
+      'weight' => '-92',
+      'type' => 'block',
+    ),
+    9 => array(
       'vid' => 'books_tab',
       'display' => 'block_4',
       'args' => '',
       'use_title' => 0,
       'title' => 'Map',
-      'weight' => '-95',
+      'weight' => '-91',
       'type' => 'view',
     ),
-    6 => array(
-      'vid' => 'books_tab',
-      'display' => 'block_5',
-      'args' => '',
-      'use_title' => 0,
-      'title' => 'Documents',
-      'weight' => '-94',
-      'type' => 'view',
-    ),
-    7 => array(
-      'vid' => 'books_tab',
-      'display' => 'block_7',
-      'args' => '',
-      'use_title' => 0,
-      'title' => 'Diary',
-      'weight' => '-93',
-      'type' => 'view',
-    ),
-    8 => array(
-      'vid' => 'books_tab',
-      'display' => 'block_6',
-      'args' => '',
-      'use_title' => 0,
-      'title' => 'Videos',
-      'weight' => '-92',
-      'type' => 'view',
+    10 => array(
+      'bid' => 'block_delta_4',
+      'hide_title' => 1,
+      'title' => 'Archive Film',
+      'weight' => '-90',
+      'type' => 'block',
     ),
   );
   $quicktabs->renderer = 'quicktabs';
@@ -107,16 +111,18 @@ function quick_tab_quicktabs_default_quicktabs() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Archive Film');
+  t('Archive film');
   t('Art');
-  t('Artifacts');
+  t('Artifact');
   t('Book page');
   t('Diary');
-  t('Documents');
-  t('Explore');
+  t('Docs');
+  t('Featured');
+  t('Gallery');
+  t('Lectures');
   t('Map');
-  t('Photo');
-  t('Research');
-  t('Videos');
+  t('Testamonies');
 
   $export['book_page'] = $quicktabs;
 
