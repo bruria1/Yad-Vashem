@@ -1087,7 +1087,94 @@ body{
   display: none;
   @include res(s-m){
     display: block;
+    position: relative;
+    margin-bottom: 60px;
   }
+  .views-slideshow-cycle-main-frame-row{
+    position: relative;
+    img{
+      margin-bottom: -6px;
+    }
+  }
+  .views-slideshow-cycle-main-frame, .views-slideshow-cycle-main-frame-row{
+    max-width: 100%;
+  }
+  .views-slideshow-controls-bottom{
+    position: absolute;
+    top: 40%;
+    z-index: 150;
+    width: 100%;
+    span{
+      position: absolute;
+    }
+    a{
+      text-indent: -9999px;
+      background:  url("../images/arrow-mobile.png") no-repeat center center #000;
+      display: block;
+      width: 30px;
+      padding: 5px 0;
+    }
+    .views-slideshow-controls-text-pause{
+      display: none;
+    }
+    .views-slideshow-controls-text-previous{
+      left: 0;
+      a{
+        background-position: 0 5px;
+      }
+    }
+    .views-slideshow-controls-text-next{
+      right: 0;
+      a{
+        background-position: -32px 5px;
+      }
+    }
+  }
+  .field-name-field-file-image-title-text{
+    position: absolute;
+    color: #fff;
+    background-color: #999;
+    padding: 5px 10px;
+    font-family: 'PT Serif', arial;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    display: none;
+  }
+  .view-footer{
+    position: absolute;
+    bottom: 0;
+    z-index: 150;
+    right: 0;
+    .description-button{
+      background-color: #000;
+      border-left: 2px solid #fff;
+      border-top:2px solid #fff;
+      cursor: pointer;
+      width: 24px;
+      text-align: center;
+      color: #fff;
+      font-family: 'PT Serif', arial;
+      font-weight: bold;
+      .display{
+        display: none;
+      }
+    }
+  }
+}
+
+.display-description{
+    .field-name-field-file-image-title-text{
+      display: block;
+    }
+    .description-button{
+      .hide{
+        display: none;
+      }
+      .display{
+        display: block!important;
+      }
+    }
 }
 
 #nerative_tabs{
