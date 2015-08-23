@@ -706,19 +706,13 @@ body{
       box-sizing: border-box;
     }
   }
-
   .book-navigation{
     clear: both;
     width: 100%;
     border-top: 1px solid #e7e7e7;
     font-family: 'PT Serif', arial;
-<<<<<<< HEAD
     padding: 20px 0 40px;
     overflow: hidden;
-=======
-    padding: 40px 0;
-    margin-bottom: 70px;
->>>>>>> a18648a3fe184aef51d0a8bf3f08041d1bf0bf50
     @include res(s-m){
       border: none;
       padding: 6px 0;
@@ -771,26 +765,12 @@ body{
       .book-title{
         font-size: 1.1em;
         color: #000;
-<<<<<<< HEAD
         line-height: 0.9em;
         margin-top: 9px;
-=======
-        line-height: 1.2;
-        max-width: 210px;
-        margin: 0 auto;
-        width: 100% !important;
-        text-align: left !important;
-        font-weight: bold !important;
->>>>>>> a18648a3fe184aef51d0a8bf3f08041d1bf0bf50
       }
       .current{
         font-size: 0.9em;
         color: #666666;
-        max-width: 210px;
-        margin: 0 auto;
-        width: 100% !important;
-        text-align: left !important;
-        font-weight: bold !important;
       }
     }
     .page-title{
@@ -810,7 +790,6 @@ body{
         font-size: 0.9em;
         .title{
           margin-bottom: 10px;
-          line-height: 1.2;
         }
       }
       img{
@@ -827,10 +806,6 @@ body{
           width: 100%;
         }
       }
-      img {
-        float: right;
-        padding-left: 20px;
-      }
     }
     .page-next{
       margin-left: 2%;
@@ -845,7 +820,6 @@ body{
         font-size: 0.9em;
         .title{
           margin-bottom: 10px;
-          line-height: 1.2;
         }
       }
       img{
@@ -858,10 +832,6 @@ body{
       .text{
         float: right;
         width: 85%;
-      }
-      img {
-        float: left;
-        padding-right: 20px;
       }
     }
     .text{
@@ -1490,16 +1460,11 @@ body{
   }
 }
 
-/* 
- * The Docs and letters-diary tabs 
- *****************************************************/ 
-
-.view-books-tab.view-display-id-block_5 ,
-.view-books-tab.view-display-id-block_7 {
-    .views-field-field-files {
+.view-books-tab.view-display-id-block_5{
+    .views-field-field-files{
         font-size: 1.1em;    
         position: relative;  
-        a {
+        a{
           text-decoration: none!important;
           position: relative;
           margin-bottom: 35px;
@@ -1691,52 +1656,37 @@ body{
 // The overlay
 #my_overlay_d1 {
   background-color: rgba(0, 0, 0, 0.71);
-  .wrapper {
-    margin-top: 40px;
-  }
   .right_bar {
     width: 28%;
     background-color: rgba(0, 0, 0, 0.39);
-    .wrapper {
-      padding:0 10% 0 3%;
-    }
   }
-  .mid {
+  #mid_d1 {
     width: 72%;
-    .fotorama__wrap {
-      width: 100% !important;
-    }
-    .fotorama__stage {
-      border: none;
-      max-height: 550px;
-      margin-top: 15px;
-    }
-    img {
-      box-sizing: border-box;
-      max-height: 535px !important;
-      width: auto !important;
-    }
-    .img_count {
-      float: left;
-      position: relative;
-      left: 35px;
-    }
-    .addthis_native_toolbox {
-      position: relative;
-      right: 10px;
-    }
+    margin: 7% auto;
   }
-  
+  .img_count {
+    float: left;
+  }
+  .addthis_native_toolbox {
+    margin-right: -40px;
+  }
 
   div#mid .wrapper,
   #fotorama_ovr {
     max-width:750px;
     width: 100%;
   }
+  .fotorama__stage {
+    border: 10px;
+  }
   // Right side overlay
+  .wrapper {
+    margin-top: 60px;
+    padding:0 10% 0 3%;
+  }
   .closeBtn {
     float: right;
-    text-decoration: none !important;
+    text-decoration: none;
     color: #fff;
     margin-bottom: 30px;
   }
@@ -1744,18 +1694,10 @@ body{
     clear: both;
     padding: 10px 0px !important;
     border-top: 2px solid;
-    border-bottom: 2px solid;
   }
 }
 
-/* 
- * The Map tab
- **************************************************/
-.views-field-field-map-images {
-  img {
-    max-width: 687px;
-  }
-}
+
 
 
 
