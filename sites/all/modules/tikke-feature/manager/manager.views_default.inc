@@ -24,25 +24,12 @@ function manager_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Galleries manage';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'עוד';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'התאמה';
-  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'איתחול';
-  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'מיין לפי';
-  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'עולה';
-  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'יורד';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'מספר פריטים בעמוד';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- הכל -';
-  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'היסט';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ לעמוד הקודם';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'לעמוד הבא ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'לעמוד האחרון »';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'field_main_image' => 'field_main_image',
@@ -107,17 +94,18 @@ function manager_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* כותרת: כללי: אזור טקסט */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<a href="node/add/documents">Create Documents</a>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  /* שדה: פעולות צובר: תוכן */
+  /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['label'] = 'תוכן';
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '1';
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
@@ -130,79 +118,8 @@ function manager_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
-    'action::views_bulk_operations_delete_revision' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::views_bulk_operations_script_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::views_bulk_operations_modify_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-      'settings' => array(
-        'show_all_tokens' => 1,
-        'display_values' => array(
-          '_all_' => '_all_',
-        ),
-      ),
-    ),
-    'action::views_bulk_operations_argument_selector_action' => array(
-      'selected' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-      'settings' => array(
-        'url' => '',
-      ),
-    ),
-    'action::pathauto_node_update_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::node_unpromote_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::node_unpublish_by_keyword_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
     'action::node_unpublish_action' => array(
       'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::node_make_sticky_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::node_make_unsticky_action' => array(
-      'selected' => 0,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -215,50 +132,12 @@ function manager_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
-    'action::node_promote_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::node_assign_owner_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::system_send_email_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::node_save_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
   );
-  /* שדה: תוכן: Main image */
-  $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
-  $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
-  $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
-  $handler->display->display_options['fields']['field_main_image']['label'] = 'Main Image';
-  $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_main_image']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
-  );
-  /* שדה: תוכן: שפה */
+  /* Field: Content: Language */
   $handler->display->display_options['fields']['language']['id'] = 'language';
   $handler->display->display_options['fields']['language']['table'] = 'node';
   $handler->display->display_options['fields']['language']['field'] = 'language';
-  /* שדה: תוכן: כותרת */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -266,44 +145,45 @@ function manager_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* שדה: תוכן: Sub Title */
+  /* Field: Content: Sub Title */
   $handler->display->display_options['fields']['field_sub_title']['id'] = 'field_sub_title';
   $handler->display->display_options['fields']['field_sub_title']['table'] = 'field_data_field_sub_title';
   $handler->display->display_options['fields']['field_sub_title']['field'] = 'field_sub_title';
   $handler->display->display_options['fields']['field_sub_title']['label'] = 'Second Title';
-  /* שדה: תוכן: קישור */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['label'] = 'נהל';
-  $handler->display->display_options['fields']['view_node']['text'] = 'תצוגה';
-  /* שדה: תוכן: ערוך קישור */
+  $handler->display->display_options['fields']['view_node']['label'] = 'Manage';
+  $handler->display->display_options['fields']['view_node']['text'] = 'View';
+  /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['edit_node']['text'] = 'עריכה';
-  /* שדה: תוכן: מחק קישור */
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Content: Delete link */
   $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
+  $handler->display->display_options['fields']['delete_node']['element_type'] = 'strong';
   $handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['delete_node']['text'] = 'מחיקה';
-  /* שדה: תוכן: מפורסם */
+  $handler->display->display_options['fields']['delete_node']['text'] = 'Delete';
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['label'] = 'Publish';
   $handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* קריטריון לסידור: תוכן: תאריך פירסום */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -321,30 +201,22 @@ function manager_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'book' => 'book',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    'ar' => 'ar',
-    'en' => 'en',
-    'fr' => 'fr',
-    'de' => 'de',
-    'he' => 'he',
-    'fa' => 'fa',
-    'ru' => 'ru',
-    'es' => 'es',
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
+  $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
   $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
@@ -355,14 +227,14 @@ function manager_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* קריטריון לסינון: תוכן: כותרת */
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'כותרת';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -388,84 +260,96 @@ function manager_views_default_views() {
   /* Display: Galleries */
   $handler = $view->new_display('page', 'Galleries', 'page_1');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* כותרת: כללי: אזור טקסט */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<a href="node/add/artifacts-gallery-arts">Create Gallery</a>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 'All';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['status']['expose']['label'] = 'Publish';
-  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
-  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
-  $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['label'] = 'תוכן';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '1';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::views_bulk_operations_delete_item' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpublish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_publish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
   );
-  /* קריטריון לסינון: תוכן: סוג */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'artifacts_gallery_arts' => 'artifacts_gallery_arts',
-  );
-  /* קריטריון לסינון: תוכן: שפה */
-  $handler->display->display_options['filters']['language']['id'] = 'language';
-  $handler->display->display_options['filters']['language']['table'] = 'node';
-  $handler->display->display_options['filters']['language']['field'] = 'language';
-  $handler->display->display_options['filters']['language']['value'] = array(
-    'ar' => 'ar',
-    'en' => 'en',
-    'fr' => 'fr',
-    'de' => 'de',
-    'he' => 'he',
-    'fa' => 'fa',
-    'ru' => 'ru',
-    'es' => 'es',
-  );
-  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
-  $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
-  $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
-  $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* קריטריון לסינון: תוכן: כותרת */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'כותרת';
-  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
-  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
+  /* Field: Content: Language */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  /* Field: Content: Gallery Type */
+  $handler->display->display_options['fields']['field_gallery_type']['id'] = 'field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['table'] = 'field_data_field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['field'] = 'field_gallery_type';
+  $handler->display->display_options['fields']['field_gallery_type']['label'] = 'Type';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Sub Title */
+  $handler->display->display_options['fields']['field_sub_title']['id'] = 'field_sub_title';
+  $handler->display->display_options['fields']['field_sub_title']['table'] = 'field_data_field_sub_title';
+  $handler->display->display_options['fields']['field_sub_title']['field'] = 'field_sub_title';
+  $handler->display->display_options['fields']['field_sub_title']['label'] = 'Second Title';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = 'Manage';
+  $handler->display->display_options['fields']['view_node']['text'] = 'View';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Content: Delete link */
+  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['label'] = '';
+  $handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['delete_node']['text'] = 'Delete';
+  /* Field: Content: Published */
+  $handler->display->display_options['fields']['status']['id'] = 'status';
+  $handler->display->display_options['fields']['status']['table'] = 'node';
+  $handler->display->display_options['fields']['status']['field'] = 'status';
+  $handler->display->display_options['fields']['status']['label'] = 'Publish';
+  $handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
+  $handler->display->display_options['fields']['status']['not'] = 0;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'admin/gallery-manage';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Galleries';
@@ -479,7 +363,7 @@ function manager_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Diaries/letters manage';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* כותרת: כללי: אזור טקסט */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -488,7 +372,7 @@ function manager_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -506,30 +390,22 @@ function manager_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'diaries_letters' => 'diaries_letters',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    'ar' => 'ar',
-    'en' => 'en',
-    'fr' => 'fr',
-    'de' => 'de',
-    'he' => 'he',
-    'fa' => 'fa',
-    'ru' => 'ru',
-    'es' => 'es',
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
+  $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
   $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
@@ -540,14 +416,14 @@ function manager_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* קריטריון לסינון: תוכן: כותרת */
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'כותרת';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -569,77 +445,6 @@ function manager_views_default_views() {
   $handler = $view->new_display('page', 'Documents', 'page_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Documents manage';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 'All';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['status']['expose']['label'] = 'Publish';
-  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
-  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
-  $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
-  /* קריטריון לסינון: תוכן: סוג */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'documents' => 'documents',
-  );
-  /* קריטריון לסינון: תוכן: שפה */
-  $handler->display->display_options['filters']['language']['id'] = 'language';
-  $handler->display->display_options['filters']['language']['table'] = 'node';
-  $handler->display->display_options['filters']['language']['field'] = 'language';
-  $handler->display->display_options['filters']['language']['value'] = array(
-    'ar' => 'ar',
-    'en' => 'en',
-    'fr' => 'fr',
-    'de' => 'de',
-    'he' => 'he',
-    'fa' => 'fa',
-    'ru' => 'ru',
-    'es' => 'es',
-  );
-  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
-  $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
-  $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
-  $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* קריטריון לסינון: תוכן: כותרת */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'כותרת';
-  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
-  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
   $handler->display->display_options['path'] = 'admin/documents-manage';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Documents';
@@ -653,7 +458,7 @@ function manager_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Maps/Charts manage';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* כותרת: כללי: אזור טקסט */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -662,7 +467,7 @@ function manager_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -680,30 +485,23 @@ function manager_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'maps_charts' => 'maps_charts',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    'ar' => 'ar',
-    'en' => 'en',
-    'fr' => 'fr',
-    'de' => 'de',
-    'he' => 'he',
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'fa' => 'fa',
-    'ru' => 'ru',
-    'es' => 'es',
   );
-  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
+  $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
   $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
@@ -714,14 +512,14 @@ function manager_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* קריטריון לסינון: תוכן: כותרת */
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'כותרת';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -744,16 +542,98 @@ function manager_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Videos manage';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* כותרת: כללי: אזור טקסט */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<a href="node/add/video-gallery">Create Video Gallery</a>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['label'] = 'תוכן';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '1';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::views_bulk_operations_delete_item' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpublish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_publish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+  );
+  /* Field: Content: Language */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Sub Title */
+  $handler->display->display_options['fields']['field_sub_title']['id'] = 'field_sub_title';
+  $handler->display->display_options['fields']['field_sub_title']['table'] = 'field_data_field_sub_title';
+  $handler->display->display_options['fields']['field_sub_title']['field'] = 'field_sub_title';
+  $handler->display->display_options['fields']['field_sub_title']['label'] = 'Second Title';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = 'Manage';
+  $handler->display->display_options['fields']['view_node']['text'] = 'View';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Content: Delete link */
+  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['label'] = '';
+  $handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['delete_node']['text'] = 'Delete';
+  /* Field: Content: Published */
+  $handler->display->display_options['fields']['status']['id'] = 'status';
+  $handler->display->display_options['fields']['status']['table'] = 'node';
+  $handler->display->display_options['fields']['status']['field'] = 'status';
+  $handler->display->display_options['fields']['status']['label'] = 'Publish';
+  $handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
+  $handler->display->display_options['fields']['status']['not'] = 0;
+  /* Field: Content: video type */
+  $handler->display->display_options['fields']['field_video_type']['id'] = 'field_video_type';
+  $handler->display->display_options['fields']['field_video_type']['table'] = 'field_data_field_video_type';
+  $handler->display->display_options['fields']['field_video_type']['field'] = 'field_video_type';
+  $handler->display->display_options['fields']['field_video_type']['label'] = 'Type';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -771,30 +651,24 @@ function manager_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'video_gallery' => 'video_gallery',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'ar' => 'ar',
-    'en' => 'en',
-    'fr' => 'fr',
-    'de' => 'de',
-    'he' => 'he',
     'fa' => 'fa',
-    'ru' => 'ru',
-    'es' => 'es',
   );
-  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
+  $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
   $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
@@ -805,17 +679,33 @@ function manager_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* קריטריון לסינון: תוכן: כותרת */
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'כותרת';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  /* Filter criterion: Content: video type (field_video_type) */
+  $handler->display->display_options['filters']['field_video_type_value']['id'] = 'field_video_type_value';
+  $handler->display->display_options['filters']['field_video_type_value']['table'] = 'field_data_field_video_type';
+  $handler->display->display_options['filters']['field_video_type_value']['field'] = 'field_video_type_value';
+  $handler->display->display_options['filters']['field_video_type_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_video_type_value']['expose']['operator_id'] = 'field_video_type_value_op';
+  $handler->display->display_options['filters']['field_video_type_value']['expose']['label'] = 'video type';
+  $handler->display->display_options['filters']['field_video_type_value']['expose']['operator'] = 'field_video_type_value_op';
+  $handler->display->display_options['filters']['field_video_type_value']['expose']['identifier'] = 'field_video_type_value';
+  $handler->display->display_options['filters']['field_video_type_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
@@ -835,7 +725,7 @@ function manager_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Researchs manage';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* כותרת: כללי: אזור טקסט */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -844,7 +734,7 @@ function manager_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* קריטריון לסינון: תוכן: מפורסם */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -862,30 +752,22 @@ function manager_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* קריטריון לסינון: תוכן: סוג */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'research' => 'research',
   );
-  /* קריטריון לסינון: תוכן: שפה */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    'ar' => 'ar',
-    'en' => 'en',
-    'fr' => 'fr',
-    'de' => 'de',
-    'he' => 'he',
-    'fa' => 'fa',
-    'ru' => 'ru',
-    'es' => 'es',
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
-  $handler->display->display_options['filters']['language']['expose']['label'] = 'שפה';
+  $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
   $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
@@ -896,14 +778,14 @@ function manager_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
-  /* קריטריון לסינון: תוכן: כותרת */
+  /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'כותרת';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -923,35 +805,35 @@ function manager_views_default_views() {
   $translatables['books'] = array(
     t('Master'),
     t('Galleries manage'),
-    t('עוד'),
-    t('התאמה'),
-    t('איתחול'),
-    t('מיין לפי'),
-    t('עולה'),
-    t('יורד'),
-    t('מספר פריטים בעמוד'),
-    t('- הכל -'),
-    t('היסט'),
-    t('« לעמוד הראשון'),
-    t('‹ לעמוד הקודם'),
-    t('לעמוד הבא ›'),
-    t('לעמוד האחרון »'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
     t('<a href="node/add/documents">Create Documents</a>'),
     t('תוכן'),
-    t('- בחר פעולה -'),
-    t('Main Image'),
-    t('שפה'),
-    t('כותרת'),
+    t('- Choose an operation -'),
+    t('Language'),
+    t('Title'),
     t('Second Title'),
-    t('נהל'),
-    t('תצוגה'),
-    t('עריכה'),
-    t('מחיקה'),
+    t('Manage'),
+    t('View'),
+    t('Edit'),
+    t('Delete'),
     t('Publish'),
     t('books'),
     t('Books manage'),
     t('Galleries'),
     t('<a href="node/add/artifacts-gallery-arts">Create Gallery</a>'),
+    t('Type'),
     t('Diary/letter'),
     t('Diaries/letters manage'),
     t('<a href="node/add/diaries-letters">Create Diary/Letter</a>'),
@@ -963,6 +845,7 @@ function manager_views_default_views() {
     t('Video'),
     t('Videos manage'),
     t('<a href="node/add/video-gallery">Create Video Gallery</a>'),
+    t('video type'),
     t('Research'),
     t('Researchs manage'),
     t('<a href="node/add/research">Create Research</a>'),
@@ -996,13 +879,13 @@ function manager_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* שדה: סיווג במילון: תאור המושג */
+  /* Field: Taxonomy term: Term description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
-  /* מסנן תלוי הקשר: סיווג במילון: מזהה מושג */
+  /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -1026,6 +909,7 @@ function manager_views_default_views() {
     t('יורד'),
     t('הכל'),
     t('Block'),
+    t('more'),
     t('תאור המושג'),
   );
   $export['term_description'] = $view;
@@ -1052,7 +936,7 @@ function manager_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'חיפוש';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'איתחול';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'מיין לפי';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'עולה';
@@ -1060,7 +944,7 @@ function manager_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'entity';
-  /* שדה: פעולות צובר: משתמש */
+  /* Field: Bulk operations: User */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'users';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -1071,36 +955,8 @@ function manager_views_default_views() {
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
-    'action::user_block_user_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 1,
-      'override_label' => 0,
-      'label' => '',
-    ),
     'action::views_bulk_operations_user_cancel_action' => array(
       'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::views_bulk_operations_delete_item' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::views_bulk_operations_delete_revision' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::views_bulk_operations_script_action' => array(
-      'selected' => 0,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -1119,91 +975,61 @@ function manager_views_default_views() {
         ),
       ),
     ),
-    'action::views_bulk_operations_user_roles_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::views_bulk_operations_argument_selector_action' => array(
-      'selected' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-      'settings' => array(
-        'url' => '',
-      ),
-    ),
-    'action::system_send_email_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::pathauto_user_update_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
   );
-  /* שדה: משתמש: פעיל */
+  /* Field: User: Active */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'users';
   $handler->display->display_options['fields']['status']['field'] = 'status';
-  $handler->display->display_options['fields']['status']['label'] = 'מצב';
+  $handler->display->display_options['fields']['status']['label'] = 'Status';
   $handler->display->display_options['fields']['status']['type'] = 'active-blocked';
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* שדה: משתמש: שם */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = 'User Name';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  /* שדה: משתמש: כתובת דוא"ל */
+  /* Field: User: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
   $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  /* שדה: משתמש: תאריך יצירה */
+  /* Field: User: Created date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'users';
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = 'Creates Date';
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* שדה: משתמש: כניסה אחרונה */
+  /* Field: User: Last access */
   $handler->display->display_options['fields']['access']['id'] = 'access';
   $handler->display->display_options['fields']['access']['table'] = 'users';
   $handler->display->display_options['fields']['access']['field'] = 'access';
   $handler->display->display_options['fields']['access']['date_format'] = 'short';
   $handler->display->display_options['fields']['access']['second_date_format'] = 'long';
-  /* שדה: משתמש: תפקידים */
+  /* Field: User: Roles */
   $handler->display->display_options['fields']['rid']['id'] = 'rid';
   $handler->display->display_options['fields']['rid']['table'] = 'users_roles';
   $handler->display->display_options['fields']['rid']['field'] = 'rid';
-  /* שדה: משתמש: ערוך קישור */
+  /* Field: User: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'users';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['label'] = 'נהל';
-  $handler->display->display_options['fields']['edit_node']['text'] = 'עריכה';
-  /* שדה: משתמש: Cancel link */
+  $handler->display->display_options['fields']['edit_node']['label'] = 'Manage';
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: User: Cancel link */
   $handler->display->display_options['fields']['cancel_node']['id'] = 'cancel_node';
   $handler->display->display_options['fields']['cancel_node']['table'] = 'users';
   $handler->display->display_options['fields']['cancel_node']['field'] = 'cancel_node';
   $handler->display->display_options['fields']['cancel_node']['label'] = '';
   $handler->display->display_options['fields']['cancel_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['cancel_node']['text'] = 'מחיקה';
-  /* קריטריון לסידור: משתמש: תאריך יצירה */
+  $handler->display->display_options['fields']['cancel_node']['text'] = 'Delete';
+  /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* קריטריון לסינון: משתמש: שם */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -1220,14 +1046,14 @@ function manager_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* קריטריון לסינון: משתמש: כתובת דוא"ל */
+  /* Filter criterion: User: E-mail */
   $handler->display->display_options['filters']['mail']['id'] = 'mail';
   $handler->display->display_options['filters']['mail']['table'] = 'users';
   $handler->display->display_options['filters']['mail']['field'] = 'mail';
   $handler->display->display_options['filters']['mail']['operator'] = 'contains';
   $handler->display->display_options['filters']['mail']['exposed'] = TRUE;
   $handler->display->display_options['filters']['mail']['expose']['operator_id'] = 'mail_op';
-  $handler->display->display_options['filters']['mail']['expose']['label'] = 'דוא"ל';
+  $handler->display->display_options['filters']['mail']['expose']['label'] = 'Email';
   $handler->display->display_options['filters']['mail']['expose']['operator'] = 'mail_op';
   $handler->display->display_options['filters']['mail']['expose']['identifier'] = 'mail';
   $handler->display->display_options['filters']['mail']['expose']['remember_roles'] = array(
@@ -1237,12 +1063,12 @@ function manager_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* קריטריון לסינון: משתמש: כתובת דוא"ל */
+  /* Filter criterion: User: E-mail */
   $handler->display->display_options['filters']['mail_1']['id'] = 'mail_1';
   $handler->display->display_options['filters']['mail_1']['table'] = 'users';
   $handler->display->display_options['filters']['mail_1']['field'] = 'mail';
   $handler->display->display_options['filters']['mail_1']['operator'] = '!=';
-  /* קריטריון לסינון: משתמש: מזהה המשתמש */
+  /* Filter criterion: User: The user ID */
   $handler->display->display_options['filters']['uid_raw']['id'] = 'uid_raw';
   $handler->display->display_options['filters']['uid_raw']['table'] = 'users';
   $handler->display->display_options['filters']['uid_raw']['field'] = 'uid_raw';
@@ -1318,7 +1144,7 @@ function manager_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* כותרת: כללי: אזור טקסט */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -1335,23 +1161,24 @@ function manager_views_default_views() {
     t('Master'),
     t('User Table'),
     t('עוד'),
-    t('חיפוש'),
+    t('Search'),
     t('איתחול'),
     t('מיין לפי'),
     t('עולה'),
     t('יורד'),
-    t('- בחר פעולה -'),
-    t('מצב'),
+    t('- Choose an operation -'),
+    t('Status'),
     t('User Name'),
-    t('כתובת דוא"ל'),
+    t('E-mail'),
     t('Creates Date'),
-    t('כניסה אחרונה'),
-    t('תפקידים'),
-    t('נהל'),
-    t('עריכה'),
-    t('מחיקה'),
-    t('דוא"ל'),
+    t('Last access'),
+    t('Roles'),
+    t('Manage'),
+    t('Edit'),
+    t('Delete'),
+    t('Email'),
     t('Page'),
+    t('more'),
     t('<a href="/admin/people/create">Add User</a>'),
   );
   $export['users'] = $view;

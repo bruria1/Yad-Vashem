@@ -1,6 +1,7 @@
 name = Manager
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = features
 dependencies[] = menu
@@ -13,4 +14,3 @@ features[user_role][] = Secondary Editor
 features[views_view][] = books
 features[views_view][] = term_description
 features[views_view][] = users
-features_exclude[dependencies][ctools] = ctools

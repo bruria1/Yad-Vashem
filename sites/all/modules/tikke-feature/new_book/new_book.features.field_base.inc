@@ -61,7 +61,7 @@ function new_book_field_default_field_bases() {
   // Exported field_base: 'field_diaries_letters'
   $field_bases['field_diaries_letters'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_diaries_letters',
@@ -73,17 +73,20 @@ function new_book_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'views',
+      'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => 'entityreference_5',
-          'view_name' => 'all_gallery',
+        'sort' => array(
+          'direction' => 'ASC',
+          'property' => 'tnid',
+          'type' => 'property',
+        ),
+        'target_bundles' => array(
+          'diaries_letters' => 'diaries_letters',
         ),
       ),
       'target_type' => 'node',
@@ -95,7 +98,7 @@ function new_book_field_default_field_bases() {
   // Exported field_base: 'field_documents'
   $field_bases['field_documents'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_documents',
@@ -107,17 +110,20 @@ function new_book_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'views',
+      'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => 'entityreference_4',
-          'view_name' => 'all_gallery',
+        'sort' => array(
+          'direction' => 'ASC',
+          'property' => 'translate',
+          'type' => 'property',
+        ),
+        'target_bundles' => array(
+          'documents' => 'documents',
         ),
       ),
       'target_type' => 'node',
@@ -239,17 +245,20 @@ function new_book_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'views',
+      'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => 'entityreference_3',
-          'view_name' => 'all_gallery',
+        'sort' => array(
+          'direction' => 'ASC',
+          'property' => 'translate',
+          'type' => 'property',
+        ),
+        'target_bundles' => array(
+          'maps_charts' => 'maps_charts',
         ),
       ),
       'target_type' => 'node',
@@ -389,17 +398,20 @@ function new_book_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'views',
+      'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => 'entityreference_2',
-          'view_name' => 'all_gallery',
+        'sort' => array(
+          'direction' => 'ASC',
+          'property' => 'translate',
+          'type' => 'property',
+        ),
+        'target_bundles' => array(
+          'research' => 'research',
         ),
       ),
       'target_type' => 'node',
@@ -759,7 +771,7 @@ function new_book_field_default_field_bases() {
   // Exported field_base: 'field_video_gallery'
   $field_bases['field_video_gallery'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => 4,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_video_gallery',

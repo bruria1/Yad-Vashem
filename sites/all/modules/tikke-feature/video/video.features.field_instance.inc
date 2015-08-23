@@ -203,7 +203,7 @@ function video_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -246,7 +246,7 @@ function video_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 39,
+      'weight' => 40,
     ),
   );
 
@@ -286,7 +286,7 @@ function video_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'node_reference_autocomplete',
-      'weight' => 41,
+      'weight' => 42,
     ),
   );
 
@@ -414,7 +414,7 @@ function video_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 38,
+      'weight' => 39,
     ),
   );
 
@@ -544,7 +544,7 @@ function video_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 40,
+      'weight' => 41,
     ),
   );
 
@@ -587,7 +587,7 @@ function video_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 37,
+      'weight' => 38,
     ),
   );
 
@@ -770,6 +770,89 @@ function video_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-video_gallery-field_video_sub_title'
+  $field_instances['node-video_gallery-field_video_sub_title'] = array(
+    'bundle' => 'video_gallery',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video_sub_title',
+    'label' => 'Video sub title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-video_gallery-field_video_type'
+  $field_instances['node-video_gallery-field_video_type'] = array(
+    'bundle' => 'video_gallery',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'list_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video_type',
+    'label' => 'video type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 3,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Camps');
@@ -788,6 +871,8 @@ function video_field_default_field_instances() {
   t('Video');
   t('Video Description');
   t('Video Title');
+  t('Video sub title');
+  t('video type');
 
   return $field_instances;
 }
