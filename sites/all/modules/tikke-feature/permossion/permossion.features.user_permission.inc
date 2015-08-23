@@ -55,27 +55,6 @@ function permossion_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: 'access content'.
-  $permissions['access content'] = array(
-    'name' => 'access content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'access content overview'.
-  $permissions['access content overview'] = array(
-    'name' => 'access content overview',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'access contextual links'.
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
@@ -167,16 +146,6 @@ function permossion_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'i18n_node',
-  );
-
-  // Exported permission: 'administer content types'.
-  $permissions['administer content types'] = array(
-    'name' => 'administer content types',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'administer contexts'.
@@ -300,16 +269,6 @@ function permossion_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
-  );
-
-  // Exported permission: 'administer nodes'.
-  $permissions['administer nodes'] = array(
-    'name' => 'administer nodes',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'administer page titles'.
@@ -437,16 +396,6 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'bypass node access'.
-  $permissions['bypass node access'] = array(
-    'name' => 'bypass node access',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
@@ -475,75 +424,13 @@ function permossion_user_default_permissions() {
     'module' => 'context_ui',
   );
 
-  // Exported permission: 'create artifacts_gallery_arts content'.
-  $permissions['create artifacts_gallery_arts content'] = array(
-    'name' => 'create artifacts_gallery_arts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'create book content'.
-  $permissions['create book content'] = array(
-    'name' => 'create book content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'create diaries_letters content'.
-  $permissions['create diaries_letters content'] = array(
-    'name' => 'create diaries_letters content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'create documents content'.
-  $permissions['create documents content'] = array(
-    'name' => 'create documents content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
-    'roles' => array(),
+    'roles' => array(
+      'Editor' => 'Editor',
+    ),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'create maps_charts content'.
-  $permissions['create maps_charts content'] = array(
-    'name' => 'create maps_charts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'create page content'.
-  $permissions['create page content'] = array(
-    'name' => 'create page content',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'create research content'.
-  $permissions['create research content'] = array(
-    'name' => 'create research content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'create url aliases'.
@@ -555,47 +442,11 @@ function permossion_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: 'create video_gallery content'.
-  $permissions['create video_gallery content'] = array(
-    'name' => 'create video_gallery content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any artifacts_gallery_arts content'.
-  $permissions['delete any artifacts_gallery_arts content'] = array(
-    'name' => 'delete any artifacts_gallery_arts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any audio files'.
   $permissions['delete any audio files'] = array(
     'name' => 'delete any audio files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'delete any book content'.
-  $permissions['delete any book content'] = array(
-    'name' => 'delete any book content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any diaries_letters content'.
-  $permissions['delete any diaries_letters content'] = array(
-    'name' => 'delete any diaries_letters content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete any document files'.
@@ -605,64 +456,11 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'delete any documents content'.
-  $permissions['delete any documents content'] = array(
-    'name' => 'delete any documents content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any image files'.
   $permissions['delete any image files'] = array(
     'name' => 'delete any image files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'delete any maps_charts content'.
-  $permissions['delete any maps_charts content'] = array(
-    'name' => 'delete any maps_charts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any page content'.
-  $permissions['delete any page content'] = array(
-    'name' => 'delete any page content',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any research content'.
-  $permissions['delete any research content'] = array(
-    'name' => 'delete any research content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any video files'.
-  $permissions['delete any video files'] = array(
-    'name' => 'delete any video files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'delete any video_gallery content'.
-  $permissions['delete any video_gallery content'] = array(
-    'name' => 'delete any video_gallery content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete backup files'.
@@ -674,38 +472,11 @@ function permossion_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: 'delete own artifacts_gallery_arts content'.
-  $permissions['delete own artifacts_gallery_arts content'] = array(
-    'name' => 'delete own artifacts_gallery_arts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete own audio files'.
   $permissions['delete own audio files'] = array(
     'name' => 'delete own audio files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'delete own book content'.
-  $permissions['delete own book content'] = array(
-    'name' => 'delete own book content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own diaries_letters content'.
-  $permissions['delete own diaries_letters content'] = array(
-    'name' => 'delete own diaries_letters content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete own document files'.
@@ -715,73 +486,11 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'delete own documents content'.
-  $permissions['delete own documents content'] = array(
-    'name' => 'delete own documents content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete own image files'.
   $permissions['delete own image files'] = array(
     'name' => 'delete own image files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'delete own maps_charts content'.
-  $permissions['delete own maps_charts content'] = array(
-    'name' => 'delete own maps_charts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own page content'.
-  $permissions['delete own page content'] = array(
-    'name' => 'delete own page content',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own research content'.
-  $permissions['delete own research content'] = array(
-    'name' => 'delete own research content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own video files'.
-  $permissions['delete own video files'] = array(
-    'name' => 'delete own video files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'delete own video_gallery content'.
-  $permissions['delete own video_gallery content'] = array(
-    'name' => 'delete own video_gallery content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete revisions'.
-  $permissions['delete revisions'] = array(
-    'name' => 'delete revisions',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete terms in camps'.
@@ -902,13 +611,6 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'download any video files'.
-  $permissions['download any video files'] = array(
-    'name' => 'download any video files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: 'download own audio files'.
   $permissions['download own audio files'] = array(
     'name' => 'download own audio files',
@@ -930,45 +632,11 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'download own video files'.
-  $permissions['download own video files'] = array(
-    'name' => 'download own video files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit any artifacts_gallery_arts content'.
-  $permissions['edit any artifacts_gallery_arts content'] = array(
-    'name' => 'edit any artifacts_gallery_arts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any audio files'.
   $permissions['edit any audio files'] = array(
     'name' => 'edit any audio files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit any book content'.
-  $permissions['edit any book content'] = array(
-    'name' => 'edit any book content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any diaries_letters content'.
-  $permissions['edit any diaries_letters content'] = array(
-    'name' => 'edit any diaries_letters content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit any document files'.
@@ -978,64 +646,11 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'edit any documents content'.
-  $permissions['edit any documents content'] = array(
-    'name' => 'edit any documents content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any image files'.
   $permissions['edit any image files'] = array(
     'name' => 'edit any image files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit any maps_charts content'.
-  $permissions['edit any maps_charts content'] = array(
-    'name' => 'edit any maps_charts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any page content'.
-  $permissions['edit any page content'] = array(
-    'name' => 'edit any page content',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any research content'.
-  $permissions['edit any research content'] = array(
-    'name' => 'edit any research content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any video files'.
-  $permissions['edit any video files'] = array(
-    'name' => 'edit any video files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit any video_gallery content'.
-  $permissions['edit any video_gallery content'] = array(
-    'name' => 'edit any video_gallery content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit meta tags'.
@@ -1048,38 +663,11 @@ function permossion_user_default_permissions() {
     'module' => 'metatag',
   );
 
-  // Exported permission: 'edit own artifacts_gallery_arts content'.
-  $permissions['edit own artifacts_gallery_arts content'] = array(
-    'name' => 'edit own artifacts_gallery_arts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit own audio files'.
   $permissions['edit own audio files'] = array(
     'name' => 'edit own audio files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit own book content'.
-  $permissions['edit own book content'] = array(
-    'name' => 'edit own book content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own diaries_letters content'.
-  $permissions['edit own diaries_letters content'] = array(
-    'name' => 'edit own diaries_letters content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit own document files'.
@@ -1089,64 +677,11 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'edit own documents content'.
-  $permissions['edit own documents content'] = array(
-    'name' => 'edit own documents content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit own image files'.
   $permissions['edit own image files'] = array(
     'name' => 'edit own image files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit own maps_charts content'.
-  $permissions['edit own maps_charts content'] = array(
-    'name' => 'edit own maps_charts content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own page content'.
-  $permissions['edit own page content'] = array(
-    'name' => 'edit own page content',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own research content'.
-  $permissions['edit own research content'] = array(
-    'name' => 'edit own research content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own video files'.
-  $permissions['edit own video files'] = array(
-    'name' => 'edit own video files',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit own video_gallery content'.
-  $permissions['edit own video_gallery content'] = array(
-    'name' => 'edit own video_gallery content',
-    'roles' => array(
-      'Editor' => 'Editor',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit terms in camps'.
@@ -1318,15 +853,6 @@ function permossion_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: 'revert revisions'.
-  $permissions['revert revisions'] = array(
-    'name' => 'revert revisions',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
@@ -1334,16 +860,6 @@ function permossion_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: 'set page title'.
-  $permissions['set page title'] = array(
-    'name' => 'set page title',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'page_title',
   );
 
   // Exported permission: 'translate admin strings'.
@@ -1447,29 +963,11 @@ function permossion_user_default_permissions() {
     'module' => 'view_unpublished',
   );
 
-  // Exported permission: 'view any unpublished book content'.
-  $permissions['view any unpublished book content'] = array(
-    'name' => 'view any unpublished book content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'view_unpublished',
-  );
-
   // Exported permission: 'view any unpublished content'.
   $permissions['view any unpublished content'] = array(
     'name' => 'view any unpublished content',
     'roles' => array(
       'Editor' => 'Editor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'view_unpublished',
-  );
-
-  // Exported permission: 'view any unpublished diaries_letters content'.
-  $permissions['view any unpublished diaries_letters content'] = array(
-    'name' => 'view any unpublished diaries_letters content',
-    'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'view_unpublished',
@@ -1509,15 +1007,6 @@ function permossion_user_default_permissions() {
     'module' => 'view_unpublished',
   );
 
-  // Exported permission: 'view any unpublished video_gallery content'.
-  $permissions['view any unpublished video_gallery content'] = array(
-    'name' => 'view any unpublished video_gallery content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'view_unpublished',
-  );
-
   // Exported permission: 'view files'.
   $permissions['view files'] = array(
     'name' => 'view files',
@@ -1543,29 +1032,11 @@ function permossion_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'view own unpublished content'.
-  $permissions['view own unpublished content'] = array(
-    'name' => 'view own unpublished content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'view private files'.
   $permissions['view private files'] = array(
     'name' => 'view private files',
     'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'view revisions'.
-  $permissions['view revisions'] = array(
-    'name' => 'view revisions',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'view the administration theme'.
