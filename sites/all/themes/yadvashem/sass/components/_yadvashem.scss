@@ -177,12 +177,21 @@ body{
 .wrapper-navigation{
   position: relative;
   z-index: 300;
+  @include res(s-m){
+    position: fixed;
+    width: 100%;
+    top: 46px;
+  }
 }
 
 #header{
   clear: both;
   @include width;
   padding: 15px 3% 0;
+  @include res(s-m){
+    position: fixed;
+    z-index: 200;
+  }
   #logo{
     padding-bottom: 50px;
     @include res(s-m){
@@ -675,7 +684,7 @@ body{
     overflow: hidden;
     margin-bottom: 20px;
   }
-  #at4m-dock, .at4m-dock-toggle{
+  #at4m-dock, .at4m-dock-toggle, .addthis-smartlayers-mobile{
     display: none;
   }
   .block-book{
@@ -702,11 +711,15 @@ body{
     width: 100%;
     border-top: 1px solid #e7e7e7;
     font-family: 'PT Serif', arial;
-    padding: 40px 0;
+    padding: 20px 0 40px;
+    overflow: hidden;
     @include res(s-m){
       border: none;
       padding: 6px 0;
       overflow: hidden;
+      img{
+        display: none;
+      }
     }
     ul.menu{
     overflow: hidden;
@@ -737,7 +750,7 @@ body{
         }
     }
     .arrow{
-      padding-top: 24px;
+      padding-top: 44px;
       width: 14px;
       height: 23px;
     }
@@ -753,6 +766,7 @@ body{
         font-size: 1.1em;
         color: #000;
         line-height: 0.9em;
+        margin-top: 9px;
       }
       .current{
         font-size: 0.9em;
@@ -777,6 +791,9 @@ body{
         .title{
           margin-bottom: 10px;
         }
+      }
+      img{
+        float: right;
       }
       .left-arrow{
         float: right;
@@ -805,6 +822,9 @@ body{
           margin-bottom: 10px;
         }
       }
+      img{
+        float: left;
+      }
       .right-arrow{
         float: left;
         width: 10%;
@@ -819,6 +839,7 @@ body{
           font-size: 14px;
           color: $title;
           line-height: 0.9em;
+          margin-top: 9px;
         }
         .next, .previous{
           font-size: 14px;
@@ -980,6 +1001,9 @@ body{
 .node-type-book .block-book{
     @include res(s-m){
       width: 100%;
+      position: fixed;
+      top: 46px;
+      z-index: 200;
       h2{
         background-color: $azure;
         padding: 10px;
@@ -1056,6 +1080,13 @@ body{
        background:  url("../images/mobile-tab.png") no-repeat right center transparent;
       }
     }
+  }
+}
+
+.mobile-main-gallery{
+  display: none;
+  @include res(s-m){
+    display: block;
   }
 }
 
@@ -1471,6 +1502,9 @@ body{
 .field-name-field-helpful{
   clear: both;
   margin-top: 55px;
+  .field-label{
+    display: none;
+  }
   .is-useful-maybe{
     display: none;
   }
