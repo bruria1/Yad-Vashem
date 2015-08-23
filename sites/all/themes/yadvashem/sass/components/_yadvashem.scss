@@ -759,6 +759,7 @@ body{
       position: absolute;
       width: 100%;
       z-index: -2;
+      right: -1px;
       @include res(s-m){
         display: none;
       }
@@ -766,7 +767,8 @@ body{
         font-size: 1.1em;
         color: #000;
         line-height: 0.9em;
-        margin-top: 9px;
+        width: 30%;
+        margin: 9px auto 0;
       }
       .current{
         font-size: 0.9em;
@@ -1088,7 +1090,6 @@ body{
   @include res(s-m){
     display: block;
     position: relative;
-    margin-bottom: 60px;
   }
   .views-slideshow-cycle-main-frame-row{
     position: relative;
@@ -1140,6 +1141,8 @@ body{
     box-sizing: border-box;
     margin-bottom: 30px;
     display: none;
+    font-size: 0.8em;
+    line-height: 1.5em;
   }
   .view-footer{
     position: absolute;
@@ -1163,6 +1166,11 @@ body{
   }
 }
 
+#nerative_body{
+      transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
 .display-description{
     .field-name-field-file-image-title-text{
       display: block;
@@ -1174,6 +1182,9 @@ body{
       .display{
         display: block!important;
       }
+    }
+    #nerative_body{
+      margin-top: 85px;
     }
 }
 
@@ -1592,12 +1603,23 @@ body{
   .field-label{
     display: none;
   }
+  .is-useful-widget{
+    @include res(s){
+      float: left;
+      clear: left;
+      margin: 20px 0;
+    }
+  }
   .is-useful-maybe{
     display: none;
   }
   .is-useful-link{
     float: left;
     margin-left: 20px;
+    @include res(s){
+      margin-left: 0;
+      margin-right: 20px;
+    }
     a{
       color: #666;
       background: url("../images/useful.png") no-repeat left center #e6e6e6;
@@ -1633,6 +1655,7 @@ body{
 .node-type-book #comments{
   display: none;
   #field-why-helpful-add-more-wrapper, #comment-body-add-more-wrapper{
+    clear: left;
     label{
       font-family: 'PT Sans', arial;
       font-weight: normal;

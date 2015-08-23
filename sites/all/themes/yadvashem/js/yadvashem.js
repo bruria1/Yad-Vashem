@@ -79,11 +79,11 @@ Drupal.behaviors.my_custom_behavior = {
 //responsive gallery description
 
 $( ".description-button" ).click(function() {
-	if ($('.mobile-main-gallery').hasClass("display-description")){
-       $('.mobile-main-gallery').removeClass("display-description");
+	if ($('body').hasClass("display-description")){
+       $('body').removeClass("display-description");
 	}
 	else{
-		$('.mobile-main-gallery').addClass("display-description");
+		$('body').addClass("display-description");
 	}
 });
 
@@ -125,42 +125,46 @@ $( ".is-useful-yes a" ).click(function() {
 
 
 
-$numbervideos=$(".view-books-tab .view-header").html();
+$numbervideos3=$("#block-costum-video-tab-3 .view-header").html();
+$numbervideos2=$("#block-costum-video-tab-2 .view-header").html();
+$numbervideos1=$("#block-costum-video-tab-1 .view-header").html();
+$numbervideos4=$("#quicktabs-tabpage-book_page-10 .view-header").html();
 
-
-
-if ($numbervideos<3){
-
-
-
-	$(".view-books-tab").addClass("one-two");
-
-
-
+if ($numbervideos4<3){
+	$("#quicktabs-tabpage-book_page-10 .view-books-tab").addClass("one-two");
 }
-
-
-
-else if ($numbervideos<5){
-
-
-
-	$(".view-books-tab").addClass("three-five");
-
-
-
+else if ($numbervideos4<5){
+	$("#quicktabs-tabpage-book_page-10 .view-books-tab").addClass("three-five");
 }
-
-
-
-else if ($numbervideos>4){
-
-
-
-	$(".view-books-tab").addClass("six-more");
-
-
-
+else if ($numbervideos4>4){
+	$("#quicktabs-tabpage-book_page-10 .view-books-tab").addClass("six-more");
+}
+if ($numbervideos1<3){
+	$("#block-costum-video-tab-1 .view-books-tab").addClass("one-two");
+}
+else if ($numbervideos1<5){
+	$("#block-costum-video-tab-1 .view-books-tab").addClass("three-five");
+}
+else if ($numbervideos1>4){
+	$("#block-costum-video-tab-1 .view-books-tab").addClass("six-more");
+}
+if ($numbervideos2<3){
+	$("#block-costum-video-tab-2 .view-books-tab").addClass("one-two");
+}
+else if ($numbervideos2<5){
+	$("#block-costum-video-tab-2 .view-books-tab").addClass("three-five");
+}
+else if ($numbervideos2>4){
+	$("#block-costum-video-tab-2 .view-books-tab").addClass("six-more");
+}
+if ($numbervideos3<3){
+	$("#block-costum-video-tab-3 .view-books-tab").addClass("one-two");
+}
+else if ($numbervideos3<5){
+	$("#block-costum-video-tab-3 .view-books-tab").addClass("three-five");
+}
+else if ($numbervideos3>4){
+	$("#block-costum-video-tab-3 .view-books-tab").addClass("six-more");
 }
 
 
