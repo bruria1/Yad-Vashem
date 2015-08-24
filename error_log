@@ -231,3 +231,28 @@
 [18-Aug-2015 11:06:02 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
 [18-Aug-2015 11:06:03 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
 [18-Aug-2015 11:06:12 Asia/Jerusalem] PHP Fatal error:  Call to undefined function replace() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 109
+[24-Aug-2015 10:32:10 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:19 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:21 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:21 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:21 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:21 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:36 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 10:32:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ')' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 126
+[24-Aug-2015 11:02:05 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 154
+[24-Aug-2015 11:02:07 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 154
+[24-Aug-2015 11:16:08 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$thumb_url' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 145

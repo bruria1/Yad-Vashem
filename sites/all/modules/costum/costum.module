@@ -4,11 +4,13 @@ function pa($obj){
 	drupal_set_message("<pre>".print_r($obj,true)."</pre>");
 }
 function render_node_layout_galllery($node , $field_name = "field_artifacts_images" , $dist_id = "") {	
-	
+	$gal_type = "";
 	switch($node->type){
 		case "artifacts_gallery_arts":
+			$gal_type = "img";
 		break;
 		case "video_gallery":
+			$gal_type = "video";
 		break;
 		default:
 		return "";
@@ -46,9 +48,8 @@ function render_node_layout_galllery($node , $field_name = "field_artifacts_imag
 	$output .="</div>
 	 </div>
 		<div id='mid_".$dist_id."' class='mid myoverlay'>".
-		//addThis js
-	
-		'<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55bdda9d02f9bea1" async="async"></script>'.
+		//addThis js	
+		//'<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55bdda9d02f9bea1" async="async"></script>'.
 		"<div class='wrapper'>
 		<div class='share_section'>
 			<span class='img_count'><span id='cur_img_".$dist_id."'>1</span>/".$img_count."</span>
@@ -66,7 +67,7 @@ $gallery =  "<div id='fotorama_".$dist_id."' class='fotorama'
 			
 		$img_arr = array();
 		$img_data = array();
-		$max_thumbs = $img_count>5?5:$img_count;
+		$max_thumbs = $img_count>6?6:$img_count;
 		
 		foreach($node->{$field_name}[LANGUAGE_NONE] as $i=>$img){
 			$uri = $link = $desc = $credit = $alt =  $title = ""; 
@@ -90,12 +91,13 @@ $gallery =  "<div id='fotorama_".$dist_id."' class='fotorama'
 			$img['path'] = file_create_url($uri);				
 			$img_data[$i]['desc'] = $desc;
 			$img_data[$i]['credit'] = $credit;
+			$img_data[$i]['url'] = $link==""?$img['path']:$link;
 			$img['attributes'] = array(
 				'alt'=> $alt,				
 			);			
-			$output .=	_addGalImg($img , $link);	
+			$output .=	_addGalImg($img , $link , "overlay_".$gal_type);	
 			$img['attributes']['data-caption'] = $title; 		
-			$gallery .= _addGalImg($img , $link);	
+			$gallery .= _addGalImg($img , $link , "gal_".$gal_type);	
 		}
 	$gallery .= "</div><scan class='img_count'><span class='img_i'>1</span> of ".$img_count."</scan>";
 	$output .="</div></div></div></div>";	
@@ -120,11 +122,33 @@ $gallery =  "<div id='fotorama_".$dist_id."' class='fotorama'
 	}
 	return $output.$gallery;	
 }
-function _addGalImg($img , $videoLink = ""){	
-	if($videoLink == ""){
-		return theme_image($img);
+function _addGalImg($img , $videoLink = "" , $type = ""){	
+	$img_html = "";	
+	switch($type){
+		case "gal_img":		
+		   $img['style_name'] = 'medium';
+		   $img['path'] = $img['uri'];		   
+		   $thumb_url = image_style_url('thumbnail' , $img['uri']);
+		   $img['attributes']['data-thumb'] = $thumb_url;
+		   $img_html = theme('image_style', $img);
+		break;		
+		case "overlay_img":
+		   $img['style_name'] = 'large';
+		   $img['path'] = $img['uri'];		   
+		   $thumb_url = image_style_url('thumbnail' , $img['uri']);
+		   $img['attributes']['data-thumb'] = $thumb_url;
+		   $img_html = theme('image_style', $img);   
+		break;
+		case "overlay_video":		 
+		default:		  
+		   $img_html = theme_image($img);
+		break;
 	}
-	return l(theme_image($img),$videoLink , array("attributes"=>array("data-video"=>"true")));
+	if($videoLink == ""){
+		return $img_html;
+	}	
+	$video_attr = array("attributes"=>array("data-video"=>"true"));
+	return l($img_html ,$videoLink , $video_attr);
 }
 
 // Info Blocks

@@ -1,6 +1,5 @@
-(function($){	
-	$(function(){			
-			console.log("4");
+	(function($){	
+	$(function(){						
 			$(".video_gal").each(function(){	
 				dis_id = this.id.replace("video_gal_","");	
 				overlay_gal = jQuery(this);
@@ -14,23 +13,31 @@
 				});
 			});
 			//var overlay = document.getElementById("my_overlay");	
-			set_counter();						
+			set_counter();
+			$(".fotorama").each(function(i,n){				
+				var fotoramdata = $(n).data('fotorama');
+				if(typeof fotoramdata=="undefined")return;
+				console.log(n);
+			});					
 	});	
 })(jQuery)
 
 function overlay(elem_id) {
-	    if(elem_id=='close'){
-			jQuery(".main_overlay").css("visibility","hidden");
-			jQuery(".main_overlay").find("video").each(function(i,v){
-				console.log(v);
-				v.pause();
+	    if(elem_id=='close'){	
+			jQuery(".fotorama").each(function(i,n){				
+				var fotoramdata = jQuery(n).data('fotorama');
+				if(typeof fotoramdata=="undefined")return;
+				fotoramdata.stopVideo();
 			});
+			jQuery(".main_overlay").css("visibility","hidden");		
+			console.log(jQuery("video"));
+			
 			return;
 		}
 		el = document.getElementById(elem_id);
 		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 }
-
+var addthis_share = {}
 function set_counter(){
 				jQuery(".main_overlay").each(function(){
 					dis_id = this.id.replace("my_overlay_","");					
@@ -42,9 +49,14 @@ function set_counter(){
 					
 					fotorama_ovr.on('fotorama:show', function (e, fotorama) {
 							dis_id = this.id.replace("my_overlay_","");							
-							document.getElementById("cur_img_"+dis_id).innerHTML = (fotorama.activeIndex +1);					
-							jQuery("#img_description_"+dis_id).html(Drupal.settings["costum_"+dis_id].imgData[fotorama.activeIndex].desc);	
-							jQuery("#img_credit_"+dis_id).html(Drupal.settings["costum_"+dis_id].imgData[fotorama.activeIndex].credit);	
+							document.getElementById("cur_img_"+dis_id).innerHTML = (fotorama.activeIndex +1);
+							var curData = Drupal.settings["costum_"+dis_id].imgData[fotorama.activeIndex];					
+							jQuery("#img_description_"+dis_id).html(curData.desc);	
+							jQuery("#img_credit_"+dis_id).html(curData.credit);								
+							//addthis_share.title = "test me";
+							//addthis_share.description = curData.desc
+							//addthis_share.image = curData.url;
+							//addthis_share.title = "asdasD";
 					});	
 					/***/
 					
