@@ -122,14 +122,35 @@ function gallery_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiupload_imagefield_widget',
+      'module' => 'image',
       'settings' => array(
         'file_entity_inline' => 1,
         'file_entity_inline_fields' => array(),
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 'plupload',
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 0,
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
+        'progress_indicator' => 'bar',
       ),
-      'type' => 'image_miw',
+      'type' => 'image_image',
       'weight' => 18,
     ),
   );

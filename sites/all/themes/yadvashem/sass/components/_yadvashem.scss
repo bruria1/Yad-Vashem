@@ -766,13 +766,21 @@ body{
       .book-title{
         font-size: 1.1em;
         color: #000;
-        line-height: 0.9em;
+        line-height: 1.2em;
         width: 30%;
-        margin: 9px auto 0;
+        margin: 3px auto 0;
+        text-align: left;
+        padding: 0 20px;
+        box-sizing: border-box;
       }
       .current{
         font-size: 0.9em;
         color: #666666;
+        text-align: left;
+        width: 30%;
+        margin: 3px auto 0;
+        padding: 0 20px;
+        box-sizing: border-box;
       }
     }
     .page-title{
@@ -780,7 +788,6 @@ body{
       float: left;
     }
     .page-previous{
-      margin-right: 2%;
       float: left;
       @include res(s-m){
         width: 49%;
@@ -796,6 +803,9 @@ body{
       }
       img{
         float: right;
+        margin-left: 10px;
+        margin-top: 5px;
+        padding-bottom: 40px;
       }
       .left-arrow{
         float: right;
@@ -826,6 +836,9 @@ body{
       }
       img{
         float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+        padding-bottom: 40px;
       }
       .right-arrow{
         float: left;
@@ -840,8 +853,8 @@ body{
         .title{
           font-size: 14px;
           color: $title;
-          line-height: 0.9em;
-          margin-top: 9px;
+          line-height: 1.5em;
+          text-align: left;
         }
         .next, .previous{
           font-size: 14px;
@@ -851,7 +864,7 @@ body{
   }
 }
 
-#block-book-navigation .menu{
+#block-book-navigation .menu {
   font-family: 'PT Sans', arial;
   padding: 0;
   a{
@@ -1370,7 +1383,7 @@ body{
       margin-right: 10px;
       padding-right: 10px;
     }
-    .print a{
+    .save_flag a{
       border: none;
     }
   }
@@ -1558,7 +1571,8 @@ body{
   }
 }
 
-.view-books-tab.view-display-id-block_5{
+.view-books-tab.view-display-id-block_5 , 
+.view-books-tab.view-display-id-block_7 {
     .views-field-field-files{
         font-size: 1.1em;    
         position: relative;  
@@ -1807,7 +1821,17 @@ body{
   }
 }
 
+// Bockmarks tab
 
+#block-views-flag-bookmarks-block-1 {
+  background-color: transparent;
+  .views-field-title a {
+    color: $blue;
+  }
+  .flag {
+    color: $azure !important;
+  }
+}
 
 
 
