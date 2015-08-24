@@ -3890,6 +3890,19 @@ body article a {
   border-top: 2px solid;
 }
 
+/* line 1826, ../sass/components/_yadvashem.scss */
+#block-views-flag-bookmarks-block-1 {
+  background-color: transparent;
+}
+/* line 1828, ../sass/components/_yadvashem.scss */
+#block-views-flag-bookmarks-block-1 .views-field-title a {
+  color: #114560;
+}
+/* line 1831, ../sass/components/_yadvashem.scss */
+#block-views-flag-bookmarks-block-1 .flag {
+  color: #208dc9 !important;
+}
+
 /**
  * @file
  * Print styling

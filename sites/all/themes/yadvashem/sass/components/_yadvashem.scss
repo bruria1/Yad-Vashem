@@ -1823,12 +1823,12 @@ body{
 
 // Bockmarks tab
 
-
-
-
-
-
-
-
-
-
+#block-views-flag-bookmarks-block-1 {
+  background-color: transparent;
+  .views-field-title a {
+    color: $blue;
+  }
+  .flag {
+    color: $azure !important;
+  }
+}
