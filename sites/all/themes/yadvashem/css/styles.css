@@ -1700,7 +1700,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1440423636');
+  background-image: url('../images/progress.gif?1440333126');
 }
 
 /********** global ****************/
@@ -2532,29 +2532,28 @@ body article a {
   height: 21px;
   float: left;
   margin-right: 10px;
-  width: 120px;
 }
-/* line 682, ../sass/components/_yadvashem.scss */
+/* line 681, ../sass/components/_yadvashem.scss */
 .node-type-book .share-links {
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
 }
-/* line 687, ../sass/components/_yadvashem.scss */
+/* line 686, ../sass/components/_yadvashem.scss */
 .node-type-book #at4m-dock, .node-type-book .at4m-dock-toggle, .node-type-book .addthis-smartlayers-mobile {
   display: none;
 }
-/* line 690, ../sass/components/_yadvashem.scss */
+/* line 689, ../sass/components/_yadvashem.scss */
 .node-type-book .block-book {
   width: 24%;
   margin-right: 4%;
   float: left;
 }
-/* line 694, ../sass/components/_yadvashem.scss */
+/* line 693, ../sass/components/_yadvashem.scss */
 .node-type-book .block-book h2 {
   display: none;
 }
-/* line 698, ../sass/components/_yadvashem.scss */
+/* line 697, ../sass/components/_yadvashem.scss */
 .node-type-book article {
   width: 72%;
   float: right;
@@ -2562,14 +2561,14 @@ body article a {
   padding-top: 44px;
 }
 @media (max-width: 767px) {
-  /* line 698, ../sass/components/_yadvashem.scss */
+  /* line 697, ../sass/components/_yadvashem.scss */
   .node-type-book article {
     width: 100%;
-    padding: 0 3%;
+    padding: 26px 3% 0;
     box-sizing: border-box;
   }
 }
-/* line 709, ../sass/components/_yadvashem.scss */
+/* line 708, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation {
   clear: both;
   width: 100%;
@@ -2579,23 +2578,23 @@ body article a {
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  /* line 709, ../sass/components/_yadvashem.scss */
+  /* line 708, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation {
     border: none;
     padding: 6px 0;
     overflow: hidden;
   }
-  /* line 720, ../sass/components/_yadvashem.scss */
+  /* line 719, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation img {
     display: none;
   }
 }
-/* line 724, ../sass/components/_yadvashem.scss */
+/* line 723, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation ul.menu {
   overflow: hidden;
   display: none;
 }
-/* line 728, ../sass/components/_yadvashem.scss */
+/* line 727, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-links {
   border: none;
   width: 85%;
@@ -2603,41 +2602,41 @@ body article a {
   position: relative;
 }
 @media (max-width: 767px) {
-  /* line 728, ../sass/components/_yadvashem.scss */
+  /* line 727, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .page-links {
     width: 100%;
     padding: 0;
   }
 }
-/* line 738, ../sass/components/_yadvashem.scss */
+/* line 737, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .right-arrow {
   background: url("../images/right-arrow.png") no-repeat center center transparent;
 }
 @media (max-width: 767px) {
-  /* line 738, ../sass/components/_yadvashem.scss */
+  /* line 737, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .right-arrow {
     clear: right;
     float: right !important;
   }
 }
-/* line 745, ../sass/components/_yadvashem.scss */
+/* line 744, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .left-arrow {
   background: url("../images/left-arrow.png") no-repeat center center transparent;
 }
 @media (max-width: 767px) {
-  /* line 745, ../sass/components/_yadvashem.scss */
+  /* line 744, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .left-arrow {
     clear: left;
     float: left !important;
   }
 }
-/* line 752, ../sass/components/_yadvashem.scss */
+/* line 751, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .arrow {
   padding-top: 44px;
   width: 14px;
   height: 23px;
 }
-/* line 757, ../sass/components/_yadvashem.scss */
+/* line 756, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .current-page {
   margin: 0 auto;
   position: absolute;
@@ -2646,43 +2645,36 @@ body article a {
   right: -1px;
 }
 @media (max-width: 767px) {
-  /* line 757, ../sass/components/_yadvashem.scss */
+  /* line 756, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .current-page {
     display: none;
   }
 }
-/* line 766, ../sass/components/_yadvashem.scss */
+/* line 765, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .current-page .book-title {
   font-size: 1.1em;
   color: #000;
-  line-height: 1.2em;
+  line-height: 0.9em;
   width: 30%;
-  margin: 3px auto 0;
-  text-align: left;
-  padding: 0 20px;
-  box-sizing: border-box;
+  margin: 9px auto 0;
 }
-/* line 776, ../sass/components/_yadvashem.scss */
+/* line 772, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .current-page .current {
   font-size: 0.9em;
   color: #666666;
-  text-align: left;
-  width: 30%;
-  margin: 3px auto 0;
-  padding: 0 20px;
-  box-sizing: border-box;
 }
-/* line 786, ../sass/components/_yadvashem.scss */
+/* line 777, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-title {
   width: 35%;
   float: left;
 }
-/* line 790, ../sass/components/_yadvashem.scss */
+/* line 781, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-previous {
+  margin-right: 2%;
   float: left;
 }
 @media (max-width: 767px) {
-  /* line 790, ../sass/components/_yadvashem.scss */
+  /* line 781, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .page-previous {
     width: 49%;
     margin: 0;
@@ -2692,41 +2684,38 @@ body article a {
     box-sizing: border-box;
     font-size: 0.9em;
   }
-  /* line 800, ../sass/components/_yadvashem.scss */
+  /* line 792, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .page-previous .title {
     margin-bottom: 10px;
   }
 }
-/* line 804, ../sass/components/_yadvashem.scss */
+/* line 796, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-previous img {
   float: right;
-  margin-left: 10px;
-  margin-top: 5px;
-  padding-bottom: 40px;
 }
-/* line 810, ../sass/components/_yadvashem.scss */
+/* line 799, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-previous .left-arrow {
   float: right;
   width: 10%;
 }
-/* line 814, ../sass/components/_yadvashem.scss */
+/* line 803, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-previous .text {
   float: left;
   width: 85%;
 }
 @media (max-width: 767px) {
-  /* line 814, ../sass/components/_yadvashem.scss */
+  /* line 803, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .page-previous .text {
     width: 100%;
   }
 }
-/* line 822, ../sass/components/_yadvashem.scss */
+/* line 811, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-next {
   margin-left: 2%;
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 822, ../sass/components/_yadvashem.scss */
+  /* line 811, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .page-next {
     width: 49%;
     margin: 0;
@@ -2736,47 +2725,44 @@ body article a {
     box-sizing: border-box;
     font-size: 0.9em;
   }
-  /* line 833, ../sass/components/_yadvashem.scss */
+  /* line 822, ../sass/components/_yadvashem.scss */
   .node-type-book .book-navigation .page-next .title {
     margin-bottom: 10px;
   }
 }
-/* line 837, ../sass/components/_yadvashem.scss */
+/* line 826, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-next img {
   float: left;
-  margin-right: 10px;
-  margin-top: 5px;
-  padding-bottom: 40px;
 }
-/* line 843, ../sass/components/_yadvashem.scss */
+/* line 829, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-next .right-arrow {
   float: left;
   width: 10%;
 }
-/* line 847, ../sass/components/_yadvashem.scss */
+/* line 833, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .page-next .text {
   float: right;
   width: 85%;
 }
-/* line 853, ../sass/components/_yadvashem.scss */
+/* line 839, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .text .title {
   font-size: 14px;
   color: #1f769b;
-  line-height: 1.5em;
-  text-align: left;
+  line-height: 0.9em;
+  margin-top: 9px;
 }
-/* line 859, ../sass/components/_yadvashem.scss */
+/* line 845, ../sass/components/_yadvashem.scss */
 .node-type-book .book-navigation .text .next, .node-type-book .book-navigation .text .previous {
   font-size: 14px;
   color: #666666;
 }
 
-/* line 867, ../sass/components/_yadvashem.scss */
+/* line 853, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu {
   font-family: 'PT Sans', arial;
   padding: 0;
 }
-/* line 870, ../sass/components/_yadvashem.scss */
+/* line 856, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu a {
   color: #666;
   display: block;
@@ -2785,56 +2771,56 @@ body article a {
   padding: 10px 20px 10px 5px;
   box-sizing: border-box;
 }
-/* line 878, ../sass/components/_yadvashem.scss */
+/* line 864, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu .is-collapsed > a {
   background: url("../images/navigate-right.png") no-repeat right center transparent;
 }
-/* line 881, ../sass/components/_yadvashem.scss */
+/* line 867, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu .is-expanded > a {
   background: url("../images/navigate-bottom.png") no-repeat right center transparent;
   color: #1f769b;
 }
-/* line 885, ../sass/components/_yadvashem.scss */
+/* line 871, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu a.active {
   color: #1f769b;
 }
 @media (max-width: 767px) {
-  /* line 885, ../sass/components/_yadvashem.scss */
+  /* line 871, ../sass/components/_yadvashem.scss */
   #block-book-navigation .menu a.active {
     font-weight: bold;
   }
 }
-/* line 891, ../sass/components/_yadvashem.scss */
+/* line 877, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu li {
   list-style-type: none;
   list-style-image: none;
 }
-/* line 894, ../sass/components/_yadvashem.scss */
+/* line 880, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu li li a {
   background-color: #e8e8e8;
   padding-left: 30px;
 }
-/* line 898, ../sass/components/_yadvashem.scss */
+/* line 884, ../sass/components/_yadvashem.scss */
 #block-book-navigation .menu li li a.active {
   background-color: #1d8fc4;
   color: #fff !important;
 }
 @media (max-width: 767px) {
-  /* line 898, ../sass/components/_yadvashem.scss */
+  /* line 884, ../sass/components/_yadvashem.scss */
   #block-book-navigation .menu li li a.active {
     color: #208dc9 !important;
     font-weight: bold;
   }
 }
 
-/* line 910, ../sass/components/_yadvashem.scss */
+/* line 896, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 article {
   margin: 0;
   padding: 0;
   width: 100%;
   float: none;
 }
-/* line 916, ../sass/components/_yadvashem.scss */
+/* line 902, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row {
   width: 48%;
   float: right;
@@ -2845,7 +2831,7 @@ body article a {
   margin-left: 2%;
   position: relative;
 }
-/* line 926, ../sass/components/_yadvashem.scss */
+/* line 912, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row-1 {
   clear: left;
   float: left;
@@ -2853,17 +2839,17 @@ body article a {
   padding: 0;
   border-bottom: none;
 }
-/* line 932, ../sass/components/_yadvashem.scss */
+/* line 918, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row-1 .node-type {
   width: 100%;
   float: right;
 }
-/* line 936, ../sass/components/_yadvashem.scss */
+/* line 922, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row-1 .field-name-field-gallery-type {
   width: 100%;
   padding-top: 7px;
 }
-/* line 940, ../sass/components/_yadvashem.scss */
+/* line 926, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row-1 .views-field-field-artifacts-images, #quicktabs-tabpage-book_page-0 .views-row-1 .field-type-video-embed-field, #quicktabs-tabpage-book_page-0 .views-row-1 .field-name-field-artifacts-images img, #quicktabs-tabpage-book_page-0 .views-row-1 .doc-image,
 #quicktabs-tabpage-book_page-0 .views-row-1 .field-name-field-map-images {
   position: relative;
@@ -2872,44 +2858,44 @@ body article a {
   margin-right: 0;
   display: block;
 }
-/* line 948, ../sass/components/_yadvashem.scss */
+/* line 934, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row-1 .field-name-field-file-image-title-text, #quicktabs-tabpage-book_page-0 .views-row-1 .title, #quicktabs-tabpage-book_page-0 .views-row-1 .file a, #quicktabs-tabpage-book_page-0 .views-row-1 .field-name-field-video-title {
   width: 100%;
   padding-left: 0;
   font-size: 1.3em !important;
   float: left;
 }
-/* line 954, ../sass/components/_yadvashem.scss */
+/* line 940, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row-1 .field-collection-container {
   width: 100%;
 }
-/* line 958, ../sass/components/_yadvashem.scss */
+/* line 944, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .field-name-field-gallery-type, #quicktabs-tabpage-book_page-0 .node-type, #quicktabs-tabpage-book_page-0 .Testimonies {
   width: 67%;
   float: right;
   font-style: italic;
 }
-/* line 963, ../sass/components/_yadvashem.scss */
+/* line 949, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .Testimonies .field-name-field-video-title {
   width: 100%;
 }
-/* line 966, ../sass/components/_yadvashem.scss */
+/* line 952, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .field-collection-container {
   width: 30%;
   float: left;
   margin-right: 2%;
   display: block;
 }
-/* line 971, ../sass/components/_yadvashem.scss */
+/* line 957, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .field-collection-container .field-name-field-video {
   width: 100%;
 }
-/* line 975, ../sass/components/_yadvashem.scss */
+/* line 961, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-row-last {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 979, ../sass/components/_yadvashem.scss */
+/* line 965, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .field-name-field-file-image-title-text, #quicktabs-tabpage-book_page-0 .views-field-title, #quicktabs-tabpage-book_page-0 .title, #quicktabs-tabpage-book_page-0 .file a, #quicktabs-tabpage-book_page-0 .field-name-field-video-title {
   margin: 0;
   font-size: 1.1em;
@@ -2922,25 +2908,25 @@ body article a {
   max-height: 72px;
   overflow: hidden;
 }
-/* line 990, ../sass/components/_yadvashem.scss */
+/* line 976, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .field-name-field-file-image-title-text a, #quicktabs-tabpage-book_page-0 .views-field-title a, #quicktabs-tabpage-book_page-0 .title a, #quicktabs-tabpage-book_page-0 .file a a, #quicktabs-tabpage-book_page-0 .field-name-field-video-title a {
   text-decoration: none !important;
 }
-/* line 994, ../sass/components/_yadvashem.scss */
+/* line 980, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .file img {
   display: none;
 }
-/* line 997, ../sass/components/_yadvashem.scss */
+/* line 983, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .node-type {
   width: 67%;
   float: right;
 }
-/* line 1001, ../sass/components/_yadvashem.scss */
+/* line 987, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .video-sign {
   position: absolute;
   top: 33px;
 }
-/* line 1005, ../sass/components/_yadvashem.scss */
+/* line 991, ../sass/components/_yadvashem.scss */
 #quicktabs-tabpage-book_page-0 .views-field-field-artifacts-images, #quicktabs-tabpage-book_page-0 .field-type-video-embed-field, #quicktabs-tabpage-book_page-0 .field-name-field-artifacts-images img, #quicktabs-tabpage-book_page-0 .doc-image,
 #quicktabs-tabpage-book_page-0 .field-name-field-map-images {
   width: 30%;
@@ -2950,14 +2936,13 @@ body article a {
 }
 
 @media (max-width: 767px) {
-  /* line 1016, ../sass/components/_yadvashem.scss */
+  /* line 1002, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book {
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 46px;
-    z-index: 200;
   }
-  /* line 1022, ../sass/components/_yadvashem.scss */
+  /* line 1007, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book h2 {
     background-color: #208dc9;
     padding: 10px;
@@ -2966,13 +2951,13 @@ body article a {
     font-size: 1.2em;
     cursor: pointer;
   }
-  /* line 1029, ../sass/components/_yadvashem.scss */
+  /* line 1014, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book h2:before {
     content: "+";
     padding-right: 15px;
     font-weight: bold;
   }
-  /* line 1035, ../sass/components/_yadvashem.scss */
+  /* line 1020, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book ul {
     max-height: 0;
     overflow: hidden;
@@ -2980,7 +2965,7 @@ body article a {
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
   }
-  /* line 1042, ../sass/components/_yadvashem.scss */
+  /* line 1027, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book li a {
     padding: 10px 10px 10px 20px !important;
     background-color: #ebedee !important;
@@ -2988,18 +2973,18 @@ body article a {
     background-image: none !important;
     border-bottom: 1px solid #fff !important;
   }
-  /* line 1051, ../sass/components/_yadvashem.scss */
+  /* line 1036, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book li ul a {
     background-color: #fff !important;
     padding: 10px 10px 10px 55px !important;
   }
-  /* line 1057, ../sass/components/_yadvashem.scss */
+  /* line 1042, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book li.is-collapsed > a:before {
     content: "+";
     padding-right: 15px;
     font-weight: bold;
   }
-  /* line 1063, ../sass/components/_yadvashem.scss */
+  /* line 1048, ../sass/components/_yadvashem.scss */
   .node-type-book .block-book li.expanded > a.active-trail:before {
     content: "-";
     padding-right: 15px;
@@ -3007,25 +2992,25 @@ body article a {
   }
 }
 
-/* line 1074, ../sass/components/_yadvashem.scss */
+/* line 1059, ../sass/components/_yadvashem.scss */
 .node-type-book .mobile-tabs {
   display: none;
   width: 100%;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  /* line 1074, ../sass/components/_yadvashem.scss */
+  /* line 1059, ../sass/components/_yadvashem.scss */
   .node-type-book .mobile-tabs {
     display: block;
   }
 }
-/* line 1081, ../sass/components/_yadvashem.scss */
+/* line 1066, ../sass/components/_yadvashem.scss */
 .node-type-book .mobile-tabs .views-row {
   text-align: center;
   color: #1f769b;
   font-family: "PT Serif",arial;
 }
-/* line 1085, ../sass/components/_yadvashem.scss */
+/* line 1070, ../sass/components/_yadvashem.scss */
 .node-type-book .mobile-tabs .views-row .views-field {
   background-image: -ms-linear-gradient(top, #F6F8F8 0%, #dbdedf 100%);
   background-image: -moz-linear-gradient(top, #F6F8F8 0%, #dbdedf 100%);
@@ -3035,47 +3020,47 @@ body article a {
   background-image: linear-gradient(to bottom, #f6f8f8 0%, #dbdedf 100%);
   padding: 15px;
 }
-/* line 1093, ../sass/components/_yadvashem.scss */
+/* line 1078, ../sass/components/_yadvashem.scss */
 .node-type-book .mobile-tabs .views-row .views-field .field-content {
   display: block;
   background: url("../images/mobile-tab.png") no-repeat right center transparent;
 }
 
-/* line 1101, ../sass/components/_yadvashem.scss */
+/* line 1086, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 1101, ../sass/components/_yadvashem.scss */
+  /* line 1086, ../sass/components/_yadvashem.scss */
   .mobile-main-gallery {
     display: block;
     position: relative;
   }
 }
-/* line 1107, ../sass/components/_yadvashem.scss */
+/* line 1092, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-cycle-main-frame-row {
   position: relative;
 }
-/* line 1109, ../sass/components/_yadvashem.scss */
+/* line 1094, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-cycle-main-frame-row img {
   margin-bottom: -6px;
 }
-/* line 1113, ../sass/components/_yadvashem.scss */
+/* line 1098, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-cycle-main-frame, .mobile-main-gallery .views-slideshow-cycle-main-frame-row {
   max-width: 100%;
 }
-/* line 1116, ../sass/components/_yadvashem.scss */
+/* line 1101, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom {
   position: absolute;
   top: 40%;
   z-index: 150;
   width: 100%;
 }
-/* line 1121, ../sass/components/_yadvashem.scss */
+/* line 1106, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom span {
   position: absolute;
 }
-/* line 1124, ../sass/components/_yadvashem.scss */
+/* line 1109, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom a {
   text-indent: -9999px;
   background: url("../images/arrow-mobile.png") no-repeat center center #000;
@@ -3083,27 +3068,27 @@ body article a {
   width: 30px;
   padding: 5px 0;
 }
-/* line 1131, ../sass/components/_yadvashem.scss */
+/* line 1116, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-pause {
   display: none;
 }
-/* line 1134, ../sass/components/_yadvashem.scss */
+/* line 1119, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-previous {
   left: 0;
 }
-/* line 1136, ../sass/components/_yadvashem.scss */
+/* line 1121, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-previous a {
   background-position: 0 5px;
 }
-/* line 1140, ../sass/components/_yadvashem.scss */
+/* line 1125, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   right: 0;
 }
-/* line 1142, ../sass/components/_yadvashem.scss */
+/* line 1127, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   background-position: -32px 5px;
 }
-/* line 1147, ../sass/components/_yadvashem.scss */
+/* line 1132, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .field-name-field-file-image-title-text {
   position: absolute;
   color: #fff;
@@ -3117,14 +3102,14 @@ body article a {
   font-size: 0.8em;
   line-height: 1.5em;
 }
-/* line 1160, ../sass/components/_yadvashem.scss */
+/* line 1145, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .view-footer {
   position: absolute;
   bottom: 0;
   z-index: 150;
   right: 0;
 }
-/* line 1165, ../sass/components/_yadvashem.scss */
+/* line 1150, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .view-footer .description-button {
   background-color: #000;
   border-left: 2px solid #fff;
@@ -3136,52 +3121,52 @@ body article a {
   font-family: 'PT Serif', arial;
   font-weight: bold;
 }
-/* line 1175, ../sass/components/_yadvashem.scss */
+/* line 1160, ../sass/components/_yadvashem.scss */
 .mobile-main-gallery .view-footer .description-button .display {
   display: none;
 }
 
-/* line 1182, ../sass/components/_yadvashem.scss */
+/* line 1167, ../sass/components/_yadvashem.scss */
 #nerative_body {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
 
-/* line 1188, ../sass/components/_yadvashem.scss */
+/* line 1173, ../sass/components/_yadvashem.scss */
 .display-description .field-name-field-file-image-title-text {
   display: block;
 }
-/* line 1192, ../sass/components/_yadvashem.scss */
+/* line 1177, ../sass/components/_yadvashem.scss */
 .display-description .description-button .hide {
   display: none;
 }
-/* line 1195, ../sass/components/_yadvashem.scss */
+/* line 1180, ../sass/components/_yadvashem.scss */
 .display-description .description-button .display {
   display: block !important;
 }
-/* line 1199, ../sass/components/_yadvashem.scss */
+/* line 1184, ../sass/components/_yadvashem.scss */
 .display-description #nerative_body {
   margin-top: 85px;
 }
 
 @media (max-width: 767px) {
-  /* line 1204, ../sass/components/_yadvashem.scss */
+  /* line 1189, ../sass/components/_yadvashem.scss */
   #nerative_tabs {
     display: none;
   }
 }
 
-/* line 1210, ../sass/components/_yadvashem.scss */
+/* line 1195, ../sass/components/_yadvashem.scss */
 .node-type-book.display-menu-book .block-book ul {
   height: auto;
   max-height: 2000px;
 }
-/* line 1214, ../sass/components/_yadvashem.scss */
+/* line 1199, ../sass/components/_yadvashem.scss */
 .node-type-book.display-menu-book .block-book h2:before {
   content: "-";
 }
 
-/* line 1219, ../sass/components/_yadvashem.scss */
+/* line 1204, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page {
   font-family: 'PT Serif', arial;
   margin-top: 30px;
@@ -3190,24 +3175,24 @@ body article a {
   border-bottom: 1px solid #d7d7d7;
   overflow: hidden;
 }
-/* line 1226, ../sass/components/_yadvashem.scss */
+/* line 1211, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page ul.quicktabs-tabs {
   margin-bottom: 0;
 }
-/* line 1229, ../sass/components/_yadvashem.scss */
+/* line 1214, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs {
   padding: 0 0 12px 26px;
   overflow: hidden;
   width: 183%;
 }
-/* line 1233, ../sass/components/_yadvashem.scss */
+/* line 1218, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs li {
   width: 6%;
   display: block;
   float: left;
   padding: 10px 1.2%;
 }
-/* line 1239, ../sass/components/_yadvashem.scss */
+/* line 1224, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs li a {
   background: url("../images/tabs_icons.png") no-repeat center center transparent;
   font-size: 0.85em;
@@ -3219,89 +3204,89 @@ body article a {
   text-align: center;
   width: 100%;
 }
-/* line 1250, ../sass/components/_yadvashem.scss */
+/* line 1235, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs li.active {
   background-color: #f1f1f1;
 }
-/* line 1253, ../sass/components/_yadvashem.scss */
+/* line 1238, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs li.active a {
   background: url("../images/tabs_icons_active.png") no-repeat center center transparent;
   color: #2692c6;
 }
-/* line 1257, ../sass/components/_yadvashem.scss */
+/* line 1242, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-0 {
   background-position: 22px 0;
 }
-/* line 1260, ../sass/components/_yadvashem.scss */
+/* line 1245, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-1 {
   background-position: -68px 0;
 }
-/* line 1263, ../sass/components/_yadvashem.scss */
+/* line 1248, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-2 {
   background-position: -174px 0;
 }
-/* line 1266, ../sass/components/_yadvashem.scss */
+/* line 1251, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-3 {
   background-position: -297px 0;
 }
-/* line 1269, ../sass/components/_yadvashem.scss */
+/* line 1254, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-4 {
   background-position: -410px 0;
 }
-/* line 1272, ../sass/components/_yadvashem.scss */
+/* line 1257, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-5 {
   background-position: -72px 0;
 }
-/* line 1275, ../sass/components/_yadvashem.scss */
+/* line 1260, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-6 {
   background-position: -174px 0;
 }
-/* line 1278, ../sass/components/_yadvashem.scss */
+/* line 1263, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-7 {
   background-position: -489px -4px;
 }
-/* line 1281, ../sass/components/_yadvashem.scss */
+/* line 1266, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-8 {
   background-position: -412px 0;
 }
-/* line 1284, ../sass/components/_yadvashem.scss */
+/* line 1269, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-9 {
   background-position: -412px 0;
 }
-/* line 1287, ../sass/components/_yadvashem.scss */
+/* line 1272, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs a#quicktabs-tab-book_page-10 {
   background-position: -412px 0;
 }
-/* line 1291, ../sass/components/_yadvashem.scss */
+/* line 1276, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list {
   position: relative;
   overflow: hidden;
 }
-/* line 1294, ../sass/components/_yadvashem.scss */
+/* line 1279, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step7 .quicktabs-tabs {
   margin-left: -15.5%;
 }
-/* line 1297, ../sass/components/_yadvashem.scss */
+/* line 1282, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step8 .quicktabs-tabs {
   margin-left: -31%;
 }
-/* line 1300, ../sass/components/_yadvashem.scss */
+/* line 1285, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step9 .quicktabs-tabs {
   margin-left: -46.5%;
 }
-/* line 1303, ../sass/components/_yadvashem.scss */
+/* line 1288, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step10 .quicktabs-tabs {
   margin-left: -62%;
 }
-/* line 1306, ../sass/components/_yadvashem.scss */
+/* line 1291, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step11 .quicktabs-tabs {
   margin-left: -77.5%;
 }
-/* line 1309, ../sass/components/_yadvashem.scss */
+/* line 1294, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step12 .quicktabs-tabs {
   margin-left: -93%;
 }
-/* line 1313, ../sass/components/_yadvashem.scss */
+/* line 1298, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .left {
   background: url("../images/left-arrow.png") no-repeat left center #fff;
   width: 25px;
@@ -3312,13 +3297,13 @@ body article a {
   opacity: 0.4;
   top: 0;
 }
-/* line 1323, ../sass/components/_yadvashem.scss */
+/* line 1308, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .quicktabs-tabs {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   margin-left: 0;
 }
-/* line 1328, ../sass/components/_yadvashem.scss */
+/* line 1313, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .right {
   background: url("../images/right-arrow.png") no-repeat right center #fff;
   width: 25px;
@@ -3328,24 +3313,24 @@ body article a {
   right: 0;
   top: 0;
 }
-/* line 1338, ../sass/components/_yadvashem.scss */
+/* line 1323, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.step12 .left {
   opacity: 1;
 }
-/* line 1343, ../sass/components/_yadvashem.scss */
+/* line 1328, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .step7 .left, #quicktabs-book_page .step8 .left, #quicktabs-book_page .step9 .left, #quicktabs-book_page .step10 .left, #quicktabs-book_page .step11 .left {
   opacity: 1;
 }
-/* line 1348, ../sass/components/_yadvashem.scss */
+/* line 1333, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .last .right {
   opacity: 0.4;
 }
-/* line 1353, ../sass/components/_yadvashem.scss */
+/* line 1338, ../sass/components/_yadvashem.scss */
 #quicktabs-book_page .item-list.no-step .right, #quicktabs-book_page .item-list.no-step .left {
   display: none;
 }
 
-/* line 1361, ../sass/components/_yadvashem.scss */
+/* line 1346, ../sass/components/_yadvashem.scss */
 .field-collection-container, .field-collection-view {
   border: none;
   margin: 0;
@@ -3354,16 +3339,16 @@ body article a {
 
 /*top links*/
 @media (max-width: 767px) {
-  /* line 1369, ../sass/components/_yadvashem.scss */
+  /* line 1354, ../sass/components/_yadvashem.scss */
   .node-type-book .top-links {
     display: none;
   }
 }
-/* line 1373, ../sass/components/_yadvashem.scss */
+/* line 1358, ../sass/components/_yadvashem.scss */
 .node-type-book .top-links div {
   float: left;
 }
-/* line 1376, ../sass/components/_yadvashem.scss */
+/* line 1361, ../sass/components/_yadvashem.scss */
 .node-type-book .top-links a {
   color: #0099cc;
   font-style: 0.9em;
@@ -3374,13 +3359,13 @@ body article a {
   margin-right: 10px;
   padding-right: 10px;
 }
-/* line 1386, ../sass/components/_yadvashem.scss */
-.node-type-book .top-links .save_flag a {
+/* line 1371, ../sass/components/_yadvashem.scss */
+.node-type-book .top-links .print a {
   border: none;
 }
 
 /*********  right sidebar at page books  **********/
-/* line 1395, ../sass/components/_yadvashem.scss */
+/* line 1380, ../sass/components/_yadvashem.scss */
 .region-sidebar-second .block {
   margin-bottom: 40px;
   font-family: 'PT Serif', arial;
@@ -3388,16 +3373,16 @@ body article a {
   padding-bottom: 10px;
 }
 
-/* line 1402, ../sass/components/_yadvashem.scss */
+/* line 1387, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block, #block-views-right-links-at-book-block-1 {
   padding-bottom: 4px;
   position: relative;
 }
-/* line 1405, ../sass/components/_yadvashem.scss */
+/* line 1390, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .views-slideshow-controls-text-previous-processed, #block-views-right-links-at-book-block .views-slideshow-controls-text-pause-processed, #block-views-right-links-at-book-block-1 .views-slideshow-controls-text-previous-processed, #block-views-right-links-at-book-block-1 .views-slideshow-controls-text-pause-processed {
   display: none;
 }
-/* line 1408, ../sass/components/_yadvashem.scss */
+/* line 1393, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .block-title, #block-views-right-links-at-book-block-1 .block-title {
   color: #fff;
   background-color: #1d8fc4;
@@ -3405,32 +3390,32 @@ body article a {
   font-size: 1.2em;
   text-align: center;
 }
-/* line 1415, ../sass/components/_yadvashem.scss */
+/* line 1400, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .bottom-text, #block-views-right-links-at-book-block-1 .bottom-text {
   padding: 0px 14px 10px;
   margin-top: -4px;
   color: #fff;
 }
-/* line 1420, ../sass/components/_yadvashem.scss */
+/* line 1405, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .views-field-field-second-title a, #block-views-right-links-at-book-block a .views-field-field-second-title, #block-views-right-links-at-book-block-1 .views-field-field-second-title a, #block-views-right-links-at-book-block-1 a .views-field-field-second-title {
   color: #fff;
   display: block;
   width: 100%;
   box-sizing: border-box;
 }
-/* line 1426, ../sass/components/_yadvashem.scss */
+/* line 1411, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .title, #block-views-right-links-at-book-block-1 .title {
   font-size: 1.1em;
 }
-/* line 1429, ../sass/components/_yadvashem.scss */
+/* line 1414, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .second-title, #block-views-right-links-at-book-block-1 .second-title {
   font-style: italic;
 }
-/* line 1432, ../sass/components/_yadvashem.scss */
+/* line 1417, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .text, #block-views-right-links-at-book-block-1 .text {
   line-height: 1.1em;
 }
-/* line 1435, ../sass/components/_yadvashem.scss */
+/* line 1420, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .views-slideshow-controls-text-next a, #block-views-right-links-at-book-block-1 .views-slideshow-controls-text-next a {
   background: #000 url("../images/right-arrow-white.png") no-repeat scroll center center;
   height: 33px;
@@ -3442,17 +3427,17 @@ body article a {
   z-index: 200;
 }
 
-/* line 1448, ../sass/components/_yadvashem.scss */
+/* line 1433, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block .block-title {
   background-color: #792a67;
 }
 
-/* line 1454, ../sass/components/_yadvashem.scss */
+/* line 1439, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-1 .views-slideshow-controls-text-next a {
   top: 47.4%;
 }
 
-/* line 1460, ../sass/components/_yadvashem.scss */
+/* line 1445, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-2 .bottom-text {
   color: #fff;
   font-weight: normal;
@@ -3460,29 +3445,29 @@ body article a {
   padding: 0px 14px;
 }
 
-/* line 1468, ../sass/components/_yadvashem.scss */
+/* line 1453, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-3 {
   background-color: #1d8fc4;
   padding: 12px 14px 28px;
   color: #fff;
 }
-/* line 1472, ../sass/components/_yadvashem.scss */
+/* line 1457, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-3 .block-title {
   font-style: italic;
   font-size: 0.9em;
   font-weight: normal;
 }
-/* line 1477, ../sass/components/_yadvashem.scss */
+/* line 1462, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-3 .views-field-title {
   font-size: 1.4em;
   margin: 5px 0 10px;
 }
-/* line 1481, ../sass/components/_yadvashem.scss */
+/* line 1466, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-3 .views-field-field-second-title {
   font-size: 1.1em;
   margin-bottom: 10px;
 }
-/* line 1485, ../sass/components/_yadvashem.scss */
+/* line 1470, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-3 .views-field-field-text .field-content {
   float: left;
   font-size: 1.2em;
@@ -3491,7 +3476,7 @@ body article a {
   margin-bottom: 10px;
   padding: 5px 10px;
 }
-/* line 1494, ../sass/components/_yadvashem.scss */
+/* line 1479, ../sass/components/_yadvashem.scss */
 #block-views-right-links-at-book-block-3 .views-field-field-link a {
   font-size: 0.9em;
   color: #fff;
@@ -3502,85 +3487,83 @@ body article a {
 }
 
 /*********  testemonies tabs **********/
-/* line 1509, ../sass/components/_yadvashem.scss */
+/* line 1494, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6 .view-header {
   display: none;
 }
-/* line 1512, ../sass/components/_yadvashem.scss */
+/* line 1497, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6 .views-row-odd {
   clear: both;
 }
-/* line 1515, ../sass/components/_yadvashem.scss */
+/* line 1500, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6 .views-row {
   width: 48%;
 }
-/* line 1518, ../sass/components/_yadvashem.scss */
+/* line 1503, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6 .views-row-odd {
   float: left;
 }
-/* line 1521, ../sass/components/_yadvashem.scss */
+/* line 1506, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6 .views-row-even {
   float: right;
 }
-/* line 1524, ../sass/components/_yadvashem.scss */
+/* line 1509, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6 .field-name-field-video-title {
   max-height: 72px;
   overflow: hidden;
 }
 
-/* line 1531, ../sass/components/_yadvashem.scss */
+/* line 1516, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.one-two .views-row-1 {
   width: 48%;
 }
-/* line 1534, ../sass/components/_yadvashem.scss */
+/* line 1519, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.one-two .views-row-2 {
   width: 48%;
 }
 
-/* line 1541, ../sass/components/_yadvashem.scss */
+/* line 1526, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.three-five .views-row .field-name-field-video {
   float: left;
   width: 50%;
   margin-right: 2%;
   margin-bottom: 20px;
 }
-/* line 1548, ../sass/components/_yadvashem.scss */
+/* line 1533, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.three-five .field-name-field-video-title {
   float: right;
   width: 48%;
 }
 
-/* line 1555, ../sass/components/_yadvashem.scss */
+/* line 1540, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.six-more .views-row {
   border-top: 1px solid #e5e5e5;
   padding-top: 20px;
 }
-/* line 1558, ../sass/components/_yadvashem.scss */
+/* line 1543, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.six-more .views-row .field-name-field-video {
   float: left;
   width: 30%;
   margin-right: 5%;
   margin-bottom: 20px;
 }
-/* line 1565, ../sass/components/_yadvashem.scss */
+/* line 1550, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.six-more .views-row-1, .view-books-tab.view-display-id-block_6.six-more .views-row-2 {
   border: none;
 }
-/* line 1568, ../sass/components/_yadvashem.scss */
+/* line 1553, ../sass/components/_yadvashem.scss */
 .view-books-tab.view-display-id-block_6.six-more .field-name-field-video-title {
   float: right;
   width: 65%;
 }
 
-/* line 1576, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 .views-field-field-files,
-.view-books-tab.view-display-id-block_7 .views-field-field-files {
+/* line 1560, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 .views-field-field-files {
   font-size: 1.1em;
   position: relative;
 }
-/* line 1579, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 .views-field-field-files a,
-.view-books-tab.view-display-id-block_7 .views-field-field-files a {
+/* line 1563, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 .views-field-field-files a {
   text-decoration: none !important;
   position: relative;
   margin-bottom: 35px;
@@ -3589,104 +3572,97 @@ body article a {
   max-height: 72px;
   overflow: hidden;
 }
-/* line 1589, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 .views-row-odd,
-.view-books-tab.view-display-id-block_7 .views-row-odd {
+/* line 1573, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 .views-row-odd {
   clear: both;
 }
-/* line 1592, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 .views-row,
-.view-books-tab.view-display-id-block_7 .views-row {
+/* line 1576, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 .views-row {
   width: 48%;
   border-top: 1px solid #e5e5e5;
   padding-top: 20px;
 }
-/* line 1597, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 .views-row-odd,
-.view-books-tab.view-display-id-block_7 .views-row-odd {
+/* line 1581, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 .views-row-odd {
   float: left;
 }
-/* line 1600, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 .views-row-even,
-.view-books-tab.view-display-id-block_7 .views-row-even {
+/* line 1584, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 .views-row-even {
   float: right;
 }
-/* line 1603, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 .views-row-1, .view-books-tab.view-display-id-block_5 .views-row-2,
-.view-books-tab.view-display-id-block_7 .views-row-1,
-.view-books-tab.view-display-id-block_7 .views-row-2 {
+/* line 1587, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 .views-row-1, .view-books-tab.view-display-id-block_5 .views-row-2 {
   border: none;
 }
-/* line 1606, ../sass/components/_yadvashem.scss */
-.view-books-tab.view-display-id-block_5 img,
-.view-books-tab.view-display-id-block_7 img {
+/* line 1590, ../sass/components/_yadvashem.scss */
+.view-books-tab.view-display-id-block_5 img {
   margin-right: 2%;
   width: 20%;
 }
 
 /********   usefull article   **********/
-/* line 1614, ../sass/components/_yadvashem.scss */
+/* line 1598, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful {
   clear: both;
   margin-top: 55px;
 }
-/* line 1617, ../sass/components/_yadvashem.scss */
+/* line 1601, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .field-label {
   display: none;
 }
 @media (max-width: 480px) {
-  /* line 1620, ../sass/components/_yadvashem.scss */
+  /* line 1604, ../sass/components/_yadvashem.scss */
   .field-name-field-helpful .is-useful-widget {
     float: left;
     clear: left;
     margin: 20px 0;
   }
 }
-/* line 1627, ../sass/components/_yadvashem.scss */
+/* line 1611, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-maybe {
   display: none;
 }
-/* line 1630, ../sass/components/_yadvashem.scss */
+/* line 1614, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-link {
   float: left;
   margin-left: 20px;
 }
 @media (max-width: 480px) {
-  /* line 1630, ../sass/components/_yadvashem.scss */
+  /* line 1614, ../sass/components/_yadvashem.scss */
   .field-name-field-helpful .is-useful-link {
     margin-left: 0;
     margin-right: 20px;
   }
 }
-/* line 1637, ../sass/components/_yadvashem.scss */
+/* line 1621, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-link a {
   color: #666;
   background: url("../images/useful.png") no-repeat left center #e6e6e6;
   text-decoration: none !important;
   padding: 9px 18px 9px 35px;
 }
-/* line 1643, ../sass/components/_yadvashem.scss */
+/* line 1627, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-link.selected a {
   background-color: #ea8418;
   color: #fff;
 }
-/* line 1648, ../sass/components/_yadvashem.scss */
+/* line 1632, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-yes a {
   background-position: left -146px;
 }
-/* line 1651, ../sass/components/_yadvashem.scss */
+/* line 1635, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-yes.selected a {
   background-position: left -56px;
 }
-/* line 1655, ../sass/components/_yadvashem.scss */
+/* line 1639, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-no a {
   background-position: left -100px;
 }
-/* line 1658, ../sass/components/_yadvashem.scss */
+/* line 1642, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful .is-useful-no.selected a {
   background-position: left -7px;
 }
-/* line 1661, ../sass/components/_yadvashem.scss */
+/* line 1645, ../sass/components/_yadvashem.scss */
 .field-name-field-helpful label {
   font-family: 'PT Sans', arial;
   font-weight: normal;
@@ -3694,32 +3670,32 @@ body article a {
   float: left;
 }
 
-/* line 1669, ../sass/components/_yadvashem.scss */
+/* line 1653, ../sass/components/_yadvashem.scss */
 .node-type-book #comments {
   display: none;
 }
-/* line 1671, ../sass/components/_yadvashem.scss */
+/* line 1655, ../sass/components/_yadvashem.scss */
 .node-type-book #comments #field-why-helpful-add-more-wrapper, .node-type-book #comments #comment-body-add-more-wrapper {
   clear: left;
 }
-/* line 1673, ../sass/components/_yadvashem.scss */
+/* line 1657, ../sass/components/_yadvashem.scss */
 .node-type-book #comments #field-why-helpful-add-more-wrapper label, .node-type-book #comments #comment-body-add-more-wrapper label {
   font-family: 'PT Sans', arial;
   font-weight: normal;
 }
-/* line 1677, ../sass/components/_yadvashem.scss */
+/* line 1661, ../sass/components/_yadvashem.scss */
 .node-type-book #comments #field-why-helpful-add-more-wrapper .grippie, .node-type-book #comments #field-why-helpful-add-more-wrapper .form-required, .node-type-book #comments #comment-body-add-more-wrapper .grippie, .node-type-book #comments #comment-body-add-more-wrapper .form-required {
   display: none;
 }
-/* line 1680, ../sass/components/_yadvashem.scss */
+/* line 1664, ../sass/components/_yadvashem.scss */
 .node-type-book #comments #field-why-helpful-add-more-wrapper textarea, .node-type-book #comments #comment-body-add-more-wrapper textarea {
   border: 1px solid #b8b8b8;
 }
-/* line 1683, ../sass/components/_yadvashem.scss */
+/* line 1667, ../sass/components/_yadvashem.scss */
 .node-type-book #comments #field-why-helpful-add-more-wrapper .form-item, .node-type-book #comments #comment-body-add-more-wrapper .form-item {
   margin-bottom: 5px;
 }
-/* line 1687, ../sass/components/_yadvashem.scss */
+/* line 1671, ../sass/components/_yadvashem.scss */
 .node-type-book #comments input.form-submit {
   background-color: #238ec3;
   color: #fff;
@@ -3728,57 +3704,61 @@ body article a {
   float: right;
 }
 
-/* line 1696, ../sass/components/_yadvashem.scss */
+/* line 1680, ../sass/components/_yadvashem.scss */
 .node-type-book #comments.display {
   display: block;
 }
 
-/* line 1700, ../sass/components/_yadvashem.scss */
+/* line 1684, ../sass/components/_yadvashem.scss */
 .is_useful-processed {
   position: relative;
 }
 
-/* line 1704, ../sass/components/_yadvashem.scss */
+/* line 1688, ../sass/components/_yadvashem.scss */
 .ajax-progress-throbber {
   display: none;
 }
 
-/* line 1710, ../sass/components/_yadvashem.scss */
-.fotorama {
+/* line 1694, ../sass/components/_yadvashem.scss */
+#fotorama_d1 {
   background-color: #EAEAEA;
 }
-/* line 1712, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__wrap,
-.fotorama .fotorama__stage,
-.fotorama .fotorama__stage__frame,
-.fotorama .fotorama__stage__shaft {
+/* line 1696, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__wrap,
+#fotorama_d1 .fotorama__stage,
+#fotorama_d1 .fotorama__stage__frame,
+#fotorama_d1 .fotorama__stage__shaft {
   width: 100% !important;
 }
-/* line 1718, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__stage {
+/* line 1702, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__stage {
   border: 0;
 }
-/* line 1721, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__stage__frame.fotorama__active {
+/* line 1705, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__stage__frame.fotorama__active {
   max-width: 687px !important;
   width: 100%;
 }
-/* line 1724, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__stage__frame.fotorama__active img {
+/* line 1708, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__stage__frame.fotorama__active img {
   max-width: 688px !important;
   width: 100%;
 }
-/* line 1729, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__nav-wrap {
+/* line 1713, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama {
+  clear: left;
+}
+/* line 1716, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__nav-wrap {
   height: 80px;
 }
-/* line 1731, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__nav-wrap .fotorama__nav {
+/* line 1718, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__nav-wrap .fotorama__nav {
   position: relative;
   top: 5px;
 }
-/* line 1735, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__nav-wrap img {
+/* line 1722, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__nav-wrap img {
   border-radius: 5px !important;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -3788,8 +3768,8 @@ body article a {
   /* for old Konqueror browsers */
   top: 0 !important;
 }
-/* line 1739, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__nav-wrap .fotorama__nav__frame {
+/* line 1726, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__nav-wrap .fotorama__nav__frame {
   border: 2px solid #fff !important;
   border-radius: 5px !important;
   -moz-border-radius: 5px;
@@ -3801,17 +3781,17 @@ body article a {
   padding: 0 !important;
   margin-right: 5px;
 }
-/* line 1745, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__nav-wrap .fotorama__thumb {
+/* line 1732, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__nav-wrap .fotorama__thumb {
   background-color: none !important;
 }
-/* line 1748, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__nav-wrap .fotorama__thumb-border {
+/* line 1735, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__nav-wrap .fotorama__thumb-border {
   border: 0 !important;
   background-image: none !important;
 }
-/* line 1753, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__caption {
+/* line 1740, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__caption {
   position: absolute;
   z-index: 12;
   bottom: 14px;
@@ -3820,16 +3800,16 @@ body article a {
   width: 100%;
   color: rgba(255, 255, 255, 0.9);
 }
-/* line 1761, ../sass/components/_yadvashem.scss */
-.fotorama .fotorama__caption .fotorama__caption__wrap {
+/* line 1748, ../sass/components/_yadvashem.scss */
+#fotorama_d1 .fotorama__caption .fotorama__caption__wrap {
   background-color: rgba(3, 0, 0, 0.5) !important;
 }
 
-/* line 1768, ../sass/components/_yadvashem.scss */
+/* line 1755, ../sass/components/_yadvashem.scss */
 .block-costum {
   position: relative;
 }
-/* line 1770, ../sass/components/_yadvashem.scss */
+/* line 1757, ../sass/components/_yadvashem.scss */
 .block-costum #tgl_overlay {
   width: 31px;
   height: 31px;
@@ -3839,17 +3819,171 @@ body article a {
   left: none;
 }
 
-/* line 1785, ../sass/components/_yadvashem.scss */
-#block-views-flag-bookmarks-block-1 {
-  background-color: transparent;
+/* line 1768, ../sass/components/_yadvashem.scss */
+.main_overlay {
+  background-color: rgba(0, 0, 0, 0.71);
 }
-/* line 1787, ../sass/components/_yadvashem.scss */
-#block-views-flag-bookmarks-block-1 .views-field-title a {
-  color: #114560;
+/* line 1770, ../sass/components/_yadvashem.scss */
+.main_overlay .right_bar {
+  width: 28%;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+/* line 1774, ../sass/components/_yadvashem.scss */
+.main_overlay .mid {
+  width: 55%;
+  margin: 2% 9%;
+}
+/* line 1778, ../sass/components/_yadvashem.scss */
+.main_overlay .img_count {
+  float: left;
+}
+/* line 1781, ../sass/components/_yadvashem.scss */
+.main_overlay div#mid .wrapper,
+.main_overlay #fotorama_ovr {
+  max-width: 750px;
+  width: 100%;
+}
+/* line 1786, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__stage {
+  border: 10px;
 }
 /* line 1790, ../sass/components/_yadvashem.scss */
-#block-views-flag-bookmarks-block-1 .flag {
-  color: #208dc9 !important;
+.main_overlay .wrapper {
+  margin-top: 60px;
+  padding: 0 10% 0 3%;
+}
+/* line 1794, ../sass/components/_yadvashem.scss */
+.main_overlay .closeBtn {
+  float: right;
+  text-decoration: none !important;
+  color: #fff;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+/* line 1800, ../sass/components/_yadvashem.scss */
+.main_overlay .closeBtn:after {
+  content: "X";
+  font-weight: bold;
+  padding-left: 10px;
+}
+/* line 1806, ../sass/components/_yadvashem.scss */
+.main_overlay h3 {
+  clear: both;
+  padding: 10px 0px !important;
+  border-top: 2px solid;
+}
+
+/* line 1813, ../sass/components/_yadvashem.scss */
+.main_overlay {
+  background-color: rgba(0, 0, 0, 0.71);
+   /*
+  .at-svc-twitter span{
+      background: url("../images/overtwitterr.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+
+  }
+  .at-svc-facebook span{
+      background: url("../images/overfacebook.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+  }
+  .at-svc-pinterest_share span{
+      background: url("../images/overpinterest.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+  }
+  .at-svc-compact span{
+      background: url("../images/overplus.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+  }*/
+}
+/* line 1815, ../sass/components/_yadvashem.scss */
+.main_overlay .right_bar {
+  width: 28%;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+/* line 1819, ../sass/components/_yadvashem.scss */
+.main_overlay .img_count {
+  float: left;
+}
+/* line 1822, ../sass/components/_yadvashem.scss */
+.main_overlay div#mid .wrapper,
+.main_overlay #fotorama_ovr {
+  max-width: 750px;
+  width: 100%;
+}
+/* line 1827, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__stage {
+  border: 10px;
+}
+/* line 1831, ../sass/components/_yadvashem.scss */
+.main_overlay .wrapper {
+  margin-top: 60px;
+  padding: 0 10% 0 3%;
+}
+/* line 1835, ../sass/components/_yadvashem.scss */
+.main_overlay .closeBtn {
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 30px;
+}
+/* line 1841, ../sass/components/_yadvashem.scss */
+.main_overlay h3 {
+  clear: both;
+  padding: 10px 0px !important;
+  border-top: 2px solid;
+}
+/* line 1846, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama {
+  clear: left;
+  width: 100%;
+}
+/* line 1849, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama .fotorama__stage__shaft, .main_overlay .fotorama .fotorama__stage fotorama__pointer, .main_overlay .fotorama .fotorama__wrap--slide {
+  width: 100% !important;
+  height: auto !important;
+}
+/* line 1854, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__stage__frame {
+  border: 7px solid #fff;
+  background-color: #000;
+  box-sizing: border-box;
+}
+/* line 1860, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__nav-wrap .fotorama__arr:focus::after, .main_overlay .fotorama__nav-wrap .fotorama__fullscreen-icon:focus::after, .main_overlay .fotorama__nav-wrap .fotorama__html, .main_overlay .fotorama__nav-wrap .fotorama__img, .main_overlay .fotorama__nav-wrap .fotorama__nav__frame:focus .fotorama__dot::after, .main_overlay .fotorama__nav-wrap .fotorama__nav__frame:focus .fotorama__thumb::after, .main_overlay .fotorama__nav-wrap .fotorama__stage__frame, .main_overlay .fotorama__nav-wrap .fotorama__stage__shaft, .main_overlay .fotorama__nav-wrap .fotorama__video iframe {
+  position: relative !important;
+}
+/* line 1864, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__nav-wrap .fotorama__nav__frame {
+  width: auto !important;
+}
+/* line 1866, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__nav-wrap .fotorama__nav__frame img {
+  padding-right: 10px !important;
+}
+/* line 1871, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__nav-wrap .fotorama__thumb-border {
+  border: none !important;
+  background: none !important;
+}
+/* line 1875, ../sass/components/_yadvashem.scss */
+.main_overlay .fotorama__nav-wrap .fotorama__thumb {
+  background: none;
+}
+/* line 1904, ../sass/components/_yadvashem.scss */
+.main_overlay .addthis_sharing_toolbox {
+  margin-top: 20px;
+}
+/* line 1906, ../sass/components/_yadvashem.scss */
+.main_overlay .addthis_sharing_toolbox a {
+  margin-right: 10px;
 }
 
 /**

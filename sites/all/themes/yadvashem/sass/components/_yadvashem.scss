@@ -677,7 +677,6 @@ body{
     height: 21px;
       float: left;
   margin-right: 10px;
-  width: 120px;
   }
   .share-links{
     width: 100%;
@@ -702,7 +701,7 @@ body{
     padding-top: 44px;
     @include res(s-m){
       width: 100%;
-      padding: 0 3%;
+      padding: 26px 3% 0;
       box-sizing: border-box;
     }
   }
@@ -766,21 +765,13 @@ body{
       .book-title{
         font-size: 1.1em;
         color: #000;
-        line-height: 1.2em;
+        line-height: 0.9em;
         width: 30%;
-        margin: 3px auto 0;
-        text-align: left;
-        padding: 0 20px;
-        box-sizing: border-box;
+        margin: 9px auto 0;
       }
       .current{
         font-size: 0.9em;
         color: #666666;
-        text-align: left;
-        width: 30%;
-        margin: 3px auto 0;
-        padding: 0 20px;
-        box-sizing: border-box;
       }
     }
     .page-title{
@@ -788,6 +779,7 @@ body{
       float: left;
     }
     .page-previous{
+      margin-right: 2%;
       float: left;
       @include res(s-m){
         width: 49%;
@@ -803,9 +795,6 @@ body{
       }
       img{
         float: right;
-        margin-left: 10px;
-        margin-top: 5px;
-        padding-bottom: 40px;
       }
       .left-arrow{
         float: right;
@@ -836,9 +825,6 @@ body{
       }
       img{
         float: left;
-        margin-right: 10px;
-        margin-top: 5px;
-        padding-bottom: 40px;
       }
       .right-arrow{
         float: left;
@@ -853,8 +839,8 @@ body{
         .title{
           font-size: 14px;
           color: $title;
-          line-height: 1.5em;
-          text-align: left;
+          line-height: 0.9em;
+          margin-top: 9px;
         }
         .next, .previous{
           font-size: 14px;
@@ -864,7 +850,7 @@ body{
   }
 }
 
-#block-book-navigation .menu {
+#block-book-navigation .menu{
   font-family: 'PT Sans', arial;
   padding: 0;
   a{
@@ -1016,9 +1002,8 @@ body{
 .node-type-book .block-book{
     @include res(s-m){
       width: 100%;
-      position: fixed;
+      position: relative;
       top: 46px;
-      z-index: 200;
       h2{
         background-color: $azure;
         padding: 10px;
@@ -1383,7 +1368,7 @@ body{
       margin-right: 10px;
       padding-right: 10px;
     }
-    .save_flag a{
+    .print a{
       border: none;
     }
   }
@@ -1571,8 +1556,7 @@ body{
   }
 }
 
-.view-books-tab.view-display-id-block_5 , 
-.view-books-tab.view-display-id-block_7 {
+.view-books-tab.view-display-id-block_5{
     .views-field-field-files{
         font-size: 1.1em;    
         position: relative;  
@@ -1707,7 +1691,7 @@ body{
 
 
 // Theme the gallery 
-.fotorama {
+#fotorama_d1 {
   background-color: #EAEAEA;
   .fotorama__wrap , 
   .fotorama__stage ,
@@ -1725,6 +1709,9 @@ body{
       max-width: 688px !important;
       width: 100%;
     }
+  }
+  .fotorama{
+    clear: left;
   }
   .fotorama__nav-wrap {
     height: 80px;
@@ -1778,16 +1765,146 @@ body{
 }
 
 // The overlay
-
-
-// Bockmarks tab
-
-#block-views-flag-bookmarks-block-1 {
-  background-color: transparent;
-  .views-field-title a {
-    color: $blue;
+.main_overlay {
+  background-color: rgba(0, 0, 0, 0.71);
+  .right_bar {
+    width: 28%;
+    background-color: rgba(0, 0, 0, 0.39);
   }
-  .flag {
-    color: $azure !important;
+  .mid {
+    width: 55%;
+    margin: 2% 9%;
+  }
+  .img_count {
+    float: left;
+  }
+  div#mid .wrapper,
+  #fotorama_ovr {
+    max-width:750px;
+    width: 100%;
+  }
+  .fotorama__stage {
+    border: 10px;
+  }
+  // Right side overlay
+  .wrapper {
+    margin-top: 60px;
+    padding:0 10% 0 3%;
+  }
+  .closeBtn {
+    float: right;
+    text-decoration: none!important;
+    color: #fff;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &:after{
+      content: "X";
+      font-weight: bold;
+      padding-left: 10px;
+    }
+  }
+  h3 {
+    clear: both;
+    padding: 10px 0px !important;
+    border-top: 2px solid;
+  }
+}
+
+.main_overlay {
+  background-color: rgba(0, 0, 0, 0.71);
+  .right_bar {
+    width: 28%;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+  .img_count {
+    float: left;
+  }
+  div#mid .wrapper,
+  #fotorama_ovr {
+    max-width:750px;
+    width: 100%;
+  }
+  .fotorama__stage {
+    border: 10px;
+  }
+  // Right side overlay
+  .wrapper {
+    margin-top: 60px;
+    padding:0 10% 0 3%;
+  }
+  .closeBtn {
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  h3 {
+    clear: both;
+    padding: 10px 0px !important;
+    border-top: 2px solid;
+    }
+  .fotorama{
+    clear: left;
+    width: 100%;
+    .fotorama__stage__shaft, .fotorama__stage fotorama__pointer, .fotorama__wrap--slide{
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
+  .fotorama__stage__frame{
+    border: 7px solid #fff;
+    background-color: #000;
+    box-sizing: border-box;
+  }
+  .fotorama__nav-wrap{
+      .fotorama__arr:focus::after, .fotorama__fullscreen-icon:focus::after, .fotorama__html, .fotorama__img, .fotorama__nav__frame:focus .fotorama__dot::after, .fotorama__nav__frame:focus .fotorama__thumb::after, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe{
+      position: relative!important;
+    }
+
+    .fotorama__nav__frame{
+      width: auto!important;
+      img{
+        padding-right: 10px!important;
+      }
+    }
+
+    .fotorama__thumb-border{
+      border: none!important;
+      background: none!important;
+    }
+    .fotorama__thumb{
+      background: none;
+    }
+  }/*
+  .at-svc-twitter span{
+      background: url("../images/overtwitterr.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+
+  }
+  .at-svc-facebook span{
+      background: url("../images/overfacebook.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+  }
+  .at-svc-pinterest_share span{
+      background: url("../images/overpinterest.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+  }
+  .at-svc-compact span{
+      background: url("../images/overplus.png") no-repeat left center transparent;
+      &:hover{
+
+      }
+  }*/
+  .addthis_sharing_toolbox {
+    margin-top: 20px;
+    a{
+      margin-right: 10px;
+    }
   }
 }
