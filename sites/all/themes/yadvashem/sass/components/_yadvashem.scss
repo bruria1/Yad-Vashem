@@ -864,7 +864,7 @@ body{
   }
 }
 
-#block-book-navigation .menu{
+#block-book-navigation .menu {
   font-family: 'PT Sans', arial;
   padding: 0;
   a{
@@ -1383,7 +1383,7 @@ body{
       margin-right: 10px;
       padding-right: 10px;
     }
-    .print a{
+    .save_flag a{
       border: none;
     }
   }
@@ -1821,7 +1821,17 @@ body{
   }
 }
 
+// Bockmarks tab
 
+#block-views-flag-bookmarks-block-1 {
+  background-color: transparent;
+  .views-field-title a {
+    color: $blue;
+  }
+  .flag {
+    color: $azure !important;
+  }
+}
 
 
 

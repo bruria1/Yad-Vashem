@@ -86,6 +86,9 @@
               <?php print t('Print'); ?>
           </a>
         </div>
+        <div class="save_flag">
+        <?php print flag_create_link('bookmarks', $node->nid); ?>
+        </div>
       </div> 
     </div>
 </div>

@@ -3375,7 +3375,7 @@ body article a {
   padding-right: 10px;
 }
 /* line 1386, ../sass/components/_yadvashem.scss */
-.node-type-book .top-links .print a {
+.node-type-book .top-links .save_flag a {
   border: none;
 }
 
@@ -3888,6 +3888,19 @@ body article a {
   clear: both;
   padding: 10px 0px !important;
   border-top: 2px solid;
+}
+
+/* line 1826, ../sass/components/_yadvashem.scss */
+#block-views-flag-bookmarks-block-1 {
+  background-color: transparent;
+}
+/* line 1828, ../sass/components/_yadvashem.scss */
+#block-views-flag-bookmarks-block-1 .views-field-title a {
+  color: #114560;
+}
+/* line 1831, ../sass/components/_yadvashem.scss */
+#block-views-flag-bookmarks-block-1 .flag {
+  color: #208dc9 !important;
 }
 
 /**

@@ -1,0 +1,14 @@
+name = favorite
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = flag
+dependencies[] = flag_bookmark
+dependencies[] = session_api
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[flag][] = bookmarks
+features[user_permission][] = flag bookmarks
+features[user_permission][] = unflag bookmarks
+features_exclude[dependencies][ctools] = ctools
