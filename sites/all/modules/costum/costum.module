@@ -260,34 +260,87 @@ function costum_block_view($delta = '') {
         $block['content'] = render_node_layout_galllery($gallery, "field_video_collection" , "v".$current_type);        
       }
   }
+  /***
+   * Start Features Tab
+   ***/
   if($delta=="features"){
 	  $node = menu_get_object();
 	  if($node->type!="book")return;	 
-	  $current_vals = _get_features_defaults($node->nid);
 	  $output = "";
+	  $current_vals = _get_features_defaults($node->nid);
+	  if(empty($current_vals)){
+		$output = "Select Config from right side";  
+	  }	  
 	  $bundels = _ref_bundles();
 	  foreach($current_vals as $k=>$fe_nid){
-		  $ref = node_load($fe_nid);		
-		  $fields = field_info_fields();
-		  $ref_arr = array();
-		  foreach($fields as $field_name => $field){
-			if($field['type']=="entityreference"){
-				if(in_array("book",$field['bundles']['node'])?"y":"N"){
-					foreach($node->{$field_name}[LANGUAGE_NONE] as $ent_id){	
-						$ent_id = $ent_id['target_id'];				
-						if($ent_id == $fe_nid){
-							pa($field_name);
-						}
-					}
+		  $imgStyle = $k==1?"small":"thumbnail_feature";
+		  $ref = node_load($fe_nid);
+		  $tab = "";$img_url = "";$img_field = "";
+		  switch($ref->type){
+			  case "artifacts_gallery_arts":
+			    $img_field = "field_artifacts_images";
+				switch($ref->field_gallery_type[LANGUAGE_NONE][0]['value']){
+					case 1:
+						$tab = "Photo";
+					break;
+					case 2:
+						$tab = "Art";
+					break;
+					case 3:
+						$tab = "Artifact";
+					break;
 				}
-			} 
-		}
-		  $output.="<div class='fe_".$k."' onClick='console.log(\"\")'>";
-		  if(isset($ref->field_artifacts_images[LANGUAGE_NONE][0])){
-			   $img = $ref->field_artifacts_images[LANGUAGE_NONE][0];
-			   $img['style_name'] = 'thumbnail';
+			  break;
+			  case "video_gallery":
+				$collection_id = $ref->field_video_collection[LANGUAGE_NONE][0]['value'];
+				$fc = entity_load('field_collection_item', array($collection_id));
+				$fc = array_shift($fc);
+				$img_url = $fc->field_video[LANGUAGE_NONE][0]['thumbnail_path'];
+				switch($ref->field_video_type[LANGUAGE_NONE][0]['value']){
+					case 1:
+						$tab = "Testamonies";
+					break;
+					case 2:
+						$tab = "Archives";
+					break;
+					case 3:
+						$tab = "Lectures";
+					break;
+				}				
+			  break;			  
+			  case "documents":
+				    $img_field = "field_main_document_image";
+					$tab = "Documents";
+			  break;
+			  case "research":
+					$tab = "Research";
+			  break;
+			  case "maps_charts":
+					$tab = "Map";
+			  break;
+			  case "diaries_letters":
+					$img_field = "field_main_diary_image";
+					$tab = "Diary";
+			  break;
+			  
+		  }	 
+		  drupal_add_js("
+		  function open_quicktab(name){
+			if(!name)return;
+			jQuery('.quicktabs-tabs').find('a:contains('+name+')').click();
+		  }
+		  ","inline");
+		  $output.="<div class='fe_".$k." fes' onClick='open_quicktab(\"".$tab.	"\")'>";
+		  if(isset($ref->{$img_field}[LANGUAGE_NONE][0])){
+			   $img = $ref->{$img_field}[LANGUAGE_NONE][0];
+			   $img['style_name'] = $imgStyle;
 			   $img['path'] = $img['uri'];
 			   $output .= theme('image_style', $img);			
+		  }
+		  else if($img_url){			 
+			  $img['style_name'] = $imgStyle;
+			  $img['path'] = $img_url;
+			  $output .= theme('image_style', $img);
 		  }
 		  if(isset($bundels[$ref->type])){
 			$output.="<span>".$bundels[$ref->type]."</span>";
