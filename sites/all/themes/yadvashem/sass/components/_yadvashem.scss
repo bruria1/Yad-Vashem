@@ -1706,3 +1706,129 @@ body{
 }
 
 
+// Theme the gallery 
+#fotorama_d1 {
+  background-color: #EAEAEA;
+  .fotorama__wrap , 
+  .fotorama__stage ,
+  .fotorama__stage__frame ,
+  .fotorama__stage__shaft  {
+    width: 100% !important;
+  }
+  .fotorama__stage {
+    border:0; 
+  }
+  .fotorama__stage__frame.fotorama__active {
+    max-width: 687px !important;
+    width: 100%;
+    img {
+      max-width: 688px !important;
+      width: 100%;
+    }
+  }
+  .fotorama__nav-wrap {
+    height: 80px;
+    .fotorama__nav {
+      position: relative;
+      top: 5px;
+    }
+    img {
+      @include rounded;
+      top: 0 !important;
+    }
+    .fotorama__nav__frame {
+      border: 2px solid #fff !important;
+      @include rounded;
+      padding:0 !important;
+      margin-right: 5px;
+    }
+    .fotorama__thumb {
+      background-color: none !important;
+    }
+    .fotorama__thumb-border {
+      border: 0 !important;
+      background-image: none !important;
+    }
+  }
+  .fotorama__caption {
+    position: absolute;
+    z-index: 12;
+    bottom: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    .fotorama__caption__wrap {
+      background-color: rgba(3, 0, 0, 0.5) !important;
+    }
+  }
+}
+
+// The enlarge icon
+.block-costum {
+  position: relative;
+  #tgl_overlay {
+    width: 31px;
+    height: 31px;
+    top: 10px;
+    position: absolute;
+    right: 10px;
+    left: none;
+  }
+}
+
+// The overlay
+#my_overlay_d1 {
+  background-color: rgba(0, 0, 0, 0.71);
+  .right_bar {
+    width: 28%;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+  #mid_d1 {
+    width: 72%;
+    margin: 7% auto;
+  }
+  .img_count {
+    float: left;
+  }
+  .addthis_native_toolbox {
+    margin-right: -40px;
+  }
+
+  div#mid .wrapper,
+  #fotorama_ovr {
+    max-width:750px;
+    width: 100%;
+  }
+  .fotorama__stage {
+    border: 10px;
+  }
+  // Right side overlay
+  .wrapper {
+    margin-top: 60px;
+    padding:0 10% 0 3%;
+  }
+  .closeBtn {
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  h3 {
+    clear: both;
+    padding: 10px 0px !important;
+    border-top: 2px solid;
+  }
+}
+
+// Bockmarks tab
+
+#block-views-flag-bookmarks-block-1 {
+  background-color: transparent;
+  .views-field-title a {
+    color: $blue;
+  }
+  .flag {
+    color: $azure !important;
+  }
+}
