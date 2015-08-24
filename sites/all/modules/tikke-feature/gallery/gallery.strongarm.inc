@@ -55,6 +55,9 @@ function gallery_strongarm() {
         'xmlsitemap' => array(
           'weight' => '5',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'language' => array(

@@ -168,7 +168,6 @@ function manager_views_default_views() {
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
-  $handler->display->display_options['fields']['delete_node']['element_type'] = 'strong';
   $handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['delete_node']['text'] = 'Delete';
   /* Field: Content: Published */
@@ -402,8 +401,16 @@ function manager_views_default_views() {
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'ar' => 'ar',
+    'en' => 'en',
+    'fr' => 'fr',
+    'de' => 'de',
+    'he' => 'he',
+    'fa' => 'fa',
+    'ru' => 'ru',
+    'es' => 'es',
   );
+  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
@@ -445,6 +452,77 @@ function manager_views_default_views() {
   $handler = $view->new_display('page', 'Documents', 'page_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Documents manage';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 'All';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status']['expose']['label'] = 'Publish';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
+  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'documents' => 'documents',
+  );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    'ar' => 'ar',
+    'en' => 'en',
+    'fr' => 'fr',
+    'de' => 'de',
+    'he' => 'he',
+    'fa' => 'fa',
+    'ru' => 'ru',
+    'es' => 'es',
+  );
+  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
+  $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
+  $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
+  $handler->display->display_options['filters']['language']['expose']['identifier'] = 'language';
+  $handler->display->display_options['filters']['language']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['language']['expose']['reduce'] = TRUE;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
+  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
   $handler->display->display_options['path'] = 'admin/documents-manage';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Documents';
@@ -497,9 +575,16 @@ function manager_views_default_views() {
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'ar' => 'ar',
+    'en' => 'en',
+    'fr' => 'fr',
+    'de' => 'de',
+    'he' => 'he',
     'fa' => 'fa',
+    'ru' => 'ru',
+    'es' => 'es',
   );
+  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
@@ -663,10 +748,16 @@ function manager_views_default_views() {
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'ar' => 'ar',
+    'en' => 'en',
+    'fr' => 'fr',
+    'de' => 'de',
+    'he' => 'he',
     'fa' => 'fa',
+    'ru' => 'ru',
+    'es' => 'es',
   );
+  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';
@@ -764,8 +855,16 @@ function manager_views_default_views() {
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'ar' => 'ar',
+    'en' => 'en',
+    'fr' => 'fr',
+    'de' => 'de',
+    'he' => 'he',
+    'fa' => 'fa',
+    'ru' => 'ru',
+    'es' => 'es',
   );
+  $handler->display->display_options['filters']['language']['exposed'] = TRUE;
   $handler->display->display_options['filters']['language']['expose']['operator_id'] = 'language_op';
   $handler->display->display_options['filters']['language']['expose']['label'] = 'Language';
   $handler->display->display_options['filters']['language']['expose']['operator'] = 'language_op';

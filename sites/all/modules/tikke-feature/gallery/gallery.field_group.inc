@@ -25,15 +25,15 @@ function gallery_field_group_info() {
     'children' => array(
       0 => 'body',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Contents',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => 'group-content field-group-tab',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
       ),
-      'formatter' => 'open',
     ),
   );
   $export['group_content|node|artifacts|form'] = $field_group;
@@ -53,13 +53,14 @@ function gallery_field_group_info() {
     'children' => array(
       0 => 'field_artifacts_images',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-media field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -88,15 +89,15 @@ function gallery_field_group_info() {
       7 => 'field_atgs_nazi_organisation',
       8 => 'field_tags_jewish_organisation',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Terms',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => 'group-terms-relations field-group-tab',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
     ),
   );
   $export['group_terms_relations|node|artifacts|form'] = $field_group;

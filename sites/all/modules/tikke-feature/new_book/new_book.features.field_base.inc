@@ -61,7 +61,7 @@ function new_book_field_default_field_bases() {
   // Exported field_base: 'field_diaries_letters'
   $field_bases['field_diaries_letters'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_diaries_letters',

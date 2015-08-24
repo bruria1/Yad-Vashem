@@ -27,6 +27,12 @@ function map_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -72,6 +78,12 @@ function map_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -114,6 +126,12 @@ function map_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 2,
+      ),
+      'simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -220,6 +238,12 @@ function map_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      'simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -262,6 +286,12 @@ function map_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
+      ),
+      'simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

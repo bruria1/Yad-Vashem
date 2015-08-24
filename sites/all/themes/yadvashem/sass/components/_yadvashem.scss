@@ -1778,48 +1778,7 @@ body{
 }
 
 // The overlay
-#my_overlay_d1 {
-  background-color: rgba(0, 0, 0, 0.71);
-  .right_bar {
-    width: 28%;
-    background-color: rgba(0, 0, 0, 0.39);
-  }
-  #mid_d1 {
-    width: 72%;
-    margin: 7% auto;
-  }
-  .img_count {
-    float: left;
-  }
-  .addthis_native_toolbox {
-    margin-right: -40px;
-  }
 
-  div#mid .wrapper,
-  #fotorama_ovr {
-    max-width:750px;
-    width: 100%;
-  }
-  .fotorama__stage {
-    border: 10px;
-  }
-  // Right side overlay
-  .wrapper {
-    margin-top: 60px;
-    padding:0 10% 0 3%;
-  }
-  .closeBtn {
-    float: right;
-    text-decoration: none;
-    color: #fff;
-    margin-bottom: 30px;
-  }
-  h3 {
-    clear: both;
-    padding: 10px 0px !important;
-    border-top: 2px solid;
-  }
-}
 
 // Bockmarks tab
 

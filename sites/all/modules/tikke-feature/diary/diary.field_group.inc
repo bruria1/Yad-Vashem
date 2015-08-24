@@ -21,7 +21,7 @@ function diary_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Contents',
-    'weight' => '15',
+    'weight' => '29',
     'children' => array(
       0 => 'body',
     ),
@@ -51,9 +51,10 @@ function diary_field_group_info() {
     'label' => 'Main',
     'weight' => '3',
     'children' => array(
-      0 => 'group_content',
-      1 => 'group_media',
-      2 => 'group_terms_relations',
+      0 => 'field_main_diary_image',
+      1 => 'group_content',
+      2 => 'group_media',
+      3 => 'group_terms_relations',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -75,8 +76,8 @@ function diary_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
-    'label' => 'Files',
-    'weight' => '16',
+    'label' => 'Media',
+    'weight' => '31',
     'children' => array(
       0 => 'field_files',
     ),
@@ -104,7 +105,7 @@ function diary_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Terms',
-    'weight' => '17',
+    'weight' => '32',
     'children' => array(
       0 => 'field_terms',
       1 => 'field_tags_places',

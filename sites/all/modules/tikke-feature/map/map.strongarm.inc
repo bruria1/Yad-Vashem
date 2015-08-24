@@ -55,6 +55,9 @@ function map_strongarm() {
         'xmlsitemap' => array(
           'weight' => '4',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'language' => array(

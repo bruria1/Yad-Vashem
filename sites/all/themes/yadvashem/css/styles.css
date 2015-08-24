@@ -1700,7 +1700,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1440333126');
+  background-image: url('../images/progress.gif?1440423636');
 }
 
 /********** global ****************/
@@ -3839,66 +3839,15 @@ body article a {
   left: none;
 }
 
-/* line 1781, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 {
-  background-color: rgba(0, 0, 0, 0.71);
-}
-/* line 1783, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 .right_bar {
-  width: 28%;
-  background-color: rgba(0, 0, 0, 0.39);
-}
-/* line 1787, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 #mid_d1 {
-  width: 72%;
-  margin: 7% auto;
-}
-/* line 1791, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 .img_count {
-  float: left;
-}
-/* line 1794, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 .addthis_native_toolbox {
-  margin-right: -40px;
-}
-/* line 1798, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 div#mid .wrapper,
-#my_overlay_d1 #fotorama_ovr {
-  max-width: 750px;
-  width: 100%;
-}
-/* line 1803, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 .fotorama__stage {
-  border: 10px;
-}
-/* line 1807, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 .wrapper {
-  margin-top: 60px;
-  padding: 0 10% 0 3%;
-}
-/* line 1811, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 .closeBtn {
-  float: right;
-  text-decoration: none;
-  color: #fff;
-  margin-bottom: 30px;
-}
-/* line 1817, ../sass/components/_yadvashem.scss */
-#my_overlay_d1 h3 {
-  clear: both;
-  padding: 10px 0px !important;
-  border-top: 2px solid;
-}
-
-/* line 1826, ../sass/components/_yadvashem.scss */
+/* line 1785, ../sass/components/_yadvashem.scss */
 #block-views-flag-bookmarks-block-1 {
   background-color: transparent;
 }
-/* line 1828, ../sass/components/_yadvashem.scss */
+/* line 1787, ../sass/components/_yadvashem.scss */
 #block-views-flag-bookmarks-block-1 .views-field-title a {
   color: #114560;
 }
-/* line 1831, ../sass/components/_yadvashem.scss */
+/* line 1790, ../sass/components/_yadvashem.scss */
 #block-views-flag-bookmarks-block-1 .flag {
   color: #208dc9 !important;
 }

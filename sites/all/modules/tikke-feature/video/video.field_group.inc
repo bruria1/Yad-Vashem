@@ -25,7 +25,6 @@ function video_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_teaser_long_text',
-      2 => 'field_video_sub_title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -144,7 +143,7 @@ function video_field_group_info() {
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
     'label' => 'Video',
-    'weight' => '11',
+    'weight' => '12',
     'children' => array(
       0 => 'field_video_collection',
     ),

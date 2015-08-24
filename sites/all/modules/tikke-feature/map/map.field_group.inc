@@ -25,13 +25,14 @@ function map_field_group_info() {
     'children' => array(
       0 => 'body',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-content field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -54,11 +55,11 @@ function map_field_group_info() {
       1 => 'group_terms_relations',
       2 => 'group_media',
     ),
-    'format_type' => 'tabs',
+    'format_type' => 'htabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => 'group-main field-group-tabs',
+        'classes' => '',
       ),
     ),
   );
@@ -79,13 +80,14 @@ function map_field_group_info() {
     'children' => array(
       0 => 'field_map_images',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-media field-group-tab',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -107,15 +109,15 @@ function map_field_group_info() {
       0 => 'field_terms',
       1 => 'field_tags_figures',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Terms',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => 'group-terms-relations field-group-tab',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
     ),
   );
   $export['group_terms_relations|node|maps_charts|form'] = $field_group;
