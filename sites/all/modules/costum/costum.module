@@ -3,6 +3,32 @@
 function pa($obj){
 	drupal_set_message("<pre>".print_r($obj,true)."</pre>");
 }
+function costum_entity_info_alter(&$entity_info) {
+      $entity_info['node']['view modes']['simple'] = array(
+        'label' => t('simple teaser'),
+        'custom settings' => TRUE,
+      );
+ }
+function _ref_bundles(){
+	return array(
+	"artifacts_gallery_arts" => t("Gallery"), 
+	"research" => t("Research"),
+	"maps_charts" => t("Map"),
+	"documents" => t("Document"),
+	"diaries_letters" => t("Diary"),
+	"video_gallery" => t("Video")	
+  );
+}
+function costum_inline_entity_form_entity_form_alter(&$entity_form, &$form_state) {
+  $bundles = _ref_bundles();
+  if(in_array($entity_form['#bundle'], array_keys($bundles))){
+	  if($entity_form['#op']=="add"){
+		$node = $form_state['node'];
+		$bundle = $entity_form['#bundle'];	
+		$entity_form['title']['#default_value'] = t("!title - !type",array("!title"=>$node->title, "!type"=>$bundles[$bundle]));
+	  }
+  }  
+}
 function render_node_layout_galllery($node , $field_name = "field_artifacts_images" , $dist_id = "") {	
 	$gal_type = "";
 	switch($node->type){
@@ -62,7 +88,8 @@ $output .=  "<div id='fotorama_ovr_".$dist_id."' class='fotorama'
 					data-max-width='100%'>";
 $gallery =  "<div id='fotorama_".$dist_id."' class='fotorama' 
 				data-width='".$gal_width."'
-				data-nav='thumbs'
+				data-nav='thumbs'	
+				data-thumbheight='60'			
 				data-max-width='100%'>";
 			
 		$img_arr = array();
@@ -122,15 +149,26 @@ $gallery =  "<div id='fotorama_".$dist_id."' class='fotorama'
 	}
 	return $output.$gallery;	
 }
-function _addGalImg($img , $videoLink = "" , $type = ""){	
+function _addGalImg($img , $Link = "" , $type = ""){	
 	$img_html = "";	
+	$attributes = array();
 	switch($type){
-		case "gal_img":		
-		   $img['style_name'] = 'medium';
+		case "gal_img":				   
 		   $img['path'] = $img['uri'];		   
-		   $thumb_url = image_style_url('thumbnail' , $img['uri']);
+		   $img_url = image_style_url('medium' , $img['uri']);
+			/*
 		   $img['attributes']['data-thumb'] = $thumb_url;
-		   $img_html = theme('image_style', $img);
+		   $img['attributes']['data-thumbfit'] = "none";
+		   $img['attributes']['data-thumbheight'] = "60";
+		   $img['attributes']['data-thumbwidth'] = "100%";		  
+		   * */
+		   
+		   $img['style_name'] = 'thumbnail';
+		   $img_html = theme('image_style', $img);			   	  
+		   $Link = $img_url;
+		   $attributes['attributes'] = $img['attributes'];
+		   $attributes["html"]=true;
+		   
 		break;		
 		case "overlay_img":
 		   $img['style_name'] = 'large';
@@ -139,16 +177,18 @@ function _addGalImg($img , $videoLink = "" , $type = ""){
 		   $img['attributes']['data-thumb'] = $thumb_url;
 		   $img_html = theme('image_style', $img);   
 		break;
-		case "overlay_video":		 
+		case "overlay_video":	
+			$img_html = "";
+			$attributes = array("attributes"=>array("data-video"=>"true"));
+		break;	 
 		default:		  
 		   $img_html = theme_image($img);
 		break;
 	}
-	if($videoLink == ""){
+	if($Link == ""){
 		return $img_html;
 	}	
-	$video_attr = array("attributes"=>array("data-video"=>"true"));
-	return l($img_html ,$videoLink , $video_attr);
+	return l($img_html ,$Link , $attributes);
 }
 
 // Info Blocks
@@ -165,7 +205,9 @@ function costum_block_info() {
 		'info' => t('Costume Gallery !tab Tab',array("!tab"=>$typeName)),       
 	  );
   };
-  
+  $blocks['features'] = array(
+		'info' => t('Featues'),       
+  );
   return $blocks;
 }
 
@@ -218,6 +260,100 @@ function costum_block_view($delta = '') {
         $block['content'] = render_node_layout_galllery($gallery, "field_video_collection" , "v".$current_type);        
       }
   }
+  if($delta=="features"){
+	  $node = menu_get_object();
+	  if($node->type!="book")return;	 
+	  $current_vals = _get_features_defaults($node->nid);
+	  $output = "";
+	  $bundels = _ref_bundles();
+	  foreach($current_vals as $k=>$fe_nid){
+		  $ref = node_load($fe_nid);		
+		  $fields = field_info_fields();
+		  $ref_arr = array();
+		  foreach($fields as $field_name => $field){
+			if($field['type']=="entityreference"){
+				if(in_array("book",$field['bundles']['node'])?"y":"N"){
+					foreach($node->{$field_name}[LANGUAGE_NONE] as $ent_id){	
+						$ent_id = $ent_id['target_id'];				
+						if($ent_id == $fe_nid){
+							pa($field_name);
+						}
+					}
+				}
+			} 
+		}
+		  $output.="<div class='fe_".$k."' onClick='console.log(\"\")'>";
+		  if(isset($ref->field_artifacts_images[LANGUAGE_NONE][0])){
+			   $img = $ref->field_artifacts_images[LANGUAGE_NONE][0];
+			   $img['style_name'] = 'thumbnail';
+			   $img['path'] = $img['uri'];
+			   $output .= theme('image_style', $img);			
+		  }
+		  if(isset($bundels[$ref->type])){
+			$output.="<span>".$bundels[$ref->type]."</span>";
+		  }
+		  $output.="<h3>".$ref->title."</h3>";
+		  $output.="</div>";
+		  //$ref_view = node_view($ref,"simple");
+		  //$output .= strip_tags(drupal_render($ref_view),"<p><div><h1><h2><h3><img>");
+	  }
+	  $block['content'] = $output;	  
+  }
   return $block;
+}
+function costum_block_configure($delta = '') {  
+  $form = array();
+  if ($delta == 'features') {
+	$nid = str_replace("node/","",$_GET['destination']);  
+	if(!is_numeric($nid))return; 
+	$node = node_load($nid);
+	if($node->type!="book")return;	 
+	  $fields = field_info_fields();
+	  $ref_arr = array();
+	  foreach($fields as $field_name => $field){
+		if($field['type']=="entityreference"){
+			if(in_array("book",$field['bundles']['node'])?"y":"N"){
+				foreach($node->{$field_name}[LANGUAGE_NONE] as $ent_id){	
+					$ent_id = $ent_id['target_id'];				
+					$ref_item = entity_load("node" , array($ent_id));
+					$ref_item = array_shift($ref_item);
+					$ref_arr[$ent_id] = $ref_item->title;
+				}
+			}
+		}			
+	}
+	$form['co_nid'] =  array(
+		"#type"=>"hidden",
+		"#default_value"=>$nid,	
+	);
+	$current_vals = _get_features_defaults($nid);
+	
+	for($i=1;$i<=4;$i++){
+		$form["cost_features_".$i] = array(
+		  '#type' => 'select',
+		  '#title' => t('Content for #!i feature',array("!i"=>$i)),		 
+		  '#options' => $ref_arr,
+		);
+		if($current_vals[$i]){
+			$form["cost_features_".$i]['#default_value'] = $current_vals[$i];
+		}
+	}
+  }
+  return $form;
+}
+function _get_features_defaults($nid){
+ return variable_get("cost_features_".$nid,array());
+}
+function costum_block_save($delta = '', $edit = array()){	
+	$nid = $edit['co_nid'];
+	$current_vals = variable_get("cost_features_".$nid,array());	
+	drupal_set_message("saved");
+	foreach($edit as $k=>$v){
+		if(strpos($k,"cost_features_")===0){
+			$i = str_replace("cost_features_","",$k);
+			$current_vals[$i] = $v;
+		}
+	}
+	variable_set("cost_features_".$nid,$current_vals);
 }
 /***/
