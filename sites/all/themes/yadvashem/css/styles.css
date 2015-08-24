@@ -1700,7 +1700,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1439888651');
+  background-image: url('../images/progress.gif?1440333126');
 }
 
 /********** global ****************/
@@ -3744,41 +3744,41 @@ body article a {
 }
 
 /* line 1710, ../sass/components/_yadvashem.scss */
-#fotorama_d1 {
+.fotorama {
   background-color: #EAEAEA;
 }
 /* line 1712, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__wrap,
-#fotorama_d1 .fotorama__stage,
-#fotorama_d1 .fotorama__stage__frame,
-#fotorama_d1 .fotorama__stage__shaft {
+.fotorama .fotorama__wrap,
+.fotorama .fotorama__stage,
+.fotorama .fotorama__stage__frame,
+.fotorama .fotorama__stage__shaft {
   width: 100% !important;
 }
 /* line 1718, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__stage {
+.fotorama .fotorama__stage {
   border: 0;
 }
 /* line 1721, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__stage__frame.fotorama__active {
+.fotorama .fotorama__stage__frame.fotorama__active {
   max-width: 687px !important;
   width: 100%;
 }
 /* line 1724, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__stage__frame.fotorama__active img {
+.fotorama .fotorama__stage__frame.fotorama__active img {
   max-width: 688px !important;
   width: 100%;
 }
 /* line 1729, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__nav-wrap {
+.fotorama .fotorama__nav-wrap {
   height: 80px;
 }
 /* line 1731, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__nav-wrap .fotorama__nav {
+.fotorama .fotorama__nav-wrap .fotorama__nav {
   position: relative;
   top: 5px;
 }
 /* line 1735, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__nav-wrap img {
+.fotorama .fotorama__nav-wrap img {
   border-radius: 5px !important;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -3789,7 +3789,7 @@ body article a {
   top: 0 !important;
 }
 /* line 1739, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__nav-wrap .fotorama__nav__frame {
+.fotorama .fotorama__nav-wrap .fotorama__nav__frame {
   border: 2px solid #fff !important;
   border-radius: 5px !important;
   -moz-border-radius: 5px;
@@ -3802,16 +3802,16 @@ body article a {
   margin-right: 5px;
 }
 /* line 1745, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__nav-wrap .fotorama__thumb {
+.fotorama .fotorama__nav-wrap .fotorama__thumb {
   background-color: none !important;
 }
 /* line 1748, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__nav-wrap .fotorama__thumb-border {
+.fotorama .fotorama__nav-wrap .fotorama__thumb-border {
   border: 0 !important;
   background-image: none !important;
 }
 /* line 1753, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__caption {
+.fotorama .fotorama__caption {
   position: absolute;
   z-index: 12;
   bottom: 14px;
@@ -3821,7 +3821,7 @@ body article a {
   color: rgba(255, 255, 255, 0.9);
 }
 /* line 1761, ../sass/components/_yadvashem.scss */
-#fotorama_d1 .fotorama__caption .fotorama__caption__wrap {
+.fotorama .fotorama__caption .fotorama__caption__wrap {
   background-color: rgba(3, 0, 0, 0.5) !important;
 }
 

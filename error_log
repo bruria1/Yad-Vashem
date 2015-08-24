@@ -256,3 +256,110 @@
 [24-Aug-2015 11:02:05 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 154
 [24-Aug-2015 11:02:07 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 154
 [24-Aug-2015 11:16:08 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$thumb_url' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 145
+[24-Aug-2015 13:50:08 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:50:12 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:50:16 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:50:29 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:50:34 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:51:27 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:51:27 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:51:29 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:51:30 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:52:00 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:52:06 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:52:18 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:52:19 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:52:29 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:53:39 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:54:12 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:54:18 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:54:39 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:54:44 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:54:52 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:55:15 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:55:39 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:56:29 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:57:20 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:57:24 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 13:57:26 Asia/Jerusalem] PHP Fatal error:  Call to undefined function flag_create_link() in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 90
+[24-Aug-2015 14:02:29 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:31 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:02:31 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$img_html' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 134
+[24-Aug-2015 14:56:54 Asia/Jerusalem] PHP Fatal error:  Unsupported operand types in /home/yadvashem/public_html/includes/form.inc on line 1808
+[24-Aug-2015 14:56:57 Asia/Jerusalem] PHP Fatal error:  Unsupported operand types in /home/yadvashem/public_html/includes/form.inc on line 1808
+[24-Aug-2015 15:10:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:10:38 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:10:40 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:10:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:10:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:10:45 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:10:54 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:10:58 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:11:10 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:11:12 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:11:15 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:11:17 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:11:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '=' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 11
+[24-Aug-2015 15:54:54 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$wrapper' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 258
+[24-Aug-2015 15:54:56 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '$wrapper' (T_VARIABLE) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 258
+[24-Aug-2015 15:57:32 Asia/Jerusalem] PHP Fatal error:  Call to a member function value() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 265
+[24-Aug-2015 15:57:34 Asia/Jerusalem] PHP Fatal error:  Call to a member function value() on a non-object in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 265
+[24-Aug-2015 15:58:25 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 6088343 bytes) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 4
+[24-Aug-2015 15:58:36 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 6088343 bytes) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 4
+[24-Aug-2015 16:02:50 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:51 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:52 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:02:53 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[24-Aug-2015 16:13:32 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:38 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:39 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:41 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:42 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:42 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:43 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:44 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:44 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:45 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:47 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:13:54 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';' in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 286
+[24-Aug-2015 16:31:26 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'for' (T_FOR) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 297
+[24-Aug-2015 16:31:28 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'for' (T_FOR) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 297
+[24-Aug-2015 16:31:34 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'for' (T_FOR) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 297
+[24-Aug-2015 16:58:48 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'content' (T_STRING) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 273
+[24-Aug-2015 16:58:49 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'content' (T_STRING) in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 273
+[24-Aug-2015 17:05:48 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:49 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:50 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:50 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:50 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:50 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:51 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:51 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:05:51 Asia/Jerusalem] PHP Fatal error:  Cannot use object of type stdClass as array in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 271
+[24-Aug-2015 17:17:51 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_set_messege() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 336
+[24-Aug-2015 17:18:24 Asia/Jerusalem] PHP Fatal error:  Call to undefined function drupal_set_messege() in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 336
+[24-Aug-2015 17:49:18 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
+[24-Aug-2015 17:49:20 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected end of file in /home/yadvashem/public_html/sites/all/modules/costum/costum.module on line 359
