@@ -386,3 +386,5 @@
 [24-Aug-2015 19:35:18 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
 [24-Aug-2015 19:35:26 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
 [24-Aug-2015 19:35:33 Asia/Jerusalem] PHP Fatal error:  Class name must be a valid object or a string in /home/yadvashem/public_html/includes/common.inc on line 7963
+[25-Aug-2015 09:46:37 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '[' in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 264
+[25-Aug-2015 09:48:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in /home/yadvashem/public_html/sites/all/themes/yadvashem/templates/node--book.tpl.php on line 97

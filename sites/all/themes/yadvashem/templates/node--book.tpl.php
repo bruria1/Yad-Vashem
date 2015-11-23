@@ -89,7 +89,7 @@
         <div class="save_flag">
           <?php print flag_create_link('bookmarks', $node->nid); ?>
         </div>
-      </div> 
+        </div> 
     </div>
 </div>
 
@@ -97,10 +97,14 @@
     <?php print render($content['field_sub_title']); ?>
   </div>
   <div id="nerative_qoute">
-    <?php print render($content['field_teaser_qoate']); ?>
-   <?php print render($content['field_quote_name']); ?>
-    <?php print render($content['field_teaser_long_text']); ?>
-    <?php if (render($content['body'])) { ?>
+    <?php if ($node->field_quote_or_abstract['und'][0]['value']==1) { 
+    print render($content['field_teaser_qoate']); 
+    print render($content['field_quote_name']); 
+    }
+    else{
+    print render($content['field_teaser_long_text']); 
+    }
+    if (render($content['body'])) { ?>
       <div class="jump_link">
        <div class="read">Read more</div>
       </div>
@@ -228,6 +232,9 @@
           </a>
 
         </div>
+                <div class="save_flag">
+          <?php print flag_create_link('bookmarks', $node->nid); ?>
+        </div>
 
     </div>
 
@@ -266,8 +273,6 @@
 
 
 </article>
-
-
 
 <div class="mobile-tabs">
 

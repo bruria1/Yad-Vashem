@@ -102,7 +102,9 @@ $gallery =  "<div id='fotorama_".$dist_id."' class='fotorama'
 				$video = field_collection_item_load($img['value']);
 				$link = $video->field_video[LANGUAGE_NONE][0]['video_url'];
 				$uri = $video->field_video[LANGUAGE_NONE][0]['thumbnail_path'];	
-				$desc = $video->field_video_description[LANGUAGE_NONE][0]['value'];		
+				if(isset($video->field_video_description[LANGUAGE_NONE][0]['value'])){
+					$desc = $video->field_video_description[LANGUAGE_NONE][0]['value'];	
+				}	
 			}
 			else {
 				$uri = $img['uri'];	
@@ -292,13 +294,15 @@ function costum_block_view($delta = '') {
 				}
 			  break;
 			  case "video_gallery":
-				$collection_id = $ref->field_video_collection[LANGUAGE_NONE][0]['value'];
-				$fc = entity_load('field_collection_item', array($collection_id));
-				$fc = array_shift($fc);
-				$img_url = $fc->field_video[LANGUAGE_NONE][0]['thumbnail_path'];
+			    if (isset($ref->field_video_collection[LANGUAGE_NONE][0]['value']))   {
+					$collection_id = $ref->field_video_collection[LANGUAGE_NONE][0]['value'];
+					$fc = entity_load('field_collection_item', array($collection_id));
+					$fc = array_shift($fc);
+					$img_url = $fc->field_video[LANGUAGE_NONE][0]['thumbnail_path'];
+				}
 				switch($ref->field_video_type[LANGUAGE_NONE][0]['value']){
 					case 1:
-						$tab = "Testamonies";
+						$tab = "Testimonies";
 					break;
 					case 2:
 						$tab = "Archives";
@@ -310,12 +314,13 @@ function costum_block_view($delta = '') {
 			  break;			  
 			  case "documents":
 				    $img_field = "field_main_document_image";
-					$tab = "Documents";
+					$tab = "Document";
 			  break;
 			  case "research":
 					$tab = "Research";
 			  break;
 			  case "maps_charts":
+			  		$img_field = "field_map_images";
 					$tab = "Map";
 			  break;
 			  case "diaries_letters":
@@ -366,6 +371,7 @@ function costum_block_configure($delta = '') {
 	  foreach($fields as $field_name => $field){
 		if($field['type']=="entityreference"){
 			if(in_array("book",$field['bundles']['node'])?"y":"N"){
+				if(isset($node->{$field_name}[LANGUAGE_NONE]))
 				foreach($node->{$field_name}[LANGUAGE_NONE] as $ent_id){	
 					$ent_id = $ent_id['target_id'];				
 					$ref_item = entity_load("node" , array($ent_id));
